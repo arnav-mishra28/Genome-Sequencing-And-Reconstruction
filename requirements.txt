@@ -1,0 +1,36 @@
+# Genome Sequencing and Reconstruction System Dependencies
+
+# Core Scientific Computing
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+
+# Machine Learning and Deep Learning
+torch>=1.12.0
+scikit-learn>=1.0.0
+
+# Bioinformatics
+biopython>=1.79
+
+# Visualization
+matplotlib>=3.4.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Data Processing
+pickle-mixin>=1.0.2
+
+# System and File Handling
+pathlib2>=2.3.0
+
+# Optional: GPU Support (uncomment if using CUDA)
+# torch-audio>=0.12.0
+# torch-vision>=0.13.0
+
+# Development and Testing
+pytest>=6.0.0
+jupyter>=1.0.0
+
+# Note: Some packages might require system-level dependencies
+# For Ubuntu/Debian: sudo apt-get install python3-dev build-essential
+# For macOS: xcode-select --install
