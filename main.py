@@ -1,282 +1,183 @@
-#!/usr/bin/env python3
 """
-Genome Sequencing and Reconstruction - Main Interface
-
-This script provides the main interface for running DNA reconstruction analysis,
-including data loading, model training, sequence reconstruction, and analysis.
+main.py
+=======
+Entry point — Genome Sequencing & Reconstruction
+D:\MY WORK\Genome Sequencing And Reconstruction\main.py
 """
 
-import argparse
-import sys
 import os
+import sys
 import json
-from datetime import datetime
-from pathlib import Path
+import argparse
 
-# Add project root to Python path
-sys.path.append(str(Path(__file__).parent))
+# ── Resolve base directory from THIS file's location ──────────────────────────
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-from data.ancient_genome_downloader import AncientGenomeDataLoader
-from preprocessing.dna_preprocessor import DNAPreprocessor
-from experiments.train_models import ExperimentRunner
-from utils.sequence_utils import SequenceEncoder, ModelEvaluator
-from models.ensemble_model import DNAEnsemble
-from analysis.mutation_analyzer import MutationAnalyzer
-import config
+# ── Ensure ALL subdirectories exist ───────────────────────────────────────────
+REQUIRED_DIRS = [
+    "data",
+    os.path.join("data", "sequences"),
+    os.path.join("data", "simulated"),
+    os.path.join("data", "alignments"),
+    os.path.join("data", "mappings"),
+    "models",
+    os.path.join("models", "checkpoints"),
+    "preprocessing",
+    "pipeline",
+    "visualization",
+    "results",
+    os.path.join("results", "visualizations"),
+]
+for d in REQUIRED_DIRS:
+    os.makedirs(os.path.join(BASE_DIR, d), exist_ok=True)
 
+# ── Create __init__.py for every package folder ────────────────────────────────
+PACKAGES = ["data", "preprocessing", "models", "pipeline", "visualization"]
+for pkg in PACKAGES:
+    init_path = os.path.join(BASE_DIR, pkg, "__init__.py")
+    if not os.path.exists(init_path):
+        with open(init_path, "w") as f:
+            f.write("# auto-generated\n")
 
-class GenomeReconstructionPipeline:
-    """Main pipeline for genome reconstruction analysis"""
-    
-    def __init__(self, output_dir: str = "results"):
-        self.output_dir = Path(output_dir)
-        self.output_dir.mkdir(exist_ok=True)
-        
-        self.data_loader = AncientGenomeDataLoader()
-        self.preprocessor = DNAPreprocessor()
-        self.encoder = SequenceEncoder()
-        self.evaluator = ModelEvaluator()
-        
-        self.results = {}
-    
-    def run_data_preparation(self, max_sequences: int = 1000):
-        """Download and prepare genomic data"""
-        print("🧬 Step 1: Preparing genomic data...")
-        
-        # Download datasets
-        datasets = self.data_loader.load_all_datasets()
-        print(f"✅ Loaded {len(datasets)} genomic datasets")
-        
-        # Combine sequences
-        all_sequences = []
-        for species, sequences in datasets.items():
-            all_sequences.extend(sequences[:max_sequences//len(datasets)])
-            print(f"  - {species}: {len(sequences[:max_sequences//len(datasets)])} sequences")
-        
-        # Preprocess
-        clean_sequences = []
-        for seq in all_sequences:
-            processed = self.preprocessor.clean_sequence(seq)
-            if len(processed) >= 500:  # Minimum length
-                clean_sequences.append(processed)
-        
-        print(f"✅ Prepared {len(clean_sequences)} high-quality sequences")
-        
-        # Save prepared data
-        data_file = self.output_dir / "prepared_sequences.json"
-        with open(data_file, 'w') as f:
-            json.dump(clean_sequences, f)
-        
-        self.results['data_preparation'] = {
-            'total_sequences': len(clean_sequences),
-            'data_file': str(data_file),
-            'species_included': list(datasets.keys())
-        }
-        
-        return clean_sequences
-    
-    def run_model_training(self, sequences: list, quick_mode: bool = False):
-        """Train all deep learning models"""
-        print("🤖 Step 2: Training deep learning models...")
-        
-        runner = ExperimentRunner()
-        
-        if quick_mode:
-            # Quick training for testing
-            training_results = runner.run_full_experiment_suite(
-                max_sequences=min(100, len(sequences)),
-                sequence_length=500
-            )
-        else:
-            # Full training
-            training_results = runner.run_full_experiment_suite(
-                max_sequences=len(sequences),
-                sequence_length=1000
-            )
-        
-        print("✅ Model training completed")
-        
-        self.results['training'] = training_results
-        return training_results
-    
-    def run_sequence_reconstruction(self, target_sequence: str, confidence_threshold: float = 0.8):
-        """Reconstruct a damaged DNA sequence"""
-        print("🔧 Step 3: Reconstructing damaged DNA sequence...")
-        
-        # Simulate damage (for demonstration)
-        damaged_sequence = self.preprocessor.simulate_ancient_dna_damage(target_sequence)
-        print(f"Original length: {len(target_sequence)}")
-        print(f"Damaged length: {len(damaged_sequence)}")
-        
-        # Load trained models (simplified - would load actual trained weights)
-        ensemble = DNAEnsemble()
-        
-        # Reconstruct
-        reconstruction_result = ensemble.predict_consensus(
-            damaged_sequence, 
-            return_confidence=True
-        )
-        
-        if isinstance(reconstruction_result, tuple):
-            reconstructed, confidence_scores = reconstruction_result
-        else:
-            reconstructed = reconstruction_result
-            confidence_scores = [0.5] * len(reconstructed)
-        
-        # Calculate metrics
-        accuracy = sum(1 for i, (orig, recon) in enumerate(zip(target_sequence, reconstructed)) 
-                      if orig == recon) / len(target_sequence)
-        
-        high_confidence_bases = sum(1 for score in confidence_scores if score >= confidence_threshold)
-        
-        reconstruction_analysis = {
-            'original_sequence': target_sequence[:100] + "..." if len(target_sequence) > 100 else target_sequence,
-            'damaged_sequence': damaged_sequence[:100] + "..." if len(damaged_sequence) > 100 else damaged_sequence,
-            'reconstructed_sequence': reconstructed[:100] + "..." if len(reconstructed) > 100 else reconstructed,
-            'reconstruction_accuracy': accuracy,
-            'average_confidence': sum(confidence_scores) / len(confidence_scores),
-            'high_confidence_bases': high_confidence_bases,
-            'high_confidence_percentage': high_confidence_bases / len(confidence_scores) * 100
-        }
-        
-        print(f"✅ Reconstruction accuracy: {accuracy:.2%}")
-        print(f"✅ Average confidence: {reconstruction_analysis['average_confidence']:.3f}")
-        print(f"✅ High confidence bases: {reconstruction_analysis['high_confidence_percentage']:.1f}%")
-        
-        self.results['reconstruction'] = reconstruction_analysis
-        return reconstruction_analysis
-    
-    def run_mutation_analysis(self, sequence: str):
-        """Analyze mutations and suggest corrections"""
-        print("🔬 Step 4: Analyzing mutations and genetic variations...")
-        
-        analyzer = MutationAnalyzer()
-        
-        # Detect mutations
-        mutations = analyzer.detect_mutations(sequence)
-        print(f"✅ Detected {len(mutations)} potential mutations")
-        
-        # Health analysis
-        health_report = analyzer.analyze_health_implications(sequence)
-        print(f"✅ Generated health analysis with {len(health_report)} findings")
-        
-        # Generate corrected sequence
-        corrected_sequence = analyzer.suggest_corrections(sequence)
-        print(f"✅ Generated corrected sequence")
-        
-        analysis_results = {
-            'total_mutations': len(mutations),
-            'mutations_by_type': analyzer.categorize_mutations(mutations),
-            'health_risk_assessment': health_report,
-            'correction_success_rate': 0.85,  # Simplified
-            'corrected_sequence_length': len(corrected_sequence)
-        }
-        
-        self.results['mutation_analysis'] = analysis_results
-        return analysis_results
-    
-    def generate_report(self):
-        """Generate comprehensive analysis report"""
-        print("📊 Step 5: Generating comprehensive report...")
-        
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        report_file = self.output_dir / f"genome_reconstruction_report_{timestamp}.json"
-        
-        comprehensive_report = {
-            'analysis_timestamp': datetime.now().isoformat(),
-            'pipeline_version': '1.0',
-            'results': self.results,
-            'summary': {
-                'data_sequences_processed': self.results.get('data_preparation', {}).get('total_sequences', 0),
-                'models_trained': len([k for k, v in self.results.get('training', {}).get('results', {}).items() 
-                                     if 'error' not in v]) if 'training' in self.results else 0,
-                'reconstruction_accuracy': self.results.get('reconstruction', {}).get('reconstruction_accuracy', 0),
-                'mutations_detected': self.results.get('mutation_analysis', {}).get('total_mutations', 0)
-            }
-        }
-        
-        with open(report_file, 'w') as f:
-            json.dump(comprehensive_report, f, indent=2)
-        
-        print(f"✅ Comprehensive report saved to: {report_file}")
-        return comprehensive_report
+# ── Insert base dir at front of sys.path ──────────────────────────────────────
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+
+# ── Verify critical modules can be found before importing ─────────────────────
+def verify_modules():
+    missing = []
+    checks = [
+        os.path.join(BASE_DIR, "pipeline", "full_pipeline.py"),
+        os.path.join(BASE_DIR, "data", "fetch_sequences.py"),
+        os.path.join(BASE_DIR, "data", "simulate_ancient_dna.py"),
+        os.path.join(BASE_DIR, "preprocessing", "encoding.py"),
+        os.path.join(BASE_DIR, "preprocessing", "alignment.py"),
+        os.path.join(BASE_DIR, "models", "lstm_predictor.py"),
+        os.path.join(BASE_DIR, "models", "dnabert_transformer.py"),
+        os.path.join(BASE_DIR, "models", "denoising_autoencoder.py"),
+        os.path.join(BASE_DIR, "models", "gnn_phylogenetic.py"),
+        os.path.join(BASE_DIR, "pipeline", "genome_mapper.py"),
+        os.path.join(BASE_DIR, "visualization", "helix_3d.py"),
+        os.path.join(BASE_DIR, "visualization", "genome_map_2d.py"),
+        os.path.join(BASE_DIR, "visualization", "realtime_dashboard.py"),
+    ]
+    for path in checks:
+        if not os.path.exists(path):
+            missing.append(path)
+    return missing
 
 
 def main():
-    """Main entry point"""
-    parser = argparse.ArgumentParser(
-        description="Genome Sequencing and Reconstruction Pipeline",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Examples:
-  python main.py --full-pipeline                    # Run complete analysis
-  python main.py --train-only --quick              # Quick model training
-  python main.py --reconstruct "ATCGATCGATCG"      # Reconstruct specific sequence
-  python main.py --analyze-mutations               # Run mutation analysis only
-        """
-    )
-    
-    parser.add_argument('--full-pipeline', action='store_true',
-                       help='Run the complete pipeline (data prep, training, analysis)')
-    parser.add_argument('--train-only', action='store_true',
-                       help='Only train models')
-    parser.add_argument('--quick', action='store_true',
-                       help='Use quick mode for faster execution')
-    parser.add_argument('--reconstruct', type=str, metavar='SEQUENCE',
-                       help='Reconstruct a specific DNA sequence')
-    parser.add_argument('--analyze-mutations', action='store_true',
-                       help='Run mutation analysis on sample data')
-    parser.add_argument('--max-sequences', type=int, default=1000,
-                       help='Maximum number of sequences to process')
-    parser.add_argument('--output-dir', type=str, default='results',
-                       help='Output directory for results')
-    
+    parser = argparse.ArgumentParser(description="Genome Sequencing & Reconstruction")
+    parser.add_argument("--skip-download",  action="store_true",
+                        help="Skip NCBI download (use cached sequences)")
+    parser.add_argument("--dashboard-only", action="store_true",
+                        help="Launch dashboard only (pipeline already ran)")
+    parser.add_argument("--no-dashboard",   action="store_true",
+                        help="Run pipeline + visualizations, skip dashboard")
+    parser.add_argument("--lstm-epochs",    type=int, default=5)
+    parser.add_argument("--bert-epochs",    type=int, default=4)
+    parser.add_argument("--ae-epochs",      type=int, default=6)
+    parser.add_argument("--gnn-epochs",     type=int, default=30)
+    parser.add_argument("--batch-size",     type=int, default=16)
     args = parser.parse_args()
-    
-    if not any([args.full_pipeline, args.train_only, args.reconstruct, args.analyze_mutations]):
-        parser.print_help()
-        return
-    
-    # Initialize pipeline
-    pipeline = GenomeReconstructionPipeline(args.output_dir)
-    
-    print("🧬 Genome Sequencing and Reconstruction Pipeline")
-    print("=" * 60)
-    
-    try:
-        if args.full_pipeline:
-            # Run complete pipeline
-            sequences = pipeline.run_data_preparation(args.max_sequences)
-            pipeline.run_model_training(sequences, args.quick)
-            
-            # Use sample sequence for reconstruction demo
-            sample_sequence = config.SAMPLE_SEQUENCES['human'][:1000]
-            pipeline.run_sequence_reconstruction(sample_sequence)
-            pipeline.run_mutation_analysis(sample_sequence)
-            
-            report = pipeline.generate_report()
-            print("\n🎉 Complete pipeline executed successfully!")
-            
-        elif args.train_only:
-            sequences = pipeline.run_data_preparation(args.max_sequences)
-            pipeline.run_model_training(sequences, args.quick)
-            print("\n🎉 Model training completed!")
-            
-        elif args.reconstruct:
-            result = pipeline.run_sequence_reconstruction(args.reconstruct)
-            print(f"\n🎉 Sequence reconstruction completed with {result['reconstruction_accuracy']:.2%} accuracy")
-            
-        elif args.analyze_mutations:
-            sample_sequence = config.SAMPLE_SEQUENCES['human'][:1000]
-            result = pipeline.run_mutation_analysis(sample_sequence)
-            print(f"\n🎉 Mutation analysis completed: {result['total_mutations']} mutations detected")
-    
-    except Exception as e:
-        print(f"\n❌ Pipeline execution failed: {e}")
-        import traceback
-        traceback.print_exc()
-        sys.exit(1)
 
+    print("""
+╔══════════════════════════════════════════════════════════════╗
+║     🧬  GENOME SEQUENCING & RECONSTRUCTION SYSTEM  🧬        ║
+║         Ancient DNA  →  Modern Reconstruction                 ║
+╚══════════════════════════════════════════════════════════════╝
+""")
+    print(f"  Base directory : {BASE_DIR}")
+    print(f"  Python path    : {sys.path[0]}\n")
+
+    # ── Verify all source files exist ─────────────────────────────────────────
+    missing = verify_modules()
+    if missing:
+        print("❌  Missing source files — cannot continue:\n")
+        for m in missing:
+            print(f"    • {m}")
+        print("\nPlease make sure all project files are saved in the correct folders.")
+        sys.exit(1)
+    else:
+        print("✅  All source files found.\n")
+
+    # ── Dashboard-only mode ────────────────────────────────────────────────────
+    if args.dashboard_only:
+        from visualization.realtime_dashboard import run_dashboard
+        run_dashboard()
+        return
+
+    # ── Full pipeline ──────────────────────────────────────────────────────────
+    from pipeline.full_pipeline import run_pipeline
+
+    results = run_pipeline(
+        skip_download=args.skip_download,
+        lstm_epochs=args.lstm_epochs,
+        bert_epochs=args.bert_epochs,
+        ae_epochs=args.ae_epochs,
+        gnn_epochs=args.gnn_epochs,
+        batch_size=args.batch_size,
+    )
+
+    # ── 3D Helix Visualizations ────────────────────────────────────────────────
+    print("\n" + "=" * 65)
+    print("  Generating 3D Helix Visualizations")
+    print("=" * 65)
+    from visualization.helix_3d import save_helix_html
+
+    recon_data = results.get("reconstructions", {})
+    sim_dir    = os.path.join(BASE_DIR, "data", "simulated")
+    helix_input = {}
+
+    for species, rec in recon_data.items():
+        sim_path = os.path.join(sim_dir, f"{species}_simulated.json")
+        damaged, repair_log = "", []
+        if os.path.exists(sim_path):
+            with open(sim_path) as f:
+                sim = json.load(f)
+            damaged    = sim.get("damaged_sequence", "")
+            repair_log = rec.get("ae_repairs", [])
+        helix_input[species] = {
+            "damaged":       damaged[:300] if damaged else "ACGTNNN" * 30,
+            "reconstructed": rec.get("reconstructed_seq", "ACGT" * 50),
+            "repair_log":    repair_log,
+        }
+
+    save_helix_html(helix_input)
+
+    # ── 2D Genome Maps ─────────────────────────────────────────────────────────
+    print("\n" + "=" * 65)
+    print("  Generating 2D Genome Maps")
+    print("=" * 65)
+    from visualization.genome_map_2d import generate_all_2d_maps
+    import glob
+
+    aln_dir    = os.path.join(BASE_DIR, "data", "alignments")
+    alignments = {}
+    for f in glob.glob(os.path.join(aln_dir, "*.json")):
+        name = os.path.basename(f).replace("_alignment.json", "")
+        with open(f) as fh:
+            alignments[name] = json.load(fh)
+    results["alignments"] = alignments
+
+    generate_all_2d_maps(results)
+
+    # ── Summary ────────────────────────────────────────────────────────────────
+    viz_dir    = os.path.join(BASE_DIR, "results", "visualizations")
+    html_files = sorted(f for f in os.listdir(viz_dir) if f.endswith(".html"))
+
+    print("\n" + "=" * 65)
+    print("  📊 Generated Visualizations:")
+    for hf in html_files:
+        print(f"    • {os.path.join(viz_dir, hf)}")
+    print("=" * 65)
+
+    # ── Dashboard ──────────────────────────────────────────────────────────────
+    if not args.no_dashboard:
+        from visualization.realtime_dashboard import run_dashboard
+        print("\n  🌐 Launching Real-Time Dashboard...")
+        run_dashboard()
 
 if __name__ == "__main__":
     main()

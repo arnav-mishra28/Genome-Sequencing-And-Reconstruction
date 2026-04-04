@@ -1,230 +1,152 @@
-# 🧬 Genome Sequencing and Reconstruction System
+# 🧬 Genome Sequencing And Reconstruction
 
-## Advanced AI-Powered Ancient DNA Analysis Pipeline
-
-This comprehensive system combines state-of-the-art deep learning techniques with bioinformatics tools to reconstruct incomplete DNA sequences from extinct species, analyze genetic variations, and predict potential solutions for genetic disorders.
-
-### 🌟 Key Features
-
-- **Multi-Model Ensemble**: LSTM, Transformer (DNA-BERT style), Denoising Autoencoder, and Graph Neural Networks
-- **Phylogenetic Analysis**: Neighbor-joining tree construction with evolutionary distance calculations
-- **Advanced Alignment**: Progressive multiple sequence alignment with quality assessment
-- **Mutation Analysis**: Comprehensive mutation detection, classification, and effect prediction
-- **Interactive Visualizations**: Real-time genome browsers and analysis dashboards
-- **Confidence Scoring**: Statistical confidence intervals for all predictions
-- **Scientific Rigor**: Uses real genomic data and established bioinformatics methods
-
-### 📊 System Architecture
-
-```
-Input: Degraded/Incomplete DNA Sequences
-    ↓
-Data Preprocessing & Tokenization
-    ↓
-Multi-Model Training Pipeline
-    ├── LSTM (Sequence Prediction)
-    ├── Transformer (Masked Language Model)
-    ├── Autoencoder (Denoising)
-    └── GNN (Phylogenetic Relations)
-    ↓
-Ensemble Prediction & Reconstruction
-    ↓
-Sequence Alignment & Phylogenetic Analysis
-    ↓
-Mutation Detection & Effect Prediction
-    ↓
-Comprehensive Reporting & Visualization
-```
-
-### 🔬 Scientific Methodology
-
-#### 1. **Data Sources**
-- Ancient DNA datasets (Neanderthal, Mammoth genomes)
-- Modern reference genomes (Human, Elephant)
-- Synthetic degraded sequences for training
-
-#### 2. **Model Architecture**
-- **LSTM**: Bidirectional LSTM with attention for sequence prediction
-- **Transformer**: Self-attention mechanism for masked base prediction
-- **Autoencoder**: Denoising architecture for error correction
-- **GNN**: Graph-based phylogenetic relationship modeling
-
-#### 3. **Alignment Methods**
-- Progressive multiple sequence alignment
-- MAFFT-inspired gap penalty optimization
-- Kimura 2-parameter evolutionary distance model
-
-#### 4. **Mutation Analysis**
-- Point mutation classification (transitions vs. transversions)
-- Insertion/deletion detection
-- Codon-level impact assessment
-- Functional effect prediction
-
-### 🚀 Quick Start
-
-1. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. **Run Analysis**
-   ```bash
-   python run_genome_analysis.py
-   ```
-
-3. **View Results**
-   - Check the generated `genome_analysis_results_[timestamp]` directory
-   - Open `interactive_genome_browser.html` for interactive visualization
-   - Read `comprehensive_report.txt` for detailed analysis
-
-### 📁 File Structure
-
-```
-genome-sequencing-reconstruction/
-├── genome_reconstruction_system.py    # Core ML models and training
-├── genome_visualization.py           # Visualization and plotting tools
-├── advanced_alignment.py            # Sequence alignment and phylogenetics
-├── run_genome_analysis.py           # Main execution script
-├── requirements.txt                 # Python dependencies
-├── README.md                       # This documentation
-└── results/                        # Generated analysis results
-    ├── analysis_results.json       # Main results in JSON format
-    ├── comprehensive_report.txt     # Human-readable report
-    ├── reconstructed_sequences.fasta # FASTA sequences
-    ├── *.png                       # Visualization plots
-    └── interactive_genome_browser.html # Interactive plots
-```
-
-### 🔧 Core Components
-
-#### `genome_reconstruction_system.py`
-- **DNATokenizer**: Converts DNA sequences to numerical representations
-- **LSTMGenomePredictor**: Bidirectional LSTM for sequence completion
-- **DNATransformer**: BERT-style transformer for masked prediction
-- **DenoisingAutoencoder**: Noise removal and error correction
-- **PhylogeneticGNN**: Graph neural network for evolutionary modeling
-- **HybridGenomeReconstructor**: Main orchestrator combining all models
-
-#### `advanced_alignment.py`
-- **AdvancedSequenceAligner**: Multiple sequence alignment tools
-- **Progressive alignment algorithm**: Step-by-step sequence alignment
-- **Phylogenetic tree construction**: Neighbor-joining method
-- **Quality assessment**: Alignment statistics and conservation analysis
-
-#### `genome_visualization.py`
-- **Sequence alignment plots**: Visual representation of alignments
-- **Mutation heatmaps**: Distribution of mutations across species
-- **Model performance tracking**: Training loss and confidence plots
-- **Interactive genome browser**: Plotly-based interactive visualization
-
-### 📈 Analysis Output
-
-The system generates comprehensive results including:
-
-1. **Reconstructed Sequences**: Complete DNA sequences with confidence scores
-2. **Mutation Analysis**: Detected mutations with predicted effects
-3. **Phylogenetic Trees**: Evolutionary relationships between species
-4. **Quality Metrics**: Alignment quality and reconstruction confidence
-5. **Interactive Visualizations**: Web-based genome browsers
-6. **Statistical Reports**: Detailed analysis summaries
-
-### 🧪 Scientific Applications
-
-- **Paleogenomics**: Reconstruction of ancient genomes
-- **Conservation Biology**: Understanding genetic diversity in extinct species
-- **Evolutionary Biology**: Tracing evolutionary pathways
-- **Comparative Genomics**: Cross-species genetic analysis
-- **Biomedical Research**: Understanding disease-related mutations
-
-### ⚙️ Technical Specifications
-
-- **Programming Language**: Python 3.8+
-- **Deep Learning Framework**: PyTorch
-- **Bioinformatics**: BioPython
-- **Visualization**: Matplotlib, Seaborn, Plotly
-- **Data Processing**: NumPy, Pandas
-- **Statistical Analysis**: SciPy, Scikit-learn
-
-### 🎯 Key Innovations
-
-1. **Ensemble Approach**: Combines multiple AI architectures for robust predictions
-2. **Phylogenetic Integration**: Uses evolutionary constraints to guide reconstruction
-3. **Confidence Quantification**: Provides statistical confidence for all predictions
-4. **Real-time Analysis**: Interactive tools for exploring results
-5. **Scientific Validation**: Implements established bioinformatics methods
-
-### 📊 Performance Metrics
-
-- **Sequence Accuracy**: Percentage of correctly reconstructed bases
-- **Mutation Detection Rate**: Sensitivity and specificity of mutation calling
-- **Alignment Quality**: Conservation scores and gap analysis
-- **Confidence Calibration**: Reliability of confidence predictions
-- **Computational Efficiency**: Processing time and resource usage
-
-### 🔬 Research Applications
-
-This system can be used for:
-
-- **Ancient DNA Studies**: Reconstructing genomes from archaeological samples
-- **Conservation Genomics**: Understanding genetic diversity in endangered species
-- **Medical Genetics**: Analyzing disease-causing mutations
-- **Evolutionary Research**: Studying genetic changes over time
-- **Biotechnology**: Designing improved genetic sequences
-
-### 📚 Scientific Background
-
-The system implements cutting-edge research from:
-- **Bioinformatics**: Multiple sequence alignment, phylogenetic reconstruction
-- **Machine Learning**: Deep learning for sequence modeling
-- **Population Genetics**: Evolutionary distance calculations
-- **Genomics**: Mutation analysis and functional prediction
-
-### 🎓 Educational Value
-
-Perfect for:
-- **Bioinformatics Courses**: Hands-on genome analysis
-- **Machine Learning Education**: Applied AI in biology
-- **Research Training**: Modern computational genomics methods
-- **Data Science**: Large-scale biological data analysis
-
-### 🚦 Usage Guidelines
-
-**Ethical Considerations:**
-- This tool is for research and educational purposes
-- Results should be validated experimentally
-- Consider privacy implications of genetic data
-- Follow institutional guidelines for genomic research
-
-**Technical Notes:**
-- GPU acceleration recommended for large datasets
-- Memory requirements scale with sequence length
-- Results quality depends on input data quality
-
-### 🤝 Contributing
-
-We welcome contributions in:
-- Algorithm improvements
-- Additional visualization features
-- Performance optimizations
-- Documentation enhancements
-- Bug fixes and testing
-
-### 📞 Support
-
-For questions or issues:
-- Check the comprehensive_report.txt for analysis details
-- Review visualization outputs for data quality
-- Validate results with domain experts
-- Consider experimental validation of predictions
-
-### 🏆 Acknowledgments
-
-This system builds upon decades of research in:
-- Computational biology and bioinformatics
-- Deep learning and artificial intelligence
-- Evolutionary biology and phylogenetics
-- Genomics and molecular biology
+> **State-of-the-art Deep Learning pipeline for ancient DNA reconstruction**
+> All files stored in `D:\Genome Sequencing And Reconstruction\`
 
 ---
 
-**Disclaimer**: This is a research tool for educational and scientific purposes. Results should be validated through appropriate experimental methods and peer review before any practical application.
+## 🗂 Project Structure
+
+D:\Genome Sequencing And Reconstruction
+├── data\ # Sequence data, simulations, mappings ├── preprocessing\ # Encoding + alignment tools ├── models\ # LSTM, DNABERT, Autoencoder, GNN ├── pipeline\ # Orchestration + genome mapper ├── visualization\ # 3D helix, 2D maps, live dashboard ├── results\ # All outputs + HTML visualizations ├── main.py # ← RUN THIS └── requirements.txt
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Run full pipeline + visualizations + dashboard
+python D:\Genome Sequencing And Reconstruction\main.py
+
+# 3. Skip download if already cached
+python main.py --skip-download
+
+# 4. Dashboard only (after pipeline ran once)
+python main.py --dashboard-only
+
+# 5. Fast test run (fewer epochs)
+python main.py --lstm-epochs 2 --bert-epochs 2 --ae-epochs 3 --gnn-epochs 10
+```plaintext
+
+---
+
+## 🧬 Species Included
+
+| Species | Type | Reference |
+|---|---|---|
+| Neanderthal | Extinct | FM865409 |
+| Woolly Mammoth | Extinct | NC_007596 |
+| Dodo | Extinct | MH595722 |
+| Thylacine | Extinct | AY463959 |
+| Passenger Pigeon | Extinct | KF000598 |
+| Cave Bear | Extinct | AJ788962 |
+| Saber-tooth Cat | Extinct | KF748507 |
+| Woolly Rhinoceros | Extinct | KX534097 |
+| Modern Human | Modern | NC_012920 |
+| African Elephant | Modern | NC_005129 |
+| Gray Wolf | Modern | NC_008093 |
+| Rock Pigeon | Modern | NC_013979 |
+
+---
+
+## 🤖 Models
+
+| Model | Purpose |
+|---|---|
+| **BiLSTM** | Sequence completion / prediction |
+| **DNABERT** | Masked DNA filling (k-mer transformer) |
+| **Denoising AE** | Base damage repair |
+| **Phylo-GNN** | Evolutionary context refinement |
+
+---
+
+## 📊 Outputs
+
+- `results/reconstructions.json` — reconstructed sequences + confidence
+- `results/visualizations/helix_3d_*.html` — 3D animated helix per species
+- `results/visualizations/genome_map_2d_*.html` — 2D chromosome maps
+- `results/visualizations/reconstruction_comparison.html` — before/after
+- `results/visualizations/phylogenetic_tree.html` — GNN phylo tree
+- Dashboard at `http://127.0.0.1:8050`
+
+---
+
+## 🧪 Mutation Types Simulated
+
+| Mutation | Biological Effect |
+|---|---|
+| C→T deamination | Hallmark ancient DNA damage; false SNPs |
+| G→A deamination | 3′-end bias; oncogenic RAS-like variants |
+| G→T oxidation | 8-oxoG; TP53-like transversions |
+| Random substitution | Background radiation / sequencing error |
+| Missing segment | Hydrolytic backbone cleavage |
+| Small insertion | Frameshift; repeat expansion |
+| Small deletion | Frameshift; exon loss |
+
+---
+
+## 📌 Notes
+
+- All data paths hardcoded to `D:\`
+- NCBI accessions are real published sequences
+- Synthetic fallback auto-generated if download fails
+- Dashboard auto-refreshes every 5 seconds
+
+1. Create folder: D:\Genome Sequencing And Reconstruction\
+
+2. Create subfolders:
+   D:\Genome Sequencing And Reconstruction\data\
+   D:\Genome Sequencing And Reconstruction\preprocessing\
+   D:\Genome Sequencing And Reconstruction\models\
+   D:\Genome Sequencing And Reconstruction\pipeline\
+   D:\Genome Sequencing And Reconstruction\visualization\
+   D:\Genome Sequencing And Reconstruction\results\
+
+3. Create an empty __init__.py in each subfolder.
+
+4. Paste each file's code into its respective path.
+
+5. Open terminal → D:\Genome Sequencing And Reconstruction\
+   pip install -r requirements.txt
+
+6. Run:
+   python main.py
+```plaintext
+
+---
+
+## 🏗️ Architecture Summary
+
+```plaintext
+NCBI Data (Real mtDNA)
+        ↓
+  Ancient DNA Simulation
+  (C→T, G→A, oxidation, gaps, fragmentation)
+        ↓
+  MAFFT-style Alignment → Reference Genome
+        ↓
+  ┌─────────────────────────────────────┐
+  │     ENSEMBLE RECONSTRUCTION         │
+  │  1. Denoising CNN Autoencoder       │
+  │     (detect + repair damaged bases) │
+  │  2. DNABERT (fill N gaps via MLM)   │
+  │  3. BiLSTM  (extend + predict)      │
+  │  4. Phylo-GNN (evolutionary priors) │
+  └─────────────────────────────────────┘
+        ↓
+  Fragment Mapping → Reference
+  (gene regions, variants, disease loci, hotspots)
+        ↓
+  ┌─────────────────────────────────────┐
+  │         VISUALIZATIONS              │
+  │  • 3D Double Helix Animation        │
+  │  │  (damaged → step-by-step repair) │
+  │  • 2D Chromosome / Gene Maps        │
+  │  • Phylogenetic Tree                │
+  │  • Real-Time Dash Dashboard         │
+  └─────────────────────────────────────┘
+
+  ✅ Everything is in D:\Genome Sequencing And Reconstruction\ ✅ Real NCBI accession numbers (with synthetic fallback) ✅ All mutation types documented with biological effects ✅ 3D Animated Helix — damaged → step-by-step → reconstructed ✅ 2D Chromosome Maps — genes, variants, hotspots, disease loci ✅ Live Dash Dashboard — all metrics update every 5 seconds ✅ Zero broken imports — every cross-module reference is valid

@@ -1,0 +1,2755 @@
+{
+  "neanderthal_mtDNA": {
+    "original_length": 8000,
+    "damaged_length": 7995,
+    "reconstructed_seq": "AAAAAAATATATATAATAATATTAAAAAATAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAATAAAAAAAAATAAAAAAAATTATATATATAAATAATTTAAATATAAATAATACATAATATAAAAAAAAAAAAAAAAAATAAAAAACAAATAATATTATATAATAAATAAATAATAAAAATAATAAAAAAAAATAAAAAAAAAAAAAAATAAATAAAAAAAAAAAATAATAAAAAAAAAAAAAAAATAAAACATAAAAAAAAAATTTATAAAAAAATAAAATAAAAAAATATAATAAAAACAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAATTAAAAATTAATAAATTAAAAAAATATAATTTTAAAAAATACAAAATAAAAAAAAAATTAATTATAAAAAAAATATAAATAATAATAATTAAATAAATAAAAAAAAAT...",
+    "full_length": 7995,
+    "gaps_before": 708,
+    "gaps_after": 0,
+    "coverage": 1.0,
+    "reliability_score": 0.6124,
+    "mean_confidence": 0.6124,
+    "ae_repairs": [
+      {
+        "global_pos": 0,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2239,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 2,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2242,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 3,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2288,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 5,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.226,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 8,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2317,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 10,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.226,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 14,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2194,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 16,
+        "original": "C",
+        "repaired": "T",
+        "confidence": 0.2229,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 17,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2293,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 18,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2205,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 25,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2257,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 26,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2235,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 28,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2286,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 30,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2218,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 32,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2208,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 34,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2277,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 35,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2267,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 37,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2207,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 38,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2293,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 40,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2275,
+        "action": "base_correction"
+      }
+    ],
+    "mutation_log": [
+      {
+        "type": "deamination_G_to_A",
+        "position": 33,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 46,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 61,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 70,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 99,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 103,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 113,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 119,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 143,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 145,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 163,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 183,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 185,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 204,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 220,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 279,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 298,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 304,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 376,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 385,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      }
+    ],
+    "mutation_summary": {
+      "deamination_G_to_A": 11,
+      "deamination_C_to_T": 78,
+      "oxidative_G_to_T": 11,
+      "random_substitution": 133,
+      "deletion": 36,
+      "insertion": 31,
+      "missing_segment": 5
+    }
+  },
+  "mammoth_mtDNA": {
+    "original_length": 8000,
+    "damaged_length": 7982,
+    "reconstructed_seq": "AAAAATTAAAATTAAAAAAAAAAAAAAATAATAAAAAAATATAAATAAAAAAAAAAAAAAAAATAAAAAATAAAATATATATACAAATATTTTTATTTATTAATAAAAAAAATATAAATATAAATAAAAAAAAATAAAATAATAAAATATAATAATAAAAAATTATAAAAAAAAAAATATATAAAAAAAATTAAACATATATTAAAAAAAAAAAATAAATTAAAAAAAAAAAAATAAAAAACATAAAAAATAAAAAAAAAAAAAATAATAAAAAAAATATAAAATAATAAAAAAAAAAAAATAATAAATTATATAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAATATTAAAAAAAAATAAAAAAATAAAAAAAAAATAAAAATAAATTAAAAAAATAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAA...",
+    "full_length": 7982,
+    "gaps_before": 735,
+    "gaps_after": 0,
+    "coverage": 1.0,
+    "reliability_score": 0.6126,
+    "mean_confidence": 0.6126,
+    "ae_repairs": [
+      {
+        "global_pos": 0,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2287,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 1,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2228,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 2,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2309,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 6,
+        "original": "G",
+        "repaired": "T",
+        "confidence": 0.222,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 7,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2283,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 9,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2242,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 10,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2224,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 17,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2275,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 22,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.221,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 23,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2247,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 26,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2196,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 27,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2221,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 30,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2266,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 32,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2231,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 37,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2245,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 40,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2269,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 43,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2234,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 46,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2253,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 48,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2242,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 49,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2264,
+        "action": "base_correction"
+      }
+    ],
+    "mutation_log": [
+      {
+        "type": "deamination_C_to_T",
+        "position": 39,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 45,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 70,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 74,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 80,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 86,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 87,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 91,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 106,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 120,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 123,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 127,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 134,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 147,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 156,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 161,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 174,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 190,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 219,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 228,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      }
+    ],
+    "mutation_summary": {
+      "deamination_C_to_T": 65,
+      "deamination_G_to_A": 18,
+      "oxidative_G_to_T": 12,
+      "random_substitution": 167,
+      "deletion": 44,
+      "insertion": 26,
+      "missing_segment": 5
+    }
+  },
+  "dodo_partial": {
+    "original_length": 572,
+    "damaged_length": 571,
+    "reconstructed_seq": "AAAATAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAATAAAAAAATATTAAATAAAAAAAAATAAAAAAACAAAAAATAATATATAAAATAAAAAAAAAAAAATTAAAAAAAAATAAAATATAAAAAATA...",
+    "full_length": 571,
+    "gaps_before": 387,
+    "gaps_after": 0,
+    "coverage": 1.0,
+    "reliability_score": 0.6119,
+    "mean_confidence": 0.6119,
+    "ae_repairs": [
+      {
+        "global_pos": 0,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2265,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 8,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2236,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 10,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2308,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 16,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2254,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 17,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2248,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 18,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2218,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 19,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2196,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 20,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2233,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 21,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2202,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 22,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2218,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 23,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2212,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 24,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2243,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 25,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2213,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 26,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2223,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 27,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2231,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 28,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2245,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 29,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2221,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 30,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2235,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 31,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2224,
+        "action": "gap_fill"
+      },
+      {
+        "global_pos": 32,
+        "original": "N",
+        "repaired": "A",
+        "confidence": 0.2235,
+        "action": "gap_fill"
+      }
+    ],
+    "mutation_log": [
+      {
+        "type": "deamination_C_to_T",
+        "position": 4,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 6,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 15,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 16,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 549,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 176,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 210,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 492,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "oxidative_G_to_T",
+        "position": 238,
+        "original": "G",
+        "mutated": "T",
+        "change": "G\u2192T",
+        "mechanism": "8-oxoguanine formation via reactive oxygen species. Oxidative DNA damage from ancient burial environment.",
+        "disease_relevance": "Transversion associated with TP53 mutations in lung cancer."
+      },
+      {
+        "type": "random_substitution",
+        "position": 36,
+        "original": "G",
+        "mutated": "T",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 38,
+        "original": "T",
+        "mutated": "A",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 65,
+        "original": "C",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 73,
+        "original": "A",
+        "mutated": "C",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 128,
+        "original": "A",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 142,
+        "original": "A",
+        "mutated": "T",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 203,
+        "original": "T",
+        "mutated": "A",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 213,
+        "original": "A",
+        "mutated": "T",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 223,
+        "original": "A",
+        "mutated": "C",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 334,
+        "original": "A",
+        "mutated": "T",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 439,
+        "original": "G",
+        "mutated": "A",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      }
+    ],
+    "mutation_summary": {
+      "deamination_C_to_T": 6,
+      "deamination_G_to_A": 2,
+      "oxidative_G_to_T": 1,
+      "random_substitution": 13,
+      "deletion": 3,
+      "insertion": 2,
+      "missing_segment": 5
+    }
+  },
+  "thylacine_mtDNA": {
+    "original_length": 8000,
+    "damaged_length": 7978,
+    "reconstructed_seq": "AAAATAATAAATAAAAAAATAATAAAAAAAAATAAAAAATATATTATATAAAAAAAATATTAAAAATAAAAAAAATTAAAAATAATAAAAAATAATAAAAAAATAAAAAACAAAAATAATATAAAAAAAAAAAAAAAAAAATTATTAAATAATAAAAAATAAATAAAAAATAAAAAATAAAAAAATAATTAATAAAATAAAAAAAAAAATATATAAAAATAAAAAAATATTTAAAAAAAAAAAAATAAAAAAAAAAAAATAAAAAAATATATATAAATATAAATAAATATAAAAATAAAAATATAAATATAAAAATAAAAATATAAAAAAAAAAATATATAAAAATAAATAAAACTAAAAAAAAAAAAATATATATATAAAAAAAAATAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATATATATATAAAAAAAAAAAAAAAAAAAAATATAAAAATAAAAAAAAATAAAAAA...",
+    "full_length": 7978,
+    "gaps_before": 781,
+    "gaps_after": 0,
+    "coverage": 1.0,
+    "reliability_score": 0.6125,
+    "mean_confidence": 0.6125,
+    "ae_repairs": [
+      {
+        "global_pos": 0,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2245,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 3,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2296,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 8,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2226,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 10,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2279,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 14,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2224,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 15,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2245,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 17,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2295,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 18,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2229,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 19,
+        "original": "C",
+        "repaired": "T",
+        "confidence": 0.219,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 20,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.223,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 23,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2204,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 25,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2237,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 26,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2261,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 28,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2258,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 30,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2218,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 35,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2252,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 36,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2253,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 37,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2188,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 38,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2285,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 39,
+        "original": "G",
+        "repaired": "T",
+        "confidence": 0.218,
+        "action": "base_correction"
+      }
+    ],
+    "mutation_log": [
+      {
+        "type": "deamination_G_to_A",
+        "position": 1,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 28,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 44,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 48,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 76,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 84,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 92,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 137,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 154,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 157,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 164,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 170,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 190,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 192,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 205,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 222,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 232,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 251,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 259,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 272,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      }
+    ],
+    "mutation_summary": {
+      "deamination_G_to_A": 14,
+      "deamination_C_to_T": 96,
+      "oxidative_G_to_T": 14,
+      "random_substitution": 181,
+      "deletion": 42,
+      "insertion": 20,
+      "missing_segment": 5
+    }
+  },
+  "passenger_pigeon": {
+    "original_length": 579,
+    "damaged_length": 575,
+    "reconstructed_seq": "AAAAATAAATAATAATTATTAAATTAATAAATAAAAAAATAAAAAACAAAATAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAATATAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAATTAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...",
+    "full_length": 575,
+    "gaps_before": 472,
+    "gaps_after": 0,
+    "coverage": 1.0,
+    "reliability_score": 0.6115,
+    "mean_confidence": 0.6115,
+    "ae_repairs": [
+      {
+        "global_pos": 1,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.229,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 2,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2272,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 4,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2269,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 6,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2242,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 8,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2273,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 10,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2223,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 11,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2239,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 12,
+        "original": "G",
+        "repaired": "T",
+        "confidence": 0.2252,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 17,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2297,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 20,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2261,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 21,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.222,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 22,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2263,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 25,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2212,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 27,
+        "original": "G",
+        "repaired": "T",
+        "confidence": 0.2236,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 28,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.224,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 29,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2239,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 30,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2242,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 32,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2253,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 33,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2216,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 34,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2206,
+        "action": "base_correction"
+      }
+    ],
+    "mutation_log": [
+      {
+        "type": "deamination_C_to_T",
+        "position": 25,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 561,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 571,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 83,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 171,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 300,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 467,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 483,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "oxidative_G_to_T",
+        "position": 293,
+        "original": "G",
+        "mutated": "T",
+        "change": "G\u2192T",
+        "mechanism": "8-oxoguanine formation via reactive oxygen species. Oxidative DNA damage from ancient burial environment.",
+        "disease_relevance": "Transversion associated with TP53 mutations in lung cancer."
+      },
+      {
+        "type": "oxidative_G_to_T",
+        "position": 386,
+        "original": "G",
+        "mutated": "T",
+        "change": "G\u2192T",
+        "mechanism": "8-oxoguanine formation via reactive oxygen species. Oxidative DNA damage from ancient burial environment.",
+        "disease_relevance": "Transversion associated with TP53 mutations in lung cancer."
+      },
+      {
+        "type": "random_substitution",
+        "position": 16,
+        "original": "C",
+        "mutated": "T",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 111,
+        "original": "A",
+        "mutated": "T",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 119,
+        "original": "T",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 126,
+        "original": "A",
+        "mutated": "C",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 159,
+        "original": "A",
+        "mutated": "C",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 289,
+        "original": "C",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 326,
+        "original": "T",
+        "mutated": "A",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 419,
+        "original": "C",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 445,
+        "original": "G",
+        "mutated": "A",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 486,
+        "original": "A",
+        "mutated": "T",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      }
+    ],
+    "mutation_summary": {
+      "deamination_C_to_T": 7,
+      "deamination_G_to_A": 1,
+      "oxidative_G_to_T": 2,
+      "random_substitution": 10,
+      "deletion": 4,
+      "missing_segment": 5
+    }
+  },
+  "cave_bear_mtDNA": {
+    "original_length": 533,
+    "damaged_length": 532,
+    "reconstructed_seq": "AAAATATTATTAATTAAAAATAATAATATAAAAAAAAAAAATAAAAAAAAAAAAAATAAAAAAATAAATAAATAAATAAAAAAAATAAAATATATAAAAAAAAAACAAAATAAAAAATATATAAAAAAAAAAAAACATATTAAACAAAAAAAAAAATAAAAATAACAAAAAAACAAAACAAAAATATATAATAATAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...",
+    "full_length": 532,
+    "gaps_before": 326,
+    "gaps_after": 0,
+    "coverage": 1.0,
+    "reliability_score": 0.6117,
+    "mean_confidence": 0.6117,
+    "ae_repairs": [
+      {
+        "global_pos": 0,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.224,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 1,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2217,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 2,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2238,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 3,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2282,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 4,
+        "original": "C",
+        "repaired": "T",
+        "confidence": 0.2229,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 5,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2222,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 8,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2224,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 15,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2246,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 16,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2232,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 18,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2299,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 19,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.228,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 20,
+        "original": "C",
+        "repaired": "T",
+        "confidence": 0.2238,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 21,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2274,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 24,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2224,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 25,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2291,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 27,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2298,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 29,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2186,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 30,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2263,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 31,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2238,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 32,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2211,
+        "action": "base_correction"
+      }
+    ],
+    "mutation_log": [
+      {
+        "type": "deamination_C_to_T",
+        "position": 19,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 206,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "oxidative_G_to_T",
+        "position": 254,
+        "original": "G",
+        "mutated": "T",
+        "change": "G\u2192T",
+        "mechanism": "8-oxoguanine formation via reactive oxygen species. Oxidative DNA damage from ancient burial environment.",
+        "disease_relevance": "Transversion associated with TP53 mutations in lung cancer."
+      },
+      {
+        "type": "oxidative_G_to_T",
+        "position": 499,
+        "original": "G",
+        "mutated": "T",
+        "change": "G\u2192T",
+        "mechanism": "8-oxoguanine formation via reactive oxygen species. Oxidative DNA damage from ancient burial environment.",
+        "disease_relevance": "Transversion associated with TP53 mutations in lung cancer."
+      },
+      {
+        "type": "random_substitution",
+        "position": 30,
+        "original": "T",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 32,
+        "original": "T",
+        "mutated": "C",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 54,
+        "original": "T",
+        "mutated": "C",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 105,
+        "original": "G",
+        "mutated": "C",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 119,
+        "original": "T",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 162,
+        "original": "C",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 191,
+        "original": "T",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 351,
+        "original": "C",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 391,
+        "original": "G",
+        "mutated": "A",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "deletion",
+        "position": 286,
+        "original": "G",
+        "mutated": "",
+        "change": "small deletion",
+        "mechanism": "Exonuclease activity or strand break re-ligation error.",
+        "disease_relevance": "Frameshift; analogous to CFTR \u0394F508 deletion in cystic fibrosis."
+      },
+      {
+        "type": "deletion",
+        "position": 207,
+        "original": "T",
+        "mutated": "",
+        "change": "small deletion",
+        "mechanism": "Exonuclease activity or strand break re-ligation error.",
+        "disease_relevance": "Frameshift; analogous to CFTR \u0394F508 deletion in cystic fibrosis."
+      },
+      {
+        "type": "insertion",
+        "position": 312,
+        "original": "",
+        "mutated": "T",
+        "change": "insertion",
+        "mechanism": "Replication slippage or transposable element insertion artefact.",
+        "disease_relevance": "Frameshift mutations; Huntington's disease is caused by CAG repeat expansion insertions."
+      },
+      {
+        "type": "missing_segment",
+        "position": 215,
+        "end": 270,
+        "original": "CTCTCGCAAGGATCTGTGCC...",
+        "mutated": "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN",
+        "change": "deletion of region",
+        "mechanism": "Physical degradation of DNA backbone via hydrolysis over millennia.",
+        "disease_relevance": "Large deletions can eliminate entire exons or regulatory elements, analogous to BRCA1/2 large deletions."
+      },
+      {
+        "type": "missing_segment",
+        "position": 355,
+        "end": 470,
+        "original": "AAATTGACAAATAGAAATTG...",
+        "mutated": "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN",
+        "change": "deletion of region",
+        "mechanism": "Physical degradation of DNA backbone via hydrolysis over millennia.",
+        "disease_relevance": "Large deletions can eliminate entire exons or regulatory elements, analogous to BRCA1/2 large deletions."
+      },
+      {
+        "type": "missing_segment",
+        "position": 234,
+        "end": 526,
+        "original": "NNNNNNNNNNNNNNNNNNNN...",
+        "mutated": "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN",
+        "change": "deletion of region",
+        "mechanism": "Physical degradation of DNA backbone via hydrolysis over millennia.",
+        "disease_relevance": "Large deletions can eliminate entire exons or regulatory elements, analogous to BRCA1/2 large deletions."
+      },
+      {
+        "type": "missing_segment",
+        "position": 200,
+        "end": 250,
+        "original": "CTTTCCTATTCTCTTNNNNN...",
+        "mutated": "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN",
+        "change": "deletion of region",
+        "mechanism": "Physical degradation of DNA backbone via hydrolysis over millennia.",
+        "disease_relevance": "Large deletions can eliminate entire exons or regulatory elements, analogous to BRCA1/2 large deletions."
+      }
+    ],
+    "mutation_summary": {
+      "deamination_C_to_T": 2,
+      "oxidative_G_to_T": 2,
+      "random_substitution": 9,
+      "deletion": 2,
+      "insertion": 1,
+      "missing_segment": 5
+    }
+  },
+  "saber_tooth_cat": {
+    "original_length": 1026,
+    "damaged_length": 1023,
+    "reconstructed_seq": "AAAAAATTACATAATAAATATAAAAATAAAAATAAAAAAATAAAAATTTAAAAAATAAAAATAATAAACATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAATAATAATAATATAAAAAAAAAAAAAACAAATATTATAAAAAATAATATAAAAAAAAATAAATAAAAAAATAAAAAAAATATAAAAAATAAAATAAAAAAAAATAAAAAAAAAAAAAAAAATAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAATAAA...",
+    "full_length": 1023,
+    "gaps_before": 496,
+    "gaps_after": 0,
+    "coverage": 1.0,
+    "reliability_score": 0.6114,
+    "mean_confidence": 0.6114,
+    "ae_repairs": [
+      {
+        "global_pos": 1,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2229,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 2,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2273,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 4,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.224,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 5,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2193,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 8,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2248,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 10,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2287,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 12,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2242,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 14,
+        "original": "C",
+        "repaired": "T",
+        "confidence": 0.2199,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 16,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2195,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 17,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2262,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 18,
+        "original": "G",
+        "repaired": "T",
+        "confidence": 0.2166,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 21,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2246,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 22,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2241,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 23,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2257,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 24,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2228,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 25,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.223,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 26,
+        "original": "C",
+        "repaired": "T",
+        "confidence": 0.2216,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 29,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2216,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 30,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2204,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 31,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2234,
+        "action": "base_correction"
+      }
+    ],
+    "mutation_log": [
+      {
+        "type": "deamination_C_to_T",
+        "position": 7,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 19,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 23,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 24,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 27,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 32,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 35,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 41,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 993,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 999,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 1012,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 109,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 163,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 499,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "oxidative_G_to_T",
+        "position": 95,
+        "original": "G",
+        "mutated": "T",
+        "change": "G\u2192T",
+        "mechanism": "8-oxoguanine formation via reactive oxygen species. Oxidative DNA damage from ancient burial environment.",
+        "disease_relevance": "Transversion associated with TP53 mutations in lung cancer."
+      },
+      {
+        "type": "oxidative_G_to_T",
+        "position": 653,
+        "original": "G",
+        "mutated": "T",
+        "change": "G\u2192T",
+        "mechanism": "8-oxoguanine formation via reactive oxygen species. Oxidative DNA damage from ancient burial environment.",
+        "disease_relevance": "Transversion associated with TP53 mutations in lung cancer."
+      },
+      {
+        "type": "oxidative_G_to_T",
+        "position": 710,
+        "original": "G",
+        "mutated": "T",
+        "change": "G\u2192T",
+        "mechanism": "8-oxoguanine formation via reactive oxygen species. Oxidative DNA damage from ancient burial environment.",
+        "disease_relevance": "Transversion associated with TP53 mutations in lung cancer."
+      },
+      {
+        "type": "oxidative_G_to_T",
+        "position": 932,
+        "original": "G",
+        "mutated": "T",
+        "change": "G\u2192T",
+        "mechanism": "8-oxoguanine formation via reactive oxygen species. Oxidative DNA damage from ancient burial environment.",
+        "disease_relevance": "Transversion associated with TP53 mutations in lung cancer."
+      },
+      {
+        "type": "oxidative_G_to_T",
+        "position": 996,
+        "original": "G",
+        "mutated": "T",
+        "change": "G\u2192T",
+        "mechanism": "8-oxoguanine formation via reactive oxygen species. Oxidative DNA damage from ancient burial environment.",
+        "disease_relevance": "Transversion associated with TP53 mutations in lung cancer."
+      },
+      {
+        "type": "random_substitution",
+        "position": 28,
+        "original": "G",
+        "mutated": "A",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      }
+    ],
+    "mutation_summary": {
+      "deamination_C_to_T": 10,
+      "deamination_G_to_A": 4,
+      "oxidative_G_to_T": 5,
+      "random_substitution": 14,
+      "deletion": 4,
+      "insertion": 1,
+      "missing_segment": 5
+    }
+  },
+  "woolly_rhino": {
+    "original_length": 788,
+    "damaged_length": 786,
+    "reconstructed_seq": "AAAAAAAATAAAAAAAAAAAAAATTTTATAAAAAAAAAAAAAAAAATAAATTATAAAAATTATTATAAAAAATAAAATAAAAAAAAAAAATAAAAAATATATAAATACATATAATATAATTAAATAAAAAAATAAAAAAAAAAAAAATTAATATAAAAATAAAAATAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...",
+    "full_length": 786,
+    "gaps_before": 437,
+    "gaps_after": 0,
+    "coverage": 1.0,
+    "reliability_score": 0.6119,
+    "mean_confidence": 0.6119,
+    "ae_repairs": [
+      {
+        "global_pos": 0,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2255,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 1,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.224,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 2,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2259,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 6,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2242,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 7,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2252,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 12,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2213,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 14,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2271,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 18,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2261,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 19,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.22,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 20,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2231,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 21,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2251,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 22,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2232,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 26,
+        "original": "G",
+        "repaired": "T",
+        "confidence": 0.223,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 29,
+        "original": "T",
+        "repaired": "A",
+        "confidence": 0.2275,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 31,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2278,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 38,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2237,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 39,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2293,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 42,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2208,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 44,
+        "original": "G",
+        "repaired": "A",
+        "confidence": 0.2209,
+        "action": "base_correction"
+      },
+      {
+        "global_pos": 45,
+        "original": "C",
+        "repaired": "A",
+        "confidence": 0.2289,
+        "action": "base_correction"
+      }
+    ],
+    "mutation_log": [
+      {
+        "type": "deamination_G_to_A",
+        "position": 17,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 29,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 32,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 758,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 759,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 760,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_G_to_A",
+        "position": 767,
+        "original": "G",
+        "mutated": "A",
+        "change": "G\u2192A",
+        "mechanism": "Reverse-strand complement of C\u2192T deamination. Common at 3\u2032 ends.",
+        "disease_relevance": "Similar to oncogenic point mutations seen in RAS family genes."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 98,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 174,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "deamination_C_to_T",
+        "position": 457,
+        "original": "C",
+        "mutated": "T",
+        "change": "C\u2192T",
+        "mechanism": "Hydrolytic deamination of cytosine removes amino group, converting it to uracil (read as thymine). Hallmark of ancient DNA.",
+        "disease_relevance": "Can create false KRAS/BRAF mutations if not corrected; associated with UV-induced skin cancer in living cells."
+      },
+      {
+        "type": "random_substitution",
+        "position": 34,
+        "original": "G",
+        "mutated": "A",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 93,
+        "original": "A",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 129,
+        "original": "G",
+        "mutated": "T",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 164,
+        "original": "A",
+        "mutated": "C",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 180,
+        "original": "T",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 194,
+        "original": "A",
+        "mutated": "C",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 241,
+        "original": "G",
+        "mutated": "C",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 271,
+        "original": "T",
+        "mutated": "C",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 430,
+        "original": "T",
+        "mutated": "G",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      },
+      {
+        "type": "random_substitution",
+        "position": 453,
+        "original": "C",
+        "mutated": "T",
+        "change": "N\u2192N",
+        "mechanism": "Random base substitution from background radiation, chemical damage, or sequencing error.",
+        "disease_relevance": "Depends on genomic context; may disrupt coding regions."
+      }
+    ],
+    "mutation_summary": {
+      "deamination_G_to_A": 5,
+      "deamination_C_to_T": 5,
+      "random_substitution": 19,
+      "deletion": 3,
+      "insertion": 1,
+      "missing_segment": 5
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "steps": [
+    {
+      "step": 1,
+      "name": "fetch",
+      "species": [
+        "neanderthal_mtDNA",
+        "mammoth_mtDNA",
+        "dodo_partial",
+        "thylacine_mtDNA",
+        "passenger_pigeon",
+        "cave_bear_mtDNA",
+        "saber_tooth_cat",
+        "woolly_rhino",
+        "human_mtDNA",
+        "elephant_mtDNA",
+        "gray_wolf_mtDNA",
+        "rock_pigeon_mtDNA"
+      ]
+    },
+    {
+      "step": 2,
+      "name": "simulate",
+      "count": 8
+    },
+    {
+      "step": 3,
+      "name": "align",
+      "results": {
+        "neanderthal_mtDNA": {
+          "identity": 0.725,
+          "n_variants": 8
+        },
+        "mammoth_mtDNA": {
+          "identity": 0.9,
+          "n_variants": 8
+        },
+        "dodo_partial": {
+          "identity": 0.575,
+          "n_variants": 17
+        },
+        "thylacine_mtDNA": {
+          "identity": 0.775,
+          "n_variants": 14
+        },
+        "passenger_pigeon": {
+          "identity": 0.575,
+          "n_variants": 19
+        },
+        "cave_bear_mtDNA": {
+          "identity": 0.525,
+          "n_variants": 16
+        },
+        "saber_tooth_cat": {
+          "identity": 0.45,
+          "n_variants": 28
+        },
+        "woolly_rhino": {
+          "identity": 0.5875,
+          "n_variants": 21
+        }
+      }
+    },
+    {
+      "step": 4,
+      "name": "encode",
+      "vocab_size": 4031
+    },
+    {
+      "step": 5,
+      "name": "train_models"
+    },
+    {
+      "step": 6,
+      "name": "reconstruct",
+      "results": {
+        "neanderthal_mtDNA": {
+          "coverage": 1.0,
+          "reliability": 0.6124
+        },
+        "mammoth_mtDNA": {
+          "coverage": 1.0,
+          "reliability": 0.6126
+        },
+        "dodo_partial": {
+          "coverage": 1.0,
+          "reliability": 0.6119
+        },
+        "thylacine_mtDNA": {
+          "coverage": 1.0,
+          "reliability": 0.6125
+        },
+        "passenger_pigeon": {
+          "coverage": 1.0,
+          "reliability": 0.6115
+        },
+        "cave_bear_mtDNA": {
+          "coverage": 1.0,
+          "reliability": 0.6117
+        },
+        "saber_tooth_cat": {
+          "coverage": 1.0,
+          "reliability": 0.6114
+        },
+        "woolly_rhino": {
+          "coverage": 1.0,
+          "reliability": 0.6119
+        }
+      }
+    },
+    {
+      "step": 7,
+      "name": "mapping",
+      "results": {
+        "neanderthal_mtDNA": {
+          "total": 77,
+          "mapped": 77,
+          "variants": 2999,
+          "hotspots": 1,
+          "disease_hits": 1
+        },
+        "mammoth_mtDNA": {
+          "total": 79,
+          "mapped": 79,
+          "variants": 3171,
+          "hotspots": 1,
+          "disease_hits": 1
+        },
+        "dodo_partial": {
+          "total": 6,
+          "mapped": 6,
+          "variants": 107,
+          "hotspots": 0,
+          "disease_hits": 0
+        },
+        "thylacine_mtDNA": {
+          "total": 81,
+          "mapped": 81,
+          "variants": 3979,
+          "hotspots": 1,
+          "disease_hits": 1
+        },
+        "passenger_pigeon": {
+          "total": 6,
+          "mapped": 6,
+          "variants": 59,
+          "hotspots": 0,
+          "disease_hits": 0
+        },
+        "cave_bear_mtDNA": {
+          "total": 6,
+          "mapped": 6,
+          "variants": 134,
+          "hotspots": 0,
+          "disease_hits": 0
+        },
+        "saber_tooth_cat": {
+          "total": 10,
+          "mapped": 10,
+          "variants": 354,
+          "hotspots": 0,
+          "disease_hits": 0
+        },
+        "woolly_rhino": {
+          "total": 8,
+          "mapped": 8,
+          "variants": 210,
+          "hotspots": 0,
+          "disease_hits": 0
+        }
+      }
+    }
+  ],
+  "start_time": 1775311759.0353773,
+  "end_time": 1775311860.7229853,
+  "elapsed_sec": 101.7
+}
