@@ -1,16 +1,661 @@
 {
   "species": "saber_tooth_cat",
-  "total_fragments": 11,
-  "mapped_fragments": 11,
-  "total_variants": 309,
+  "total_fragments": 10,
+  "mapped_fragments": 10,
+  "total_variants": 203,
   "hotspots": [],
   "disease_hits": [],
   "mappings": [
     {
       "mapped": true,
-      "ref_start": 2055,
-      "ref_end": 2109,
-      "identity": 0.3889,
+      "ref_start": 1895,
+      "ref_end": 1985,
+      "identity": 0.2556,
+      "mapping_score": 23,
+      "gene_region": {
+        "gene": "16S rRNA",
+        "start": 1671,
+        "end": 3229,
+        "type": "rRNA"
+      },
+      "variants": [
+        {
+          "ref_pos": 1896,
+          "ref_base": "G",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1897,
+          "ref_base": "G",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1899,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1900,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1903,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1904,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1906,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1907,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1912,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1913,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1914,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1915,
+          "ref_base": "C",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1919,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1924,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1925,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1926,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1927,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1930,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1931,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1932,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1933,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1934,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1936,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1937,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1939,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1943,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1944,
+          "ref_base": "C",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1945,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1946,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1947,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1948,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1949,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1950,
+          "ref_base": "T",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1951,
+          "ref_base": "C",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1953,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1955,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1957,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1958,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1959,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1960,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1961,
+          "ref_base": "G",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1963,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1964,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1965,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1966,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1968,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1970,
+          "ref_base": "C",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1972,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1973,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1974,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1975,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 1976,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        }
+      ],
+      "disease_hits": [],
+      "fragment_id": 0,
+      "fragment_len": 90
+    },
+    {
+      "mapped": true,
+      "ref_start": 0,
+      "ref_end": 133,
+      "identity": 0.0,
+      "mapping_score": 0,
+      "gene_region": {
+        "gene": "intergenic",
+        "type": "intergenic"
+      },
+      "variants": [],
+      "disease_hits": [],
+      "fragment_id": 1,
+      "fragment_len": 133
+    },
+    {
+      "mapped": true,
+      "ref_start": 255,
+      "ref_end": 354,
+      "identity": 0.0808,
+      "mapping_score": 8,
+      "gene_region": {
+        "gene": "D-loop",
+        "start": 1,
+        "end": 576,
+        "type": "control"
+      },
+      "variants": [
+        {
+          "ref_pos": 290,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 291,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 295,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 298,
+          "ref_base": "G",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 299,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 301,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 302,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 305,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 307,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 308,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 309,
+          "ref_base": "G",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 310,
+          "ref_base": "C",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 312,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 313,
+          "ref_base": "G",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 315,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 316,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 317,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 319,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 320,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 321,
+          "ref_base": "G",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 322,
+          "ref_base": "G",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 323,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 324,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 325,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 326,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 328,
+          "ref_base": "C",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 329,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 330,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 331,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 332,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 333,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 336,
+          "ref_base": "C",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 337,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 338,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 339,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 340,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 341,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 342,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 343,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 345,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 346,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 347,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 348,
+          "ref_base": "G",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 350,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 351,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 352,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 353,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        }
+      ],
+      "disease_hits": [],
+      "fragment_id": 2,
+      "fragment_len": 99
+    },
+    {
+      "mapped": true,
+      "ref_start": 2545,
+      "ref_end": 2625,
+      "identity": 0.2625,
       "mapping_score": 21,
       "gene_region": {
         "gene": "16S rRNA",
@@ -20,217 +665,269 @@
       },
       "variants": [
         {
-          "ref_pos": 2055,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2056,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2057,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2058,
-          "ref_base": "G",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2059,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2060,
+          "ref_pos": 2546,
           "ref_base": "A",
           "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 2062,
-          "ref_base": "G",
+          "ref_pos": 2549,
+          "ref_base": "T",
           "read_base": "C",
           "type": "SNP"
         },
         {
-          "ref_pos": 2063,
-          "ref_base": "G",
+          "ref_pos": 2551,
+          "ref_base": "C",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2555,
+          "ref_base": "A",
           "read_base": "C",
           "type": "SNP"
         },
         {
-          "ref_pos": 2066,
+          "ref_pos": 2557,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2558,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2561,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2563,
           "ref_base": "A",
           "read_base": "T",
           "type": "SNP"
         },
         {
-          "ref_pos": 2067,
+          "ref_pos": 2564,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2568,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2569,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2570,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2574,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2575,
+          "ref_base": "G",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2576,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2577,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2578,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2579,
+          "ref_base": "G",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2580,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2581,
           "ref_base": "C",
           "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 2070,
+          "ref_pos": 2583,
+          "ref_base": "T",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2584,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2587,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2588,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2589,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2590,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2591,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2593,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2594,
           "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2596,
+          "ref_base": "C",
           "read_base": "A",
           "type": "SNP"
         },
         {
-          "ref_pos": 2071,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2072,
+          "ref_pos": 2597,
           "ref_base": "G",
           "read_base": "C",
           "type": "SNP"
         },
         {
-          "ref_pos": 2077,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2078,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2081,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2083,
+          "ref_pos": 2600,
           "ref_base": "T",
           "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 2085,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2087,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2088,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2089,
+          "ref_pos": 2603,
           "ref_base": "A",
           "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 2091,
-          "ref_base": "T",
+          "ref_pos": 2605,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2606,
+          "ref_base": "C",
           "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 2095,
+          "ref_pos": 2607,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2608,
           "ref_base": "A",
           "read_base": "T",
           "type": "SNP"
         },
         {
-          "ref_pos": 2096,
+          "ref_pos": 2609,
           "ref_base": "A",
           "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 2097,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2099,
+          "ref_pos": 2611,
           "ref_base": "A",
-          "read_base": "C",
+          "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 2100,
+          "ref_pos": 2612,
           "ref_base": "G",
           "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2103,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2104,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2105,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2106,
-          "ref_base": "T",
-          "read_base": "G",
           "type": "SNP"
         }
       ],
       "disease_hits": [],
-      "fragment_id": 0,
-      "fragment_len": 54
-    },
-    {
-      "mapped": true,
-      "ref_start": 10,
-      "ref_end": 93,
-      "identity": 0.0241,
-      "mapping_score": 2,
-      "gene_region": {
-        "gene": "D-loop",
-        "start": 1,
-        "end": 576,
-        "type": "control"
-      },
-      "variants": [],
-      "disease_hits": [],
-      "fragment_id": 1,
-      "fragment_len": 83
+      "fragment_id": 3,
+      "fragment_len": 80
     },
     {
       "mapped": true,
       "ref_start": 0,
-      "ref_end": 100,
+      "ref_end": 140,
+      "identity": 0.0,
+      "mapping_score": 0,
+      "gene_region": {
+        "gene": "intergenic",
+        "type": "intergenic"
+      },
+      "variants": [],
+      "disease_hits": [],
+      "fragment_id": 4,
+      "fragment_len": 140
+    },
+    {
+      "mapped": true,
+      "ref_start": 0,
+      "ref_end": 133,
       "identity": 0.0,
       "mapping_score": 0,
       "gene_region": {
@@ -239,153 +936,27 @@
       },
       "variants": [
         {
-          "ref_pos": 57,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 59,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 60,
+          "ref_pos": 87,
           "ref_base": "C",
           "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 62,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 63,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 64,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 65,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 66,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 68,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 69,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 70,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 71,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 72,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 73,
-          "ref_base": "G",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 74,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 75,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 77,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 80,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 81,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 83,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 84,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 85,
-          "ref_base": "G",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 86,
-          "ref_base": "C",
-          "read_base": "T",
           "type": "SNP"
         },
         {
           "ref_pos": 88,
           "ref_base": "T",
-          "read_base": "G",
+          "read_base": "C",
           "type": "SNP"
         },
         {
           "ref_pos": 89,
           "ref_base": "T",
-          "read_base": "C",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 90,
+          "ref_base": "C",
+          "read_base": "A",
           "type": "SNP"
         },
         {
@@ -403,1525 +974,91 @@
         {
           "ref_pos": 93,
           "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 94,
-          "ref_base": "T",
           "read_base": "C",
           "type": "SNP"
         },
         {
           "ref_pos": 95,
           "ref_base": "T",
-          "read_base": "G",
+          "read_base": "C",
           "type": "SNP"
         },
         {
           "ref_pos": 96,
           "ref_base": "A",
-          "read_base": "G",
+          "read_base": "C",
           "type": "SNP"
         },
         {
           "ref_pos": 97,
           "ref_base": "G",
-          "read_base": "A",
+          "read_base": "C",
           "type": "SNP"
         },
         {
           "ref_pos": 98,
           "ref_base": "T",
-          "read_base": "C",
+          "read_base": "A",
           "type": "SNP"
         },
         {
           "ref_pos": 99,
           "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        }
-      ],
-      "disease_hits": [],
-      "fragment_id": 2,
-      "fragment_len": 100
-    },
-    {
-      "mapped": true,
-      "ref_start": 2550,
-      "ref_end": 2691,
-      "identity": 0.1702,
-      "mapping_score": 24,
-      "gene_region": {
-        "gene": "16S rRNA",
-        "start": 1671,
-        "end": 3229,
-        "type": "rRNA"
-      },
-      "variants": [
-        {
-          "ref_pos": 2550,
-          "ref_base": "C",
           "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 2551,
-          "ref_base": "C",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2552,
-          "ref_base": "C",
+          "ref_pos": 100,
+          "ref_base": "T",
           "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 2554,
-          "ref_base": "C",
+          "ref_pos": 102,
+          "ref_base": "T",
           "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 2555,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2556,
-          "ref_base": "G",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2558,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2561,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2562,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2563,
+          "ref_pos": 103,
           "ref_base": "A",
           "read_base": "T",
           "type": "SNP"
         },
         {
-          "ref_pos": 2566,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2568,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2569,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2573,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2577,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2578,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2580,
+          "ref_pos": 104,
           "ref_base": "G",
           "read_base": "A",
           "type": "SNP"
         },
         {
-          "ref_pos": 2581,
-          "ref_base": "C",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2582,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2584,
+          "ref_pos": 106,
           "ref_base": "A",
-          "read_base": "T",
+          "read_base": "C",
           "type": "SNP"
         },
         {
-          "ref_pos": 2585,
+          "ref_pos": 108,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 109,
           "ref_base": "C",
           "read_base": "G",
           "type": "SNP"
         },
-        {
-          "ref_pos": 2587,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2590,
-          "ref_base": "C",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2591,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2592,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2594,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2601,
-          "ref_base": "C",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2602,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2603,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2604,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2605,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2606,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2607,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2608,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2609,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2610,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2611,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2612,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2613,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2614,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2616,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2618,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2620,
-          "ref_base": "C",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2621,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2622,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2623,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2624,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2625,
-          "ref_base": "C",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2626,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2627,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2628,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2629,
-          "ref_base": "C",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2630,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2631,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2632,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2634,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2639,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2640,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2641,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2643,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2646,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2647,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2648,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2649,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2650,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2651,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2652,
-          "ref_base": "G",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2653,
-          "ref_base": "C",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2655,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2657,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2658,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2659,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2660,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2661,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2662,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2663,
-          "ref_base": "G",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2664,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2665,
-          "ref_base": "G",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2666,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2667,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2668,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2669,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2670,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2671,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2672,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2673,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2674,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2675,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2676,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2677,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2680,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2681,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2682,
-          "ref_base": "G",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2683,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2685,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2686,
-          "ref_base": "C",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2688,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2689,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2690,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        }
-      ],
-      "disease_hits": [],
-      "fragment_id": 3,
-      "fragment_len": 141
-    },
-    {
-      "mapped": true,
-      "ref_start": 2660,
-      "ref_end": 2782,
-      "identity": 0.1803,
-      "mapping_score": 22,
-      "gene_region": {
-        "gene": "16S rRNA",
-        "start": 1671,
-        "end": 3229,
-        "type": "rRNA"
-      },
-      "variants": [
-        {
-          "ref_pos": 2660,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2662,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2663,
-          "ref_base": "G",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2664,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2668,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2671,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2672,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2673,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2675,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2676,
-          "ref_base": "G",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2677,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2678,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2681,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2683,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2685,
-          "ref_base": "C",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2686,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2688,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2691,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2692,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2693,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2694,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2695,
-          "ref_base": "G",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2697,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2698,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2700,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2706,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2707,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2708,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2710,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2711,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2712,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2713,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2715,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2716,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2717,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2718,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2720,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2721,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2722,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2723,
-          "ref_base": "G",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2724,
-          "ref_base": "G",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2725,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2727,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2728,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2730,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2731,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2735,
-          "ref_base": "C",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2736,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2738,
-          "ref_base": "C",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2740,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2741,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2743,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2745,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2746,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2747,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2748,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2749,
-          "ref_base": "G",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2750,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2751,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2752,
-          "ref_base": "C",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2753,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2754,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2755,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2757,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2758,
-          "ref_base": "C",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2759,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2760,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2761,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2762,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2763,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2765,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2766,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2767,
-          "ref_base": "C",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2768,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2770,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2771,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2772,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2773,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2774,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2775,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2776,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2777,
-          "ref_base": "G",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2778,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 2779,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        }
-      ],
-      "disease_hits": [],
-      "fragment_id": 4,
-      "fragment_len": 122
-    },
-    {
-      "mapped": true,
-      "ref_start": 3290,
-      "ref_end": 3350,
-      "identity": 0.0833,
-      "mapping_score": 5,
-      "gene_region": {
-        "gene": "intergenic",
-        "type": "intergenic"
-      },
-      "variants": [],
-      "disease_hits": [],
-      "fragment_id": 5,
-      "fragment_len": 60
-    },
-    {
-      "mapped": true,
-      "ref_start": 0,
-      "ref_end": 145,
-      "identity": 0.0,
-      "mapping_score": 0,
-      "gene_region": {
-        "gene": "intergenic",
-        "type": "intergenic"
-      },
-      "variants": [],
-      "disease_hits": [],
-      "fragment_id": 6,
-      "fragment_len": 145
-    },
-    {
-      "mapped": true,
-      "ref_start": 0,
-      "ref_end": 113,
-      "identity": 0.0,
-      "mapping_score": 0,
-      "gene_region": {
-        "gene": "intergenic",
-        "type": "intergenic"
-      },
-      "variants": [],
-      "disease_hits": [],
-      "fragment_id": 7,
-      "fragment_len": 113
-    },
-    {
-      "mapped": true,
-      "ref_start": 0,
-      "ref_end": 90,
-      "identity": 0.0,
-      "mapping_score": 0,
-      "gene_region": {
-        "gene": "intergenic",
-        "type": "intergenic"
-      },
-      "variants": [],
-      "disease_hits": [],
-      "fragment_id": 8,
-      "fragment_len": 90
-    },
-    {
-      "mapped": true,
-      "ref_start": 3120,
-      "ref_end": 3202,
-      "identity": 0.1707,
-      "mapping_score": 14,
-      "gene_region": {
-        "gene": "16S rRNA",
-        "start": 1671,
-        "end": 3229,
-        "type": "rRNA"
-      },
-      "variants": [
-        {
-          "ref_pos": 3142,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3144,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3145,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3146,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3148,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3151,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3153,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3154,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3156,
-          "ref_base": "C",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3157,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3159,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3160,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3162,
-          "ref_base": "C",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3163,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3167,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3169,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3170,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3171,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3172,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3174,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3175,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3177,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3178,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3179,
-          "ref_base": "A",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3181,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3182,
-          "ref_base": "C",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3183,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3184,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3186,
-          "ref_base": "C",
-          "read_base": "T",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3187,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3188,
-          "ref_base": "A",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3189,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3190,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3191,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3192,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3193,
-          "ref_base": "T",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3194,
-          "ref_base": "C",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3198,
-          "ref_base": "T",
-          "read_base": "A",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3199,
-          "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3200,
-          "ref_base": "T",
-          "read_base": "G",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 3201,
-          "ref_base": "C",
-          "read_base": "G",
-          "type": "SNP"
-        }
-      ],
-      "disease_hits": [],
-      "fragment_id": 9,
-      "fragment_len": 82
-    },
-    {
-      "mapped": true,
-      "ref_start": 110,
-      "ref_end": 146,
-      "identity": 0.4444,
-      "mapping_score": 16,
-      "gene_region": {
-        "gene": "D-loop",
-        "start": 1,
-        "end": 576,
-        "type": "control"
-      },
-      "variants": [
         {
           "ref_pos": 110,
           "ref_base": "T",
           "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 111,
+          "ref_base": "T",
+          "read_base": "G",
           "type": "SNP"
         },
         {
@@ -1931,9 +1068,15 @@
           "type": "SNP"
         },
         {
+          "ref_pos": 113,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
           "ref_pos": 114,
           "ref_base": "A",
-          "read_base": "C",
+          "read_base": "G",
           "type": "SNP"
         },
         {
@@ -1945,13 +1088,13 @@
         {
           "ref_pos": 116,
           "ref_base": "A",
-          "read_base": "G",
+          "read_base": "T",
           "type": "SNP"
         },
         {
           "ref_pos": 117,
           "ref_base": "T",
-          "read_base": "G",
+          "read_base": "C",
           "type": "SNP"
         },
         {
@@ -1963,85 +1106,288 @@
         {
           "ref_pos": 119,
           "ref_base": "C",
-          "read_base": "A",
+          "read_base": "G",
           "type": "SNP"
         },
         {
           "ref_pos": 120,
           "ref_base": "A",
-          "read_base": "G",
+          "read_base": "C",
           "type": "SNP"
         },
         {
           "ref_pos": 121,
           "ref_base": "A",
-          "read_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 122,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 123,
+          "ref_base": "T",
+          "read_base": "A",
           "type": "SNP"
         },
         {
           "ref_pos": 124,
           "ref_base": "C",
-          "read_base": "T",
+          "read_base": "G",
           "type": "SNP"
         },
         {
           "ref_pos": 125,
           "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 126,
+          "ref_base": "C",
           "read_base": "G",
           "type": "SNP"
         },
         {
           "ref_pos": 127,
           "ref_base": "C",
-          "read_base": "G",
+          "read_base": "A",
           "type": "SNP"
         },
         {
           "ref_pos": 128,
           "ref_base": "A",
-          "read_base": "C",
-          "type": "SNP"
-        },
-        {
-          "ref_pos": 132,
-          "ref_base": "C",
           "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 135,
-          "ref_base": "A",
+          "ref_pos": 130,
+          "ref_base": "G",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 131,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        }
+      ],
+      "disease_hits": [],
+      "fragment_id": 5,
+      "fragment_len": 133
+    },
+    {
+      "mapped": true,
+      "ref_start": 2480,
+      "ref_end": 2584,
+      "identity": 0.2115,
+      "mapping_score": 22,
+      "gene_region": {
+        "gene": "16S rRNA",
+        "start": 1671,
+        "end": 3229,
+        "type": "rRNA"
+      },
+      "variants": [
+        {
+          "ref_pos": 2480,
+          "ref_base": "G",
           "read_base": "T",
           "type": "SNP"
         },
         {
-          "ref_pos": 137,
+          "ref_pos": 2481,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2483,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2484,
+          "ref_base": "A",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2485,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2488,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2494,
+          "ref_base": "G",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2500,
           "ref_base": "T",
           "read_base": "G",
           "type": "SNP"
         },
         {
-          "ref_pos": 139,
-          "ref_base": "A",
-          "read_base": "T",
+          "ref_pos": 2501,
+          "ref_base": "G",
+          "read_base": "C",
           "type": "SNP"
         },
         {
-          "ref_pos": 142,
+          "ref_pos": 2502,
           "ref_base": "A",
           "read_base": "C",
           "type": "SNP"
         },
         {
-          "ref_pos": 145,
+          "ref_pos": 2504,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2505,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2506,
           "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2507,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2508,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2510,
+          "ref_base": "C",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2513,
+          "ref_base": "G",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2514,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2517,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2518,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2519,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2521,
+          "ref_base": "C",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2523,
+          "ref_base": "G",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 2525,
+          "ref_base": "T",
           "read_base": "A",
           "type": "SNP"
         }
       ],
       "disease_hits": [],
-      "fragment_id": 10,
-      "fragment_len": 36
+      "fragment_id": 6,
+      "fragment_len": 104
+    },
+    {
+      "mapped": true,
+      "ref_start": 0,
+      "ref_end": 71,
+      "identity": 0.0,
+      "mapping_score": 0,
+      "gene_region": {
+        "gene": "intergenic",
+        "type": "intergenic"
+      },
+      "variants": [],
+      "disease_hits": [],
+      "fragment_id": 7,
+      "fragment_len": 71
+    },
+    {
+      "mapped": true,
+      "ref_start": 0,
+      "ref_end": 92,
+      "identity": 0.0,
+      "mapping_score": 0,
+      "gene_region": {
+        "gene": "intergenic",
+        "type": "intergenic"
+      },
+      "variants": [],
+      "disease_hits": [],
+      "fragment_id": 8,
+      "fragment_len": 92
+    },
+    {
+      "mapped": true,
+      "ref_start": 2115,
+      "ref_end": 2178,
+      "identity": 0.0635,
+      "mapping_score": 4,
+      "gene_region": {
+        "gene": "16S rRNA",
+        "start": 1671,
+        "end": 3229,
+        "type": "rRNA"
+      },
+      "variants": [],
+      "disease_hits": [],
+      "fragment_id": 9,
+      "fragment_len": 63
     }
   ]
 }

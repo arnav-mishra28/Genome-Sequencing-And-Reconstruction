@@ -1,8 +1,8 @@
 {
   "name": "dodo_partial",
-  "score": 27.5,
-  "identity": 0.5833,
-  "aligned_length": 60,
+  "score": 190.0,
+  "identity": 0.5,
+  "aligned_length": 80,
   "variants": [
     {
       "aln_pos": 0,
@@ -41,43 +41,67 @@
       "type": "unknown"
     },
     {
-      "aln_pos": 17,
+      "aln_pos": 15,
       "ref_base": "2",
-      "qry_base": "8",
+      "qry_base": " ",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 16,
+      "ref_base": "3",
+      "qry_base": " ",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 17,
+      "ref_base": "3",
+      "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 18,
-      "ref_base": "0",
-      "qry_base": "2",
-      "type": "unknown"
-    },
-    {
-      "aln_pos": 35,
-      "ref_base": "C",
-      "qry_base": "T",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 57,
-      "ref_base": "3",
-      "qry_base": "4",
-      "type": "unknown"
-    },
-    {
-      "aln_pos": 58,
-      "ref_base": "5",
+      "ref_base": "6",
       "qry_base": "0",
       "type": "unknown"
     },
     {
+      "aln_pos": 25,
+      "ref_base": "C",
+      "qry_base": "A",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 28,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 51,
+      "ref_base": "T",
+      "qry_base": "C",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 55,
+      "ref_base": "C",
+      "qry_base": "A",
+      "type": "transversion"
+    },
+    {
       "aln_pos": 59,
-      "ref_base": "6",
-      "qry_base": "5",
-      "type": "unknown"
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 77,
+      "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
     }
   ],
-  "n_variants": 12,
-  "query_aligned": "target          382 TT-TG-----CGT-CTAGAT-GAT---TTG--CGTA 405",
-  "ref_aligned": "query           320 TTATGCTCGACGTACCAGATGGATTTATTGATCGTA 356"
+  "n_variants": 16,
+  "query_aligned": "target            0 CAAACAAAGAC----TAA---------AG--CAGGAG-TTGAATTTAAG----CTGGTG-",
+  "ref_aligned": "query          2336 CAAACCAAAACATTTTAACCATTTCTCAGTATAGGCGATAGAA---AAGACCTCTGGCGC"
 }

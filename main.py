@@ -219,12 +219,13 @@ def _generate_visualizations(results):
     # Summary
     viz_dir = os.path.join(BASE_DIR, "results", "visualizations")
     if os.path.exists(viz_dir):
-        html_files = sorted(f for f in os.listdir(viz_dir)
-                            if f.endswith(".html"))
-        if html_files:
-            print("\n  📊 Generated Visualizations:")
-            for hf in html_files:
-                print(f"    • {os.path.join(viz_dir, hf)}")
+        png_files = sorted(f for f in os.listdir(viz_dir)
+                            if f.endswith(".png"))
+        if png_files:
+            print(f"\n  📊 Generated {len(png_files)} Visualization Images:")
+            for pf in png_files:
+                print(f"    • {os.path.join(viz_dir, pf)}")
+            print(f"\n  📂 Open folder: {viz_dir}")
 
 
 def main():
