@@ -1,7 +1,7 @@
 {
   "name": "cave_bear_mtDNA",
-  "score": 120.5,
-  "identity": 0.5375,
+  "score": 49.5,
+  "identity": 0.5625,
   "aligned_length": 80,
   "variants": [
     {
@@ -42,90 +42,54 @@
     },
     {
       "aln_pos": 15,
-      "ref_base": "2",
+      "ref_base": "4",
       "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 16,
-      "ref_base": "2",
+      "ref_base": "0",
       "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 17,
-      "ref_base": "7",
+      "ref_base": "0",
       "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 18,
-      "ref_base": "5",
-      "qry_base": "3",
+      "ref_base": "2",
+      "qry_base": "0",
       "type": "unknown"
     },
     {
-      "aln_pos": 26,
-      "ref_base": "G",
-      "qry_base": "T",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 38,
-      "ref_base": "T",
-      "qry_base": "G",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 39,
+      "aln_pos": 21,
       "ref_base": "A",
       "qry_base": "C",
       "type": "transversion"
     },
     {
-      "aln_pos": 40,
-      "ref_base": "G",
-      "qry_base": "A",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 50,
+      "aln_pos": 68,
       "ref_base": "A",
       "qry_base": "C",
       "type": "transversion"
     },
     {
-      "aln_pos": 51,
+      "aln_pos": 69,
       "ref_base": "A",
       "qry_base": "T",
       "type": "transversion"
     },
     {
-      "aln_pos": 52,
-      "ref_base": "G",
-      "qry_base": "C",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 55,
+      "aln_pos": 76,
       "ref_base": "A",
       "qry_base": "T",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 60,
-      "ref_base": "A",
-      "qry_base": "T",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 79,
-      "ref_base": "C",
-      "qry_base": "A",
       "type": "transversion"
     }
   ],
-  "n_variants": 20,
-  "query_aligned": "target            3 TCC---TTG-TT--AATTGCAACCCATCTTCTCTCTAAATTCA--ATCA---A--G-TCA",
-  "ref_aligned": "query          2275 TCCCGAGTGATTAAAATTTAGACCCA-C--AAGTCAAAATACAACATCACTTATTGATCC"
+  "n_variants": 14,
+  "query_aligned": "target            0 GCATCCTGG-TT---AAT-----TGC-AGCC--CATC----TTCTC-TCTAAA--TTCAA",
+  "ref_aligned": "query          4002 GAAT--TGGATTCGAAATAAACATGCTAGCCATCATCCCTATTCTCATAAAAAAGTACAA"
 }

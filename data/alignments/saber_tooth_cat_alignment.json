@@ -1,7 +1,7 @@
 {
   "name": "saber_tooth_cat",
-  "score": 99.5,
-  "identity": 0.525,
+  "score": 194.0,
+  "identity": 0.5375,
   "aligned_length": 80,
   "variants": [
     {
@@ -42,96 +42,60 @@
     },
     {
       "aln_pos": 15,
-      "ref_base": "2",
+      "ref_base": "1",
       "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 16,
-      "ref_base": "7",
-      "qry_base": "2",
-      "type": "unknown"
-    },
-    {
-      "aln_pos": 17,
-      "ref_base": "4",
+      "ref_base": "9",
       "qry_base": "6",
       "type": "unknown"
     },
     {
+      "aln_pos": 17,
+      "ref_base": "6",
+      "qry_base": "9",
+      "type": "unknown"
+    },
+    {
       "aln_pos": 18,
-      "ref_base": "8",
+      "ref_base": "9",
       "qry_base": "4",
       "type": "unknown"
     },
     {
-      "aln_pos": 26,
-      "ref_base": "C",
-      "qry_base": "G",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 29,
-      "ref_base": "T",
-      "qry_base": "G",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 30,
-      "ref_base": "A",
-      "qry_base": "C",
-      "type": "transversion"
-    },
-    {
       "aln_pos": 31,
+      "ref_base": "G",
+      "qry_base": "C",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 35,
       "ref_base": "T",
       "qry_base": "C",
       "type": "transition"
     },
     {
-      "aln_pos": 44,
+      "aln_pos": 36,
       "ref_base": "T",
       "qry_base": "G",
       "type": "transversion"
     },
     {
-      "aln_pos": 60,
-      "ref_base": "C",
-      "qry_base": "G",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 62,
+      "aln_pos": 39,
       "ref_base": "T",
       "qry_base": "G",
       "type": "transversion"
     },
     {
-      "aln_pos": 63,
-      "ref_base": "C",
+      "aln_pos": 67,
+      "ref_base": "T",
       "qry_base": "A",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 65,
-      "ref_base": "T",
-      "qry_base": "C",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 71,
-      "ref_base": "T",
-      "qry_base": "C",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 79,
-      "ref_base": "C",
-      "qry_base": "G",
       "type": "transversion"
     }
   ],
-  "n_variants": 21,
-  "query_aligned": "target          264 TGTGATGTTGCCCAAC--CA---CGC-----G--CCGATCGTGATCGCCGACAG--TTCG",
-  "ref_aligned": "query          2748 TGT--TCTTTATCAACATCATCTCTCTTATTGTCCCGATCCTTCTTGCCG-TAGCCTTCC"
+  "n_variants": 15,
+  "query_aligned": "target          694 GCC-GCC--GTCA-ACGTGGT----GGCCGACG--A--C-GACGTCGAGC---GG--GC-",
+  "ref_aligned": "query          1969 GCCTGCCCAGTGACATTTGTTTAACGGCCG-CGGTATCCTGAC--CGTGCAAAGGTAGCA"
 }

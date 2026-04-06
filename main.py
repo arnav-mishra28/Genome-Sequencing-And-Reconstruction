@@ -35,6 +35,7 @@ REQUIRED_DIRS = [
     "evaluation",
     "api",
     "visualization",
+    "simulation",
     "results",
     os.path.join("results", "visualizations"),
 ]
@@ -43,7 +44,7 @@ for d in REQUIRED_DIRS:
 
 # ── Create __init__.py for every package folder ────────────────────────────────
 PACKAGES = ["config", "data", "preprocessing", "models", "pipeline",
-            "visualization", "training", "evaluation", "api"]
+            "visualization", "training", "evaluation", "api", "simulation"]
 for pkg in PACKAGES:
     init_path = os.path.join(BASE_DIR, pkg, "__init__.py")
     if not os.path.exists(init_path):
@@ -62,6 +63,7 @@ BANNER = """
 ║  Powered by: DNABERT-2 · ESM · AlphaFold Attention · GNN        ║
 ║  Data:       NCBI · Ensembl · UCSC Genome Browser                ║
 ║  Training:   4-Phase Curriculum Learning                         ║
+║  Live Sim:   Real-time 3D/2D Damage Visualization                ║
 ║  API:        FastAPI + Swagger                                   ║
 ╚══════════════════════════════════════════════════════════════════╝
 """
@@ -99,6 +101,10 @@ def verify_modules():
         os.path.join(BASE_DIR, "pipeline", "genome_mapper.py"),
         os.path.join(BASE_DIR, "visualization", "helix_3d.py"),
         os.path.join(BASE_DIR, "visualization", "genome_map_2d.py"),
+        os.path.join(BASE_DIR, "visualization", "live_helix_3d.py"),
+        os.path.join(BASE_DIR, "visualization", "live_genome_2d.py"),
+        os.path.join(BASE_DIR, "visualization", "live_viewer.py"),
+        os.path.join(BASE_DIR, "simulation", "live_simulation.py"),
     ]
     for path in checks:
         if not os.path.exists(path):
@@ -136,6 +142,22 @@ def cmd_dashboard(args):
     """Launch Dash dashboard."""
     from visualization.realtime_dashboard import run_dashboard
     run_dashboard()
+
+
+def cmd_simulate(args):
+    """Launch live real-time DNA damage simulation with 3D/2D visualization."""
+    from visualization.live_viewer import launch_live_simulation
+
+    launch_live_simulation(
+        species_name=args.species,
+        sequence=args.sequence,
+        speed=args.speed,
+        manual=args.manual,
+        show_3d=not args.no_3d,
+        max_bases=args.max_bases,
+        max_events=args.max_events,
+        seed=args.seed,
+    )
 
 
 def cmd_evaluate(args):
@@ -259,6 +281,44 @@ def main():
     # ── evaluate ──────────────────────────────────────────────────────────────
     p_eval = sub.add_parser("evaluate", help="Run benchmark evaluation")
 
+    # ── simulate ─────────────────────────────────────────────────────────────
+    p_sim = sub.add_parser(
+        "simulate",
+        help="Launch live real-time DNA damage simulation with 3D/2D visualization",
+    )
+    p_sim.add_argument(
+        "--species", type=str, default="neanderthal_mtDNA",
+        help="Species to simulate damage on (default: neanderthal_mtDNA)",
+    )
+    p_sim.add_argument(
+        "--sequence", type=str, default=None,
+        help="Custom DNA sequence string (overrides --species loading)",
+    )
+    p_sim.add_argument(
+        "--speed", type=float, default=5.0,
+        help="Events per second in auto mode (default: 5.0)",
+    )
+    p_sim.add_argument(
+        "--manual", action="store_true",
+        help="Start paused in manual step-through mode",
+    )
+    p_sim.add_argument(
+        "--no-3d", action="store_true",
+        help="Skip 3D helix visualization (faster on slower machines)",
+    )
+    p_sim.add_argument(
+        "--max-bases", type=int, default=200,
+        help="Max bases to show in 3D helix view (default: 200)",
+    )
+    p_sim.add_argument(
+        "--max-events", type=int, default=500,
+        help="Max damage events to simulate (default: 500)",
+    )
+    p_sim.add_argument(
+        "--seed", type=int, default=42,
+        help="Random seed for reproducibility (default: 42)",
+    )
+
     args = parser.parse_args()
 
     print(BANNER)
@@ -291,6 +351,8 @@ def main():
     elif args.command == "evaluate":
         from config.settings import RESULTS_DIR
         cmd_evaluate(args)
+    elif args.command == "simulate":
+        cmd_simulate(args)
     else:
         # Default: run full pipeline (backward compatible)
         # Create a namespace with default args

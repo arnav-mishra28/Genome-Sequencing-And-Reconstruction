@@ -1,32 +1,32 @@
 [
   {
     "epoch": 1,
-    "loss": 1.534984,
-    "val_loss": 1.595457
+    "loss": 1.520284,
+    "val_loss": 1.582345
   },
   {
     "epoch": 2,
-    "loss": 1.307989,
-    "val_loss": 1.573769
+    "loss": 1.302674,
+    "val_loss": 1.562735
   },
   {
     "epoch": 3,
-    "loss": 1.156997,
-    "val_loss": 1.546378
+    "loss": 1.102099,
+    "val_loss": 1.535328
   },
   {
     "epoch": 4,
-    "loss": 1.129364,
-    "val_loss": 1.512446
+    "loss": 1.006183,
+    "val_loss": 1.497081
   },
   {
     "epoch": 5,
-    "loss": 0.940785,
-    "val_loss": 1.469719
+    "loss": 0.974196,
+    "val_loss": 1.445134
   },
   {
     "epoch": 6,
-    "loss": 0.950531,
-    "val_loss": 1.414581
+    "loss": 0.927606,
+    "val_loss": 1.371539
   }
 ]

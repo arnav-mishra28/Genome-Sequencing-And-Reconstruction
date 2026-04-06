@@ -1,7 +1,7 @@
 {
   "name": "neanderthal_mtDNA",
-  "score": 8129.0,
-  "identity": 0.85,
+  "score": 7582.5,
+  "identity": 0.9,
   "aligned_length": 80,
   "variants": [
     {
@@ -41,43 +41,19 @@
       "type": "unknown"
     },
     {
-      "aln_pos": 25,
+      "aln_pos": 36,
       "ref_base": "C",
       "qry_base": "T",
       "type": "transition"
     },
     {
-      "aln_pos": 27,
-      "ref_base": "G",
-      "qry_base": "A",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 35,
-      "ref_base": "A",
-      "qry_base": "T",
+      "aln_pos": 41,
+      "ref_base": "T",
+      "qry_base": "G",
       "type": "transversion"
-    },
-    {
-      "aln_pos": 37,
-      "ref_base": "C",
-      "qry_base": "T",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 46,
-      "ref_base": "C",
-      "qry_base": "T",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 48,
-      "ref_base": "C",
-      "qry_base": "T",
-      "type": "transition"
     }
   ],
-  "n_variants": 12,
-  "query_aligned": "target            0 GATCATAAGTCTATCTCTCTATTAACTATTCACGGGAGCTCTCCATGCATTTGGTATTTT",
+  "n_variants": 8,
+  "query_aligned": "target            0 GATCACAGGTCTATCATCCTAGTAACCACTCACGGGAGCTCTCCATGCATTTGGTATTTT",
   "ref_aligned": "query             0 GATCACAGGTCTATCACCCTATTAACCACTCACGGGAGCTCTCCATGCATTTGGTATTTT"
 }

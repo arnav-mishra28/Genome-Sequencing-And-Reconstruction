@@ -1,7 +1,7 @@
 {
   "name": "dodo_partial",
-  "score": 190.0,
-  "identity": 0.5,
+  "score": 89.0,
+  "identity": 0.4875,
   "aligned_length": 80,
   "variants": [
     {
@@ -48,60 +48,60 @@
     },
     {
       "aln_pos": 16,
-      "ref_base": "3",
+      "ref_base": "9",
       "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 17,
-      "ref_base": "3",
+      "ref_base": "0",
       "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 18,
-      "ref_base": "6",
+      "ref_base": "8",
       "qry_base": "0",
       "type": "unknown"
     },
     {
-      "aln_pos": 25,
-      "ref_base": "C",
-      "qry_base": "A",
-      "type": "transversion"
-    },
-    {
       "aln_pos": 28,
-      "ref_base": "A",
-      "qry_base": "G",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 51,
       "ref_base": "T",
       "qry_base": "C",
       "type": "transition"
     },
     {
-      "aln_pos": 55,
-      "ref_base": "C",
+      "aln_pos": 36,
+      "ref_base": "T",
+      "qry_base": "C",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 40,
+      "ref_base": "T",
       "qry_base": "A",
       "type": "transversion"
     },
     {
-      "aln_pos": 59,
+      "aln_pos": 48,
+      "ref_base": "T",
+      "qry_base": "G",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 50,
       "ref_base": "A",
       "qry_base": "T",
       "type": "transversion"
     },
     {
-      "aln_pos": 77,
-      "ref_base": "C",
+      "aln_pos": 79,
+      "ref_base": "A",
       "qry_base": "T",
-      "type": "transition"
+      "type": "transversion"
     }
   ],
   "n_variants": 16,
-  "query_aligned": "target            0 CAAACAAAGAC----TAA---------AG--CAGGAG-TTGAATTTAAG----CTGGTG-",
-  "ref_aligned": "query          2336 CAAACCAAAACATTTTAACCATTTCTCAGTATAGGCGATAGAA---AAGACCTCTGGCGC"
+  "query_aligned": "target            0 TA----AACAGA--AACTAAAGC----AGGTGT---T-GGA---TT--TAAAGCTG-G-T",
+  "ref_aligned": "query          2908 TATGACAATAGAAGAATTAATGCTAAAATGAGTAACTCGGAACCTTCCT----CTGCGCA"
 }
