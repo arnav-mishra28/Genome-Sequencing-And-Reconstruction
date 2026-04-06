@@ -1,0 +1,95 @@
+{
+  "name": "cave_bear_mtDNA",
+  "score": 45.0,
+  "identity": 0.5375,
+  "aligned_length": 80,
+  "variants": [
+    {
+      "aln_pos": 0,
+      "ref_base": "q",
+      "qry_base": "t",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 1,
+      "ref_base": "u",
+      "qry_base": "a",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 2,
+      "ref_base": "e",
+      "qry_base": "r",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 3,
+      "ref_base": "r",
+      "qry_base": "g",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 4,
+      "ref_base": "y",
+      "qry_base": "e",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 5,
+      "ref_base": " ",
+      "qry_base": "t",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 15,
+      "ref_base": "3",
+      "qry_base": " ",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 16,
+      "ref_base": "9",
+      "qry_base": " ",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 17,
+      "ref_base": "9",
+      "qry_base": " ",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 18,
+      "ref_base": "8",
+      "qry_base": "2",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 26,
+      "ref_base": "A",
+      "qry_base": "C",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 62,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 65,
+      "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 78,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    }
+  ],
+  "n_variants": 14,
+  "query_aligned": "target            2 ATC---CTT--ATT---AAT-----TGC-AGCC--CAT--CTTTTTTC-TAAA----TTC",
+  "ref_aligned": "query          3998 ATCTGAATTGGATTCGAAATAAACATGCTAGCCATCATCCCTATTCTCATAAAAAAGTAC"
+}

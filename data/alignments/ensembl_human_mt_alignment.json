@@ -1,0 +1,59 @@
+{
+  "name": "ensembl_human_mt",
+  "score": 7335.0,
+  "identity": 0.875,
+  "aligned_length": 80,
+  "variants": [
+    {
+      "aln_pos": 0,
+      "ref_base": "q",
+      "qry_base": "t",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 1,
+      "ref_base": "u",
+      "qry_base": "a",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 2,
+      "ref_base": "e",
+      "qry_base": "r",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 3,
+      "ref_base": "r",
+      "qry_base": "g",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 4,
+      "ref_base": "y",
+      "qry_base": "e",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 5,
+      "ref_base": " ",
+      "qry_base": "t",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 23,
+      "ref_base": "C",
+      "qry_base": "A",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 45,
+      "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
+    }
+  ],
+  "n_variants": 8,
+  "query_aligned": "target            0 GA-AACAGGTCTATCACCCTATTAATCACTCACGGGAGCT-TCCATGCATTTGGTATTTT",
+  "ref_aligned": "query             0 GATCACAGGTCTATCACCCTATTAACCACTCACGGGAGCTCTCCATGCATTTGGTATTTT"
+}

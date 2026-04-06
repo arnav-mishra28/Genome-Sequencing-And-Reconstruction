@@ -1,0 +1,113 @@
+{
+  "name": "passenger_pigeon",
+  "score": 72.0,
+  "identity": 0.55,
+  "aligned_length": 80,
+  "variants": [
+    {
+      "aln_pos": 0,
+      "ref_base": "q",
+      "qry_base": "t",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 1,
+      "ref_base": "u",
+      "qry_base": "a",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 2,
+      "ref_base": "e",
+      "qry_base": "r",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 3,
+      "ref_base": "r",
+      "qry_base": "g",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 4,
+      "ref_base": "y",
+      "qry_base": "e",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 5,
+      "ref_base": " ",
+      "qry_base": "t",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 15,
+      "ref_base": "2",
+      "qry_base": " ",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 16,
+      "ref_base": "4",
+      "qry_base": "2",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 17,
+      "ref_base": "1",
+      "qry_base": "2",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 48,
+      "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 50,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 60,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 61,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 62,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 70,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 71,
+      "ref_base": "A",
+      "qry_base": "C",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 74,
+      "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
+    }
+  ],
+  "n_variants": 17,
+  "query_aligned": "target          224 AATGGGAAAG------TAAT-GTG--AATTGCAGAGTTCAGTGAAT--CATCGATTTTTG",
+  "ref_aligned": "query          2414 AA-GGGAAAGATGAAATAATAGTGAAAACTACA-AG--CAAAAAATAGCAAAGACT----"
+}

@@ -1,0 +1,191 @@
+{
+  "species": "dodo_partial",
+  "total_fragments": 6,
+  "mapped_fragments": 6,
+  "total_variants": 14,
+  "hotspots": [],
+  "disease_hits": [],
+  "mappings": [
+    {
+      "mapped": true,
+      "ref_start": 270,
+      "ref_end": 401,
+      "identity": 0.0305,
+      "mapping_score": 4,
+      "gene_region": {
+        "gene": "D-loop",
+        "start": 1,
+        "end": 576,
+        "type": "control"
+      },
+      "variants": [
+        {
+          "ref_pos": 270,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 382,
+          "ref_base": "G",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 383,
+          "ref_base": "C",
+          "read_base": "A",
+          "type": "SNP"
+        }
+      ],
+      "disease_hits": [],
+      "fragment_id": 0,
+      "fragment_len": 131
+    },
+    {
+      "mapped": true,
+      "ref_start": 0,
+      "ref_end": 64,
+      "identity": 0.0,
+      "mapping_score": 0,
+      "gene_region": {
+        "gene": "intergenic",
+        "type": "intergenic"
+      },
+      "variants": [],
+      "disease_hits": [],
+      "fragment_id": 1,
+      "fragment_len": 64
+    },
+    {
+      "mapped": true,
+      "ref_start": 0,
+      "ref_end": 108,
+      "identity": 0.0,
+      "mapping_score": 0,
+      "gene_region": {
+        "gene": "intergenic",
+        "type": "intergenic"
+      },
+      "variants": [],
+      "disease_hits": [],
+      "fragment_id": 2,
+      "fragment_len": 108
+    },
+    {
+      "mapped": true,
+      "ref_start": 0,
+      "ref_end": 84,
+      "identity": 0.0,
+      "mapping_score": 0,
+      "gene_region": {
+        "gene": "intergenic",
+        "type": "intergenic"
+      },
+      "variants": [
+        {
+          "ref_pos": 80,
+          "ref_base": "G",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 81,
+          "ref_base": "C",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 82,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 83,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        }
+      ],
+      "disease_hits": [],
+      "fragment_id": 3,
+      "fragment_len": 84
+    },
+    {
+      "mapped": true,
+      "ref_start": 710,
+      "ref_end": 829,
+      "identity": 0.1008,
+      "mapping_score": 12,
+      "gene_region": {
+        "gene": "12S rRNA",
+        "start": 648,
+        "end": 1601,
+        "type": "rRNA"
+      },
+      "variants": [
+        {
+          "ref_pos": 710,
+          "ref_base": "A",
+          "read_base": "G",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 711,
+          "ref_base": "A",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 712,
+          "ref_base": "T",
+          "read_base": "C",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 713,
+          "ref_base": "G",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 717,
+          "ref_base": "C",
+          "read_base": "T",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 719,
+          "ref_base": "G",
+          "read_base": "A",
+          "type": "SNP"
+        },
+        {
+          "ref_pos": 727,
+          "ref_base": "G",
+          "read_base": "A",
+          "type": "SNP"
+        }
+      ],
+      "disease_hits": [],
+      "fragment_id": 4,
+      "fragment_len": 119
+    },
+    {
+      "mapped": true,
+      "ref_start": 0,
+      "ref_end": 59,
+      "identity": 0.0,
+      "mapping_score": 0,
+      "gene_region": {
+        "gene": "intergenic",
+        "type": "intergenic"
+      },
+      "variants": [],
+      "disease_hits": [],
+      "fragment_id": 5,
+      "fragment_len": 59
+    }
+  ]
+}

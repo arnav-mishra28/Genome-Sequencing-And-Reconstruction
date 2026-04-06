@@ -1,0 +1,93 @@
+{
+  "neanderthal_mtDNA": {
+    "accession": "FM865409",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\FM865409.fasta",
+    "header": "FM865409.1 Homo sapiens neanderthalensis complete mitochondrial genome, isolate El Sidron 1253",
+    "length": 16565,
+    "source": "ncbi"
+  },
+  "mammoth_mtDNA": {
+    "accession": "NC_007596",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\NC_007596.fasta",
+    "header": "NC_007596.2 Mammuthus primigenius mitochondrion, complete genome",
+    "length": 16770,
+    "source": "ncbi"
+  },
+  "dodo_partial": {
+    "accession": "MH595722",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\MH595722.fasta",
+    "header": "MH595722.1 Campylopodiella ditrichoides voucher CUH M13 B0029 ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (rbcL) gene, partial cds; chloroplast",
+    "length": 572,
+    "source": "ncbi"
+  },
+  "thylacine_mtDNA": {
+    "accession": "AY463959",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\AY463959.fasta",
+    "header": "AY463959.1 Acinonyx jubatus mitochondrion, complete genome",
+    "length": 17011,
+    "source": "ncbi"
+  },
+  "passenger_pigeon": {
+    "accession": "KF000598",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\KF000598.fasta",
+    "header": "KF000598.1 Uncultured Thelephorales clone 12075_B_vivipara 18S ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and 28S ribosomal RNA gene, partial sequence",
+    "length": 579,
+    "source": "ncbi"
+  },
+  "cave_bear_mtDNA": {
+    "accession": "AJ788962",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\AJ788962.fasta",
+    "header": "AJ788962.1 AJ788962 Antirrhinum majus whole plant Antirrhinum majus cDNA clone 018_2_01_e24, mRNA sequence",
+    "length": 533,
+    "source": "ncbi"
+  },
+  "saber_tooth_cat": {
+    "accession": "KF748507",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\KF748507.fasta",
+    "header": "KF748507.1 Dietzia sp. D5 clone cont158 luciferase family monooxygenase gene, complete cds",
+    "length": 1026,
+    "source": "ncbi"
+  },
+  "woolly_rhino": {
+    "accession": "KX534097",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\KX534097.fasta",
+    "header": "KX534097.1 Haemonchus contortus isolate MEK02 internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence",
+    "length": 788,
+    "source": "ncbi"
+  },
+  "human_mtDNA": {
+    "accession": "NC_012920",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\NC_012920.fasta",
+    "header": "NC_012920.1 Homo sapiens mitochondrion, complete genome",
+    "length": 16569,
+    "source": "ncbi"
+  },
+  "elephant_mtDNA": {
+    "accession": "NC_005129",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\NC_005129.fasta",
+    "header": "NC_005129.2 Elephas maximus mitochondrion, complete genome",
+    "length": 16902,
+    "source": "ncbi"
+  },
+  "gray_wolf_mtDNA": {
+    "accession": "NC_008093",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\NC_008093.fasta",
+    "header": "NC_008093.1 Canis latrans mitochondrion, complete genome",
+    "length": 16724,
+    "source": "ncbi"
+  },
+  "rock_pigeon_mtDNA": {
+    "accession": "NC_013979",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\NC_013979.fasta",
+    "header": "NC_013979.1 Lophophorus lhuysii mitochondrion, complete genome",
+    "length": 16712,
+    "source": "ncbi"
+  },
+  "ensembl_human_mt": {
+    "accession": "ensembl_MT",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\ensembl_homo_sapiens_MT_1-16569.fasta",
+    "header": "ensembl|homo_sapiens|MT:1-16569",
+    "length": 16569,
+    "source": "ensembl"
+  }
+}

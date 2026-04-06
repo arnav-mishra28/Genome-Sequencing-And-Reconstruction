@@ -1,0 +1,71 @@
+{
+  "name": "neanderthal_mtDNA",
+  "score": 7706.5,
+  "identity": 0.875,
+  "aligned_length": 80,
+  "variants": [
+    {
+      "aln_pos": 0,
+      "ref_base": "q",
+      "qry_base": "t",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 1,
+      "ref_base": "u",
+      "qry_base": "a",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 2,
+      "ref_base": "e",
+      "qry_base": "r",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 3,
+      "ref_base": "r",
+      "qry_base": "g",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 4,
+      "ref_base": "y",
+      "qry_base": "e",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 5,
+      "ref_base": " ",
+      "qry_base": "t",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 25,
+      "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 44,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 50,
+      "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 77,
+      "ref_base": "T",
+      "qry_base": "C",
+      "type": "transition"
+    }
+  ],
+  "n_variants": 10,
+  "query_aligned": "target            0 GATCATAGGTCTATCACCCTATTATCCACTTACGGGAGCTCTCCATGCATTTGGTATCTT",
+  "ref_aligned": "query             0 GATCACAGGTCTATCACCCTATTAACCACTCACGGGAGCTCTCCATGCATTTGGTATTTT"
+}

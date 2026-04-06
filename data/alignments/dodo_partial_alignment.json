@@ -1,0 +1,83 @@
+{
+  "name": "dodo_partial",
+  "score": 27.5,
+  "identity": 0.5833,
+  "aligned_length": 60,
+  "variants": [
+    {
+      "aln_pos": 0,
+      "ref_base": "q",
+      "qry_base": "t",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 1,
+      "ref_base": "u",
+      "qry_base": "a",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 2,
+      "ref_base": "e",
+      "qry_base": "r",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 3,
+      "ref_base": "r",
+      "qry_base": "g",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 4,
+      "ref_base": "y",
+      "qry_base": "e",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 5,
+      "ref_base": " ",
+      "qry_base": "t",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 17,
+      "ref_base": "2",
+      "qry_base": "8",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 18,
+      "ref_base": "0",
+      "qry_base": "2",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 35,
+      "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 57,
+      "ref_base": "3",
+      "qry_base": "4",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 58,
+      "ref_base": "5",
+      "qry_base": "0",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 59,
+      "ref_base": "6",
+      "qry_base": "5",
+      "type": "unknown"
+    }
+  ],
+  "n_variants": 12,
+  "query_aligned": "target          382 TT-TG-----CGT-CTAGAT-GAT---TTG--CGTA 405",
+  "ref_aligned": "query           320 TTATGCTCGACGTACCAGATGGATTTATTGATCGTA 356"
+}
