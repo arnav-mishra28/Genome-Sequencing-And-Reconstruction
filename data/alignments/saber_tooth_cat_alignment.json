@@ -1,7 +1,7 @@
 {
   "name": "saber_tooth_cat",
-  "score": 108.5,
-  "identity": 0.525,
+  "score": 141.5,
+  "identity": 0.475,
   "aligned_length": 80,
   "variants": [
     {
@@ -42,84 +42,84 @@
     },
     {
       "aln_pos": 15,
-      "ref_base": "1",
+      "ref_base": "2",
       "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 16,
-      "ref_base": "8",
-      "qry_base": "3",
+      "ref_base": "3",
+      "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 17,
-      "ref_base": "8",
-      "qry_base": "0",
+      "ref_base": "1",
+      "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 18,
-      "ref_base": "6",
+      "ref_base": "7",
       "qry_base": "0",
       "type": "unknown"
     },
     {
       "aln_pos": 22,
-      "ref_base": "G",
-      "qry_base": "C",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 28,
-      "ref_base": "A",
-      "qry_base": "T",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 29,
-      "ref_base": "A",
+      "ref_base": "C",
       "qry_base": "G",
-      "type": "transition"
+      "type": "transversion"
     },
     {
-      "aln_pos": 32,
-      "ref_base": "A",
+      "aln_pos": 42,
+      "ref_base": "T",
       "qry_base": "C",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 41,
-      "ref_base": "G",
-      "qry_base": "C",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 43,
-      "ref_base": "A",
-      "qry_base": "G",
       "type": "transition"
-    },
-    {
-      "aln_pos": 45,
-      "ref_base": "A",
-      "qry_base": "G",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 47,
-      "ref_base": "A",
-      "qry_base": "T",
-      "type": "transversion"
     },
     {
       "aln_pos": 50,
       "ref_base": "A",
       "qry_base": "C",
       "type": "transversion"
+    },
+    {
+      "aln_pos": 62,
+      "ref_base": "A",
+      "qry_base": "C",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 66,
+      "ref_base": "T",
+      "qry_base": "C",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 67,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 69,
+      "ref_base": "G",
+      "qry_base": "C",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 74,
+      "ref_base": "A",
+      "qry_base": "C",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 76,
+      "ref_base": "A",
+      "qry_base": "C",
+      "type": "transversion"
     }
   ],
   "n_variants": 19,
-  "query_aligned": "target          300 AGCAGT--TGGGCACCTCTCGCCGAGCTC-CACCCCGCC-G-----------CATCGACC",
-  "ref_aligned": "query          1886 AGGAGTAAAAGGAA---CTCGGCAAACACAAACCCCGCCTGTTTACCAAAAACATC-ACC"
+  "query_aligned": "target            0 ATGAC------ATCC-------CTTGA-CACCG------GTTCCCCCGGCG---CCCGCG",
+  "ref_aligned": "query          2317 ATCACTTATTGATCCAATAGTTTTTGATCAACGGAACAAGTTACCCTAGGGATAACAGCG"
 }

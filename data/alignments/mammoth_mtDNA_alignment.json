@@ -1,7 +1,7 @@
 {
   "name": "mammoth_mtDNA",
-  "score": 8519.5,
-  "identity": 0.8375,
+  "score": 7797.0,
+  "identity": 0.9125,
   "aligned_length": 80,
   "variants": [
     {
@@ -41,43 +41,13 @@
       "type": "unknown"
     },
     {
-      "aln_pos": 25,
-      "ref_base": "G",
-      "qry_base": "A",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 29,
+      "aln_pos": 73,
       "ref_base": "C",
       "qry_base": "T",
       "type": "transition"
-    },
-    {
-      "aln_pos": 32,
-      "ref_base": "A",
-      "qry_base": "C",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 43,
-      "ref_base": "A",
-      "qry_base": "G",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 45,
-      "ref_base": "G",
-      "qry_base": "T",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 65,
-      "ref_base": "G",
-      "qry_base": "C",
-      "type": "transversion"
     }
   ],
-  "n_variants": 12,
-  "query_aligned": "target            1 TTAATATAGTTTCAAA-AAAAGCGATGTACTGAAAATACCTAGACCAGTATATCCAACTC",
-  "ref_aligned": "query             1 TTAATGTAGCTTAAAACAAAAGCAAGGTACTGAAAATACCTAGACGAGTATATCCAACTC"
+  "n_variants": 7,
+  "query_aligned": "target            2 TAATGTAGCTTAAAACAAAAGCAAGGTACTGAAAATACCTAGACGAGTATATCTAACTCC",
+  "ref_aligned": "query             2 TAATGTAGCTTAAAACAAAAGCAAGGTACTGAAAATACCTAGACGAGTATATCCAACTCC"
 }

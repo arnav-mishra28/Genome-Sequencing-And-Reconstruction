@@ -170,54 +170,58 @@ def run_phase5(
 
             opt.zero_grad(set_to_none=True)
 
-            with torch.amp.autocast("cuda", enabled=USE_AMP):
-                outputs = model(
-                    tokens, att,
-                    species_feats=species_feats,
-                    adjacency=adjacency,
+            # Forward pass
+            outputs = model(
+                tokens, att,
+                species_feats=species_feats,
+                adjacency=adjacency,
+            )
+
+            # MLM loss
+            mlm_logits = outputs["mlm_logits"]
+            mlm_loss = mlm_criterion(
+                mlm_logits.reshape(-1, len(vocab)),
+                labels.reshape(-1),
+            )
+
+            # Confidence calibration loss
+            with torch.no_grad():
+                preds = mlm_logits.argmax(dim=-1)
+                valid_mask = (labels != -100)
+                correct = (preds == labels).float()
+                correct = correct * valid_mask.float()
+
+            per_base_conf = outputs["per_base_conf"]
+            if valid_mask.any():
+                conf_loss = conf_criterion(
+                    per_base_conf[valid_mask],
+                    correct[valid_mask],
                 )
+            else:
+                conf_loss = torch.tensor(0.0, device=device)
 
-                # MLM loss
-                mlm_logits = outputs["mlm_logits"]
-                mlm_loss = mlm_criterion(
-                    mlm_logits.reshape(-1, len(vocab)),
-                    labels.reshape(-1),
-                )
+            # Biological constraint loss
+            bio_loss = bio_loss_fn(gc_tensor)
 
-                # Confidence calibration loss
-                # Ground truth: whether each position's top prediction
-                # matches the label (where label != -100)
-                with torch.no_grad():
-                    preds = mlm_logits.argmax(dim=-1)  # (B, L)
-                    valid_mask = (labels != -100)
-                    correct = (preds == labels).float()
-                    # Only compute where we have labels
-                    correct = correct * valid_mask.float()
+            # Joint loss
+            loss = (
+                1.0  * mlm_loss +
+                0.5  * conf_loss +
+                0.05 * bio_loss
+            )
 
-                per_base_conf = outputs["per_base_conf"]
-                if valid_mask.any():
-                    conf_loss = conf_criterion(
-                        per_base_conf[valid_mask],
-                        correct[valid_mask],
-                    )
-                else:
-                    conf_loss = torch.tensor(0.0, device=device)
+            # Backward
+            if USE_AMP and device.type == "cuda":
+                scaler.scale(loss).backward()
+                scaler.unscale_(opt)
+                nn.utils.clip_grad_norm_(model.parameters(), GRADIENT_CLIP)
+                scaler.step(opt)
+                scaler.update()
+            else:
+                loss.backward()
+                nn.utils.clip_grad_norm_(model.parameters(), GRADIENT_CLIP)
+                opt.step()
 
-                # Biological constraint loss
-                bio_loss = bio_loss_fn(gc_tensor)
-
-                # ── Joint loss ────────────────────────────────────────────────
-                loss = (
-                    1.0  * mlm_loss +
-                    0.5  * conf_loss +
-                    0.05 * bio_loss
-                )
-
-            scaler.scale(loss).backward()
-            scaler.unscale_(opt)
-            nn.utils.clip_grad_norm_(model.parameters(), GRADIENT_CLIP)
-            scaler.step(opt)
-            scaler.update()
             sched.step()
 
             total_loss += loss.item()

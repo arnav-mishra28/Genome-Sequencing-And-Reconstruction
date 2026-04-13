@@ -107,16 +107,24 @@ def run_phase4(
             att      = att.to(device)
 
             opt.zero_grad(set_to_none=True)
-            with torch.amp.autocast("cuda", enabled=USE_AMP):
+            if USE_AMP and device.type == "cuda":
+                with torch.amp.autocast("cuda"):
+                    logits = bert_model(frag_tok, att)
+                    loss   = crit(logits.reshape(-1, logits.shape[-1]),
+                                  ref_tok.reshape(-1))
+                scaler.scale(loss).backward()
+                scaler.unscale_(opt)
+                nn.utils.clip_grad_norm_(trainable, GRADIENT_CLIP)
+                scaler.step(opt)
+                scaler.update()
+            else:
                 logits = bert_model(frag_tok, att)
                 loss   = crit(logits.reshape(-1, logits.shape[-1]),
                               ref_tok.reshape(-1))
+                loss.backward()
+                nn.utils.clip_grad_norm_(trainable, GRADIENT_CLIP)
+                opt.step()
 
-            scaler.scale(loss).backward()
-            scaler.unscale_(opt)
-            nn.utils.clip_grad_norm_(trainable, GRADIENT_CLIP)
-            scaler.step(opt)
-            scaler.update()
             total_loss += loss.item()
             n_batches  += 1
 

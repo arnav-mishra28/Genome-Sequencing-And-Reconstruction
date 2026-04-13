@@ -3,10 +3,10 @@
     "neanderthal_mtDNA": {
       "species": "neanderthal_mtDNA",
       "accuracy": {
-        "accuracy": 0.392,
-        "matches": 196,
+        "accuracy": 0.564,
+        "matches": 282,
         "total": 500,
-        "mismatches": 304,
+        "mismatches": 218,
         "length_diff": 7500
       },
       "edit_dist": {
@@ -17,17 +17,17 @@
         "seq2_len": 8000
       },
       "similarity": {
-        "overall_identity": 0.392,
+        "overall_identity": 0.564,
         "window_identities": [
           {
             "start": 0,
             "end": 100,
-            "identity": 0.64
+            "identity": 0.94
           },
           {
             "start": 50,
             "end": 150,
-            "identity": 0.41
+            "identity": 0.67
           },
           {
             "start": 100,
@@ -37,52 +37,52 @@
           {
             "start": 150,
             "end": 250,
-            "identity": 0.36
+            "identity": 0.26
           },
           {
             "start": 200,
             "end": 300,
-            "identity": 0.42
+            "identity": 0.35
           },
           {
             "start": 250,
             "end": 350,
-            "identity": 0.32
+            "identity": 0.68
           },
           {
             "start": 300,
             "end": 400,
-            "identity": 0.26
+            "identity": 0.91
           },
           {
             "start": 350,
             "end": 450,
-            "identity": 0.31
+            "identity": 0.58
           },
           {
             "start": 400,
             "end": 500,
-            "identity": 0.36
+            "identity": 0.34
           }
         ],
         "per_base_accuracy": {
-          "A": 0.3873,
-          "C": 0.3399,
-          "G": 0.1111,
-          "T": 0.609
+          "A": 0.5634,
+          "C": 0.5752,
+          "G": 0.5833,
+          "T": 0.5414
         },
         "n_gaps_remaining": 0
       },
       "phylo": {
         "species": "neanderthal_mtDNA",
-        "cosine_similarity": 0.478008,
+        "cosine_similarity": 0.84215,
         "expected_similarity": 0.988072,
         "expected_distance": 0.6,
-        "deviation": 0.510064,
-        "consistency_score": 0.489936
+        "deviation": 0.145922,
+        "consistency_score": 0.854078
       },
       "calibration": {
-        "ece": 0.246368,
+        "ece": 0.26994,
         "bins": [
           {
             "bin": "[0.0, 0.1)",
@@ -122,10 +122,9 @@
           },
           {
             "bin": "[0.6, 0.7)",
-            "count": 500,
-            "avg_conf": 0.6384,
-            "avg_acc": 0.392,
-            "gap": 0.2464
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
           },
           {
             "bin": "[0.7, 0.8)",
@@ -135,9 +134,10 @@
           },
           {
             "bin": "[0.8, 0.9)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
+            "count": 500,
+            "avg_conf": 0.8339,
+            "avg_acc": 0.564,
+            "gap": 0.2699
           },
           {
             "bin": "[0.9, 1.0)",
@@ -146,18 +146,18 @@
             "avg_acc": 0.0
           }
         ],
-        "mean_confidence": 0.6384,
-        "mean_accuracy": 0.392,
+        "mean_confidence": 0.8339,
+        "mean_accuracy": 0.564,
         "n_samples": 500
       }
     },
     "mammoth_mtDNA": {
       "species": "mammoth_mtDNA",
       "accuracy": {
-        "accuracy": 0.554,
-        "matches": 277,
+        "accuracy": 0.518,
+        "matches": 259,
         "total": 500,
-        "mismatches": 223,
+        "mismatches": 241,
         "length_diff": 7500
       },
       "edit_dist": {
@@ -168,7 +168,460 @@
         "seq2_len": 8000
       },
       "similarity": {
-        "overall_identity": 0.554,
+        "overall_identity": 0.518,
+        "window_identities": [
+          {
+            "start": 0,
+            "end": 100,
+            "identity": 0.95
+          },
+          {
+            "start": 50,
+            "end": 150,
+            "identity": 0.94
+          },
+          {
+            "start": 100,
+            "end": 200,
+            "identity": 0.8
+          },
+          {
+            "start": 150,
+            "end": 250,
+            "identity": 0.43
+          },
+          {
+            "start": 200,
+            "end": 300,
+            "identity": 0.27
+          },
+          {
+            "start": 250,
+            "end": 350,
+            "identity": 0.32
+          },
+          {
+            "start": 300,
+            "end": 400,
+            "identity": 0.33
+          },
+          {
+            "start": 350,
+            "end": 450,
+            "identity": 0.3
+          },
+          {
+            "start": 400,
+            "end": 500,
+            "identity": 0.24
+          }
+        ],
+        "per_base_accuracy": {
+          "A": 0.5882,
+          "C": 0.4673,
+          "G": 0.4659,
+          "T": 0.4915
+        },
+        "n_gaps_remaining": 0
+      },
+      "phylo": {
+        "species": "mammoth_mtDNA",
+        "cosine_similarity": 0.833253,
+        "expected_similarity": 0.904837,
+        "expected_distance": 5.0,
+        "deviation": 0.071585,
+        "consistency_score": 0.928415
+      },
+      "calibration": {
+        "ece": 0.31608,
+        "bins": [
+          {
+            "bin": "[0.0, 0.1)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.1, 0.2)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.2, 0.3)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.3, 0.4)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.4, 0.5)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.5, 0.6)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.6, 0.7)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.7, 0.8)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.8, 0.9)",
+            "count": 500,
+            "avg_conf": 0.8341,
+            "avg_acc": 0.518,
+            "gap": 0.3161
+          },
+          {
+            "bin": "[0.9, 1.0)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          }
+        ],
+        "mean_confidence": 0.8341,
+        "mean_accuracy": 0.518,
+        "n_samples": 500
+      }
+    },
+    "dodo_partial": {
+      "species": "dodo_partial",
+      "accuracy": {
+        "accuracy": 0.26,
+        "matches": 130,
+        "total": 500,
+        "mismatches": 370,
+        "length_diff": 72
+      },
+      "edit_dist": {
+        "edit_distance": 191,
+        "normalised": 0.333916,
+        "similarity": 0.666084,
+        "seq1_len": 500,
+        "seq2_len": 572
+      },
+      "similarity": {
+        "overall_identity": 0.26,
+        "window_identities": [
+          {
+            "start": 0,
+            "end": 100,
+            "identity": 0.38
+          },
+          {
+            "start": 50,
+            "end": 150,
+            "identity": 0.21
+          },
+          {
+            "start": 100,
+            "end": 200,
+            "identity": 0.19
+          },
+          {
+            "start": 150,
+            "end": 250,
+            "identity": 0.23
+          },
+          {
+            "start": 200,
+            "end": 300,
+            "identity": 0.29
+          },
+          {
+            "start": 250,
+            "end": 350,
+            "identity": 0.32
+          },
+          {
+            "start": 300,
+            "end": 400,
+            "identity": 0.23
+          },
+          {
+            "start": 350,
+            "end": 450,
+            "identity": 0.22
+          },
+          {
+            "start": 400,
+            "end": 500,
+            "identity": 0.21
+          }
+        ],
+        "per_base_accuracy": {
+          "A": 0.2185,
+          "C": 0.4828,
+          "G": 0.1753,
+          "T": 0.2303
+        },
+        "n_gaps_remaining": 0
+      },
+      "phylo": {
+        "species": "dodo_partial",
+        "cosine_similarity": 0.293354,
+        "expected_similarity": 0.606531,
+        "expected_distance": 25.0,
+        "deviation": 0.313176,
+        "consistency_score": 0.686824
+      },
+      "calibration": {
+        "ece": 0.57262,
+        "bins": [
+          {
+            "bin": "[0.0, 0.1)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.1, 0.2)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.2, 0.3)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.3, 0.4)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.4, 0.5)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.5, 0.6)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.6, 0.7)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.7, 0.8)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.8, 0.9)",
+            "count": 500,
+            "avg_conf": 0.8326,
+            "avg_acc": 0.26,
+            "gap": 0.5726
+          },
+          {
+            "bin": "[0.9, 1.0)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          }
+        ],
+        "mean_confidence": 0.8326,
+        "mean_accuracy": 0.26,
+        "n_samples": 500
+      }
+    },
+    "thylacine_mtDNA": {
+      "species": "thylacine_mtDNA",
+      "accuracy": {
+        "accuracy": 0.306,
+        "matches": 153,
+        "total": 500,
+        "mismatches": 347,
+        "length_diff": 7500
+      },
+      "edit_dist": {
+        "edit_distance": 4500,
+        "normalised": 0.9,
+        "similarity": 0.1,
+        "seq1_len": 500,
+        "seq2_len": 8000
+      },
+      "similarity": {
+        "overall_identity": 0.306,
+        "window_identities": [
+          {
+            "start": 0,
+            "end": 100,
+            "identity": 0.28
+          },
+          {
+            "start": 50,
+            "end": 150,
+            "identity": 0.3
+          },
+          {
+            "start": 100,
+            "end": 200,
+            "identity": 0.27
+          },
+          {
+            "start": 150,
+            "end": 250,
+            "identity": 0.25
+          },
+          {
+            "start": 200,
+            "end": 300,
+            "identity": 0.27
+          },
+          {
+            "start": 250,
+            "end": 350,
+            "identity": 0.33
+          },
+          {
+            "start": 300,
+            "end": 400,
+            "identity": 0.37
+          },
+          {
+            "start": 350,
+            "end": 450,
+            "identity": 0.35
+          },
+          {
+            "start": 400,
+            "end": 500,
+            "identity": 0.34
+          }
+        ],
+        "per_base_accuracy": {
+          "A": 0.3907,
+          "C": 0.3696,
+          "G": 0.1458,
+          "T": 0.2522
+        },
+        "n_gaps_remaining": 0
+      },
+      "phylo": {
+        "species": "thylacine_mtDNA",
+        "cosine_similarity": 0.311346,
+        "expected_similarity": 0.040762,
+        "expected_distance": 160.0,
+        "deviation": 0.270584,
+        "consistency_score": 0.729416
+      },
+      "calibration": {
+        "ece": 0.527681,
+        "bins": [
+          {
+            "bin": "[0.0, 0.1)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.1, 0.2)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.2, 0.3)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.3, 0.4)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.4, 0.5)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.5, 0.6)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.6, 0.7)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.7, 0.8)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.8, 0.9)",
+            "count": 500,
+            "avg_conf": 0.8337,
+            "avg_acc": 0.306,
+            "gap": 0.5277
+          },
+          {
+            "bin": "[0.9, 1.0)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          }
+        ],
+        "mean_confidence": 0.8337,
+        "mean_accuracy": 0.306,
+        "n_samples": 500
+      }
+    },
+    "passenger_pigeon": {
+      "species": "passenger_pigeon",
+      "accuracy": {
+        "accuracy": 0.33,
+        "matches": 165,
+        "total": 500,
+        "mismatches": 335,
+        "length_diff": 79
+      },
+      "edit_dist": {
+        "edit_distance": 349,
+        "normalised": 0.602763,
+        "similarity": 0.397237,
+        "seq1_len": 500,
+        "seq2_len": 579
+      },
+      "similarity": {
+        "overall_identity": 0.33,
         "window_identities": [
           {
             "start": 0,
@@ -178,62 +631,62 @@
           {
             "start": 50,
             "end": 150,
-            "identity": 0.72
+            "identity": 0.38
           },
           {
             "start": 100,
             "end": 200,
-            "identity": 0.69
+            "identity": 0.2
           },
           {
             "start": 150,
             "end": 250,
-            "identity": 0.7
+            "identity": 0.18
           },
           {
             "start": 200,
             "end": 300,
-            "identity": 0.74
+            "identity": 0.22
           },
           {
             "start": 250,
             "end": 350,
-            "identity": 0.55
+            "identity": 0.28
           },
           {
             "start": 300,
             "end": 400,
-            "identity": 0.3
+            "identity": 0.22
           },
           {
             "start": 350,
             "end": 450,
-            "identity": 0.3
+            "identity": 0.21
           },
           {
             "start": 400,
             "end": 500,
-            "identity": 0.27
+            "identity": 0.24
           }
         ],
         "per_base_accuracy": {
-          "A": 0.6417,
-          "C": 0.5514,
-          "G": 0.0909,
-          "T": 0.7627
+          "A": 0.1696,
+          "C": 0.8684,
+          "G": 0.1641,
+          "T": 0.1781
         },
         "n_gaps_remaining": 0
       },
       "phylo": {
-        "species": "mammoth_mtDNA",
-        "cosine_similarity": 0.575192,
-        "expected_similarity": 0.904837,
-        "expected_distance": 5.0,
-        "deviation": 0.329646,
-        "consistency_score": 0.670354
+        "species": "passenger_pigeon",
+        "cosine_similarity": 0.176741,
+        "expected_similarity": 0.548812,
+        "expected_distance": 30.0,
+        "deviation": 0.37207,
+        "consistency_score": 0.62793
       },
       "calibration": {
-        "ece": 0.081876,
+        "ece": 0.500948,
         "bins": [
           {
             "bin": "[0.0, 0.1)",
@@ -273,10 +726,9 @@
           },
           {
             "bin": "[0.6, 0.7)",
-            "count": 500,
-            "avg_conf": 0.6359,
-            "avg_acc": 0.554,
-            "gap": 0.0819
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
           },
           {
             "bin": "[0.7, 0.8)",
@@ -286,9 +738,10 @@
           },
           {
             "bin": "[0.8, 0.9)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
+            "count": 500,
+            "avg_conf": 0.8309,
+            "avg_acc": 0.33,
+            "gap": 0.5009
           },
           {
             "bin": "[0.9, 1.0)",
@@ -297,94 +750,94 @@
             "avg_acc": 0.0
           }
         ],
-        "mean_confidence": 0.6359,
-        "mean_accuracy": 0.554,
+        "mean_confidence": 0.8309,
+        "mean_accuracy": 0.33,
         "n_samples": 500
       }
     },
-    "dodo_partial": {
-      "species": "dodo_partial",
+    "cave_bear_mtDNA": {
+      "species": "cave_bear_mtDNA",
       "accuracy": {
-        "accuracy": 0.42,
-        "matches": 210,
+        "accuracy": 0.226,
+        "matches": 113,
         "total": 500,
-        "mismatches": 290,
-        "length_diff": 72
+        "mismatches": 387,
+        "length_diff": 33
       },
       "edit_dist": {
-        "edit_distance": 337,
-        "normalised": 0.589161,
-        "similarity": 0.410839,
+        "edit_distance": 397,
+        "normalised": 0.744841,
+        "similarity": 0.255159,
         "seq1_len": 500,
-        "seq2_len": 572
+        "seq2_len": 533
       },
       "similarity": {
-        "overall_identity": 0.42,
+        "overall_identity": 0.226,
         "window_identities": [
           {
             "start": 0,
             "end": 100,
-            "identity": 0.74
+            "identity": 0.27
           },
           {
             "start": 50,
             "end": 150,
-            "identity": 0.5
+            "identity": 0.2
           },
           {
             "start": 100,
             "end": 200,
-            "identity": 0.23
+            "identity": 0.25
           },
           {
             "start": 150,
             "end": 250,
-            "identity": 0.29
+            "identity": 0.3
           },
           {
             "start": 200,
             "end": 300,
-            "identity": 0.34
+            "identity": 0.26
           },
           {
             "start": 250,
             "end": 350,
-            "identity": 0.41
+            "identity": 0.22
           },
           {
             "start": 300,
             "end": 400,
-            "identity": 0.45
+            "identity": 0.17
           },
           {
             "start": 350,
             "end": 450,
-            "identity": 0.39
+            "identity": 0.11
           },
           {
             "start": 400,
             "end": 500,
-            "identity": 0.34
+            "identity": 0.18
           }
         ],
         "per_base_accuracy": {
-          "A": 0.2185,
-          "C": 0.1149,
-          "G": 0.0206,
-          "T": 1.0
+          "A": 0.0703,
+          "C": 0.9333,
+          "G": 0.0163,
+          "T": 0.0278
         },
         "n_gaps_remaining": 0
       },
       "phylo": {
-        "species": "dodo_partial",
-        "cosine_similarity": 0.148452,
-        "expected_similarity": 0.606531,
-        "expected_distance": 25.0,
-        "deviation": 0.458079,
-        "consistency_score": 0.541921
+        "species": "cave_bear_mtDNA",
+        "cosine_similarity": 0.107656,
+        "expected_similarity": 0.449329,
+        "expected_distance": 40.0,
+        "deviation": 0.341673,
+        "consistency_score": 0.658327
       },
       "calibration": {
-        "ece": 0.212014,
+        "ece": 0.604414,
         "bins": [
           {
             "bin": "[0.0, 0.1)",
@@ -424,10 +877,9 @@
           },
           {
             "bin": "[0.6, 0.7)",
-            "count": 500,
-            "avg_conf": 0.632,
-            "avg_acc": 0.42,
-            "gap": 0.212
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
           },
           {
             "bin": "[0.7, 0.8)",
@@ -437,9 +889,10 @@
           },
           {
             "bin": "[0.8, 0.9)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
+            "count": 500,
+            "avg_conf": 0.8304,
+            "avg_acc": 0.226,
+            "gap": 0.6044
           },
           {
             "bin": "[0.9, 1.0)",
@@ -448,18 +901,320 @@
             "avg_acc": 0.0
           }
         ],
-        "mean_confidence": 0.632,
-        "mean_accuracy": 0.42,
+        "mean_confidence": 0.8304,
+        "mean_accuracy": 0.226,
         "n_samples": 500
       }
     },
-    "thylacine_mtDNA": {
-      "species": "thylacine_mtDNA",
+    "saber_tooth_cat": {
+      "species": "saber_tooth_cat",
       "accuracy": {
-        "accuracy": 0.384,
-        "matches": 192,
+        "accuracy": 0.412,
+        "matches": 206,
         "total": 500,
-        "mismatches": 308,
+        "mismatches": 294,
+        "length_diff": 526
+      },
+      "edit_dist": {
+        "edit_distance": 540,
+        "normalised": 0.526316,
+        "similarity": 0.473684,
+        "seq1_len": 500,
+        "seq2_len": 1026
+      },
+      "similarity": {
+        "overall_identity": 0.412,
+        "window_identities": [
+          {
+            "start": 0,
+            "end": 100,
+            "identity": 0.67
+          },
+          {
+            "start": 50,
+            "end": 150,
+            "identity": 0.3
+          },
+          {
+            "start": 100,
+            "end": 200,
+            "identity": 0.2
+          },
+          {
+            "start": 150,
+            "end": 250,
+            "identity": 0.24
+          },
+          {
+            "start": 200,
+            "end": 300,
+            "identity": 0.3
+          },
+          {
+            "start": 250,
+            "end": 350,
+            "identity": 0.38
+          },
+          {
+            "start": 300,
+            "end": 400,
+            "identity": 0.46
+          },
+          {
+            "start": 350,
+            "end": 450,
+            "identity": 0.42
+          },
+          {
+            "start": 400,
+            "end": 500,
+            "identity": 0.43
+          }
+        ],
+        "per_base_accuracy": {
+          "A": 0.1343,
+          "C": 0.7513,
+          "G": 0.2321,
+          "T": 0.1471
+        },
+        "n_gaps_remaining": 0
+      },
+      "phylo": {
+        "species": "saber_tooth_cat",
+        "cosine_similarity": 0.136509,
+        "expected_similarity": 0.165299,
+        "expected_distance": 90.0,
+        "deviation": 0.02879,
+        "consistency_score": 0.97121
+      },
+      "calibration": {
+        "ece": 0.419601,
+        "bins": [
+          {
+            "bin": "[0.0, 0.1)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.1, 0.2)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.2, 0.3)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.3, 0.4)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.4, 0.5)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.5, 0.6)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.6, 0.7)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.7, 0.8)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.8, 0.9)",
+            "count": 500,
+            "avg_conf": 0.8316,
+            "avg_acc": 0.412,
+            "gap": 0.4196
+          },
+          {
+            "bin": "[0.9, 1.0)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          }
+        ],
+        "mean_confidence": 0.8316,
+        "mean_accuracy": 0.412,
+        "n_samples": 500
+      }
+    },
+    "woolly_rhino": {
+      "species": "woolly_rhino",
+      "accuracy": {
+        "accuracy": 0.234,
+        "matches": 117,
+        "total": 500,
+        "mismatches": 383,
+        "length_diff": 288
+      },
+      "edit_dist": {
+        "edit_distance": 492,
+        "normalised": 0.624365,
+        "similarity": 0.375635,
+        "seq1_len": 500,
+        "seq2_len": 788
+      },
+      "similarity": {
+        "overall_identity": 0.234,
+        "window_identities": [
+          {
+            "start": 0,
+            "end": 100,
+            "identity": 0.52
+          },
+          {
+            "start": 50,
+            "end": 150,
+            "identity": 0.24
+          },
+          {
+            "start": 100,
+            "end": 200,
+            "identity": 0.11
+          },
+          {
+            "start": 150,
+            "end": 250,
+            "identity": 0.13
+          },
+          {
+            "start": 200,
+            "end": 300,
+            "identity": 0.15
+          },
+          {
+            "start": 250,
+            "end": 350,
+            "identity": 0.19
+          },
+          {
+            "start": 300,
+            "end": 400,
+            "identity": 0.2
+          },
+          {
+            "start": 350,
+            "end": 450,
+            "identity": 0.17
+          },
+          {
+            "start": 400,
+            "end": 500,
+            "identity": 0.19
+          }
+        ],
+        "per_base_accuracy": {
+          "A": 0.1429,
+          "C": 0.7234,
+          "G": 0.0811,
+          "T": 0.129
+        },
+        "n_gaps_remaining": 0
+      },
+      "phylo": {
+        "species": "woolly_rhino",
+        "cosine_similarity": 0.080855,
+        "expected_similarity": 0.313486,
+        "expected_distance": 58.0,
+        "deviation": 0.232631,
+        "consistency_score": 0.767369
+      },
+      "calibration": {
+        "ece": 0.597364,
+        "bins": [
+          {
+            "bin": "[0.0, 0.1)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.1, 0.2)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.2, 0.3)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.3, 0.4)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.4, 0.5)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.5, 0.6)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.6, 0.7)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.7, 0.8)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          },
+          {
+            "bin": "[0.8, 0.9)",
+            "count": 500,
+            "avg_conf": 0.8314,
+            "avg_acc": 0.234,
+            "gap": 0.5974
+          },
+          {
+            "bin": "[0.9, 1.0)",
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
+          }
+        ],
+        "mean_confidence": 0.8314,
+        "mean_accuracy": 0.234,
+        "n_samples": 500
+      }
+    },
+    "ensembl_human_mt": {
+      "species": "ensembl_human_mt",
+      "accuracy": {
+        "accuracy": 0.34,
+        "matches": 170,
+        "total": 500,
+        "mismatches": 330,
         "length_diff": 7500
       },
       "edit_dist": {
@@ -470,314 +1225,12 @@
         "seq2_len": 8000
       },
       "similarity": {
-        "overall_identity": 0.384,
+        "overall_identity": 0.34,
         "window_identities": [
           {
             "start": 0,
             "end": 100,
-            "identity": 0.63
-          },
-          {
-            "start": 50,
-            "end": 150,
-            "identity": 0.51
-          },
-          {
-            "start": 100,
-            "end": 200,
-            "identity": 0.34
-          },
-          {
-            "start": 150,
-            "end": 250,
-            "identity": 0.36
-          },
-          {
-            "start": 200,
-            "end": 300,
-            "identity": 0.49
-          },
-          {
-            "start": 250,
-            "end": 350,
-            "identity": 0.33
-          },
-          {
-            "start": 300,
-            "end": 400,
-            "identity": 0.27
-          },
-          {
-            "start": 350,
-            "end": 450,
-            "identity": 0.37
-          },
-          {
-            "start": 400,
-            "end": 500,
-            "identity": 0.19
-          }
-        ],
-        "per_base_accuracy": {
-          "A": 0.3907,
-          "C": 0.2391,
-          "G": 0.125,
-          "T": 0.7652
-        },
-        "n_gaps_remaining": 0
-      },
-      "phylo": {
-        "species": "thylacine_mtDNA",
-        "cosine_similarity": 0.447392,
-        "expected_similarity": 0.040762,
-        "expected_distance": 160.0,
-        "deviation": 0.40663,
-        "consistency_score": 0.59337
-      },
-      "calibration": {
-        "ece": 0.249674,
-        "bins": [
-          {
-            "bin": "[0.0, 0.1)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.1, 0.2)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.2, 0.3)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.3, 0.4)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.4, 0.5)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.5, 0.6)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.6, 0.7)",
-            "count": 500,
-            "avg_conf": 0.6337,
-            "avg_acc": 0.384,
-            "gap": 0.2497
-          },
-          {
-            "bin": "[0.7, 0.8)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.8, 0.9)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.9, 1.0)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          }
-        ],
-        "mean_confidence": 0.6337,
-        "mean_accuracy": 0.384,
-        "n_samples": 500
-      }
-    },
-    "passenger_pigeon": {
-      "species": "passenger_pigeon",
-      "accuracy": {
-        "accuracy": 0.308,
-        "matches": 154,
-        "total": 500,
-        "mismatches": 346,
-        "length_diff": 79
-      },
-      "edit_dist": {
-        "edit_distance": 360,
-        "normalised": 0.621762,
-        "similarity": 0.378238,
-        "seq1_len": 500,
-        "seq2_len": 579
-      },
-      "similarity": {
-        "overall_identity": 0.308,
-        "window_identities": [
-          {
-            "start": 0,
-            "end": 100,
-            "identity": 0.33
-          },
-          {
-            "start": 50,
-            "end": 150,
-            "identity": 0.32
-          },
-          {
-            "start": 100,
-            "end": 200,
-            "identity": 0.29
-          },
-          {
-            "start": 150,
-            "end": 250,
-            "identity": 0.24
-          },
-          {
-            "start": 200,
-            "end": 300,
-            "identity": 0.26
-          },
-          {
-            "start": 250,
-            "end": 350,
-            "identity": 0.34
-          },
-          {
-            "start": 300,
-            "end": 400,
-            "identity": 0.35
-          },
-          {
-            "start": 350,
-            "end": 450,
-            "identity": 0.37
-          },
-          {
-            "start": 400,
-            "end": 500,
-            "identity": 0.31
-          }
-        ],
-        "per_base_accuracy": {
-          "A": 0.0446,
-          "C": 0.0526,
-          "G": 0.0625,
-          "T": 0.9247
-        },
-        "n_gaps_remaining": 0
-      },
-      "phylo": {
-        "species": "passenger_pigeon",
-        "cosine_similarity": 0.151788,
-        "expected_similarity": 0.548812,
-        "expected_distance": 30.0,
-        "deviation": 0.397023,
-        "consistency_score": 0.602977
-      },
-      "calibration": {
-        "ece": 0.324231,
-        "bins": [
-          {
-            "bin": "[0.0, 0.1)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.1, 0.2)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.2, 0.3)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.3, 0.4)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.4, 0.5)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.5, 0.6)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.6, 0.7)",
-            "count": 500,
-            "avg_conf": 0.6322,
-            "avg_acc": 0.308,
-            "gap": 0.3242
-          },
-          {
-            "bin": "[0.7, 0.8)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.8, 0.9)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.9, 1.0)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          }
-        ],
-        "mean_confidence": 0.6322,
-        "mean_accuracy": 0.308,
-        "n_samples": 500
-      }
-    },
-    "cave_bear_mtDNA": {
-      "species": "cave_bear_mtDNA",
-      "accuracy": {
-        "accuracy": 0.33,
-        "matches": 165,
-        "total": 500,
-        "mismatches": 335,
-        "length_diff": 33
-      },
-      "edit_dist": {
-        "edit_distance": 356,
-        "normalised": 0.667917,
-        "similarity": 0.332083,
-        "seq1_len": 500,
-        "seq2_len": 533
-      },
-      "similarity": {
-        "overall_identity": 0.33,
-        "window_identities": [
-          {
-            "start": 0,
-            "end": 100,
-            "identity": 0.5
+            "identity": 0.45
           },
           {
             "start": 50,
@@ -792,354 +1245,52 @@
           {
             "start": 150,
             "end": 250,
-            "identity": 0.28
-          },
-          {
-            "start": 200,
-            "end": 300,
-            "identity": 0.23
-          },
-          {
-            "start": 250,
-            "end": 350,
-            "identity": 0.2
-          },
-          {
-            "start": 300,
-            "end": 400,
-            "identity": 0.31
-          },
-          {
-            "start": 350,
-            "end": 450,
-            "identity": 0.36
-          },
-          {
-            "start": 400,
-            "end": 500,
-            "identity": 0.39
-          }
-        ],
-        "per_base_accuracy": {
-          "A": 0.0859,
-          "C": 0.0857,
-          "G": 0.0081,
-          "T": 1.0
-        },
-        "n_gaps_remaining": 0
-      },
-      "phylo": {
-        "species": "cave_bear_mtDNA",
-        "cosine_similarity": 0.078058,
-        "expected_similarity": 0.449329,
-        "expected_distance": 40.0,
-        "deviation": 0.371271,
-        "consistency_score": 0.628729
-      },
-      "calibration": {
-        "ece": 0.301093,
-        "bins": [
-          {
-            "bin": "[0.0, 0.1)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.1, 0.2)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.2, 0.3)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.3, 0.4)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.4, 0.5)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.5, 0.6)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.6, 0.7)",
-            "count": 500,
-            "avg_conf": 0.6311,
-            "avg_acc": 0.33,
-            "gap": 0.3011
-          },
-          {
-            "bin": "[0.7, 0.8)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.8, 0.9)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.9, 1.0)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          }
-        ],
-        "mean_confidence": 0.6311,
-        "mean_accuracy": 0.33,
-        "n_samples": 500
-      }
-    },
-    "saber_tooth_cat": {
-      "species": "saber_tooth_cat",
-      "accuracy": {
-        "accuracy": 0.254,
-        "matches": 127,
-        "total": 500,
-        "mismatches": 373,
-        "length_diff": 526
-      },
-      "edit_dist": {
-        "edit_distance": 728,
-        "normalised": 0.709552,
-        "similarity": 0.290448,
-        "seq1_len": 500,
-        "seq2_len": 1026
-      },
-      "similarity": {
-        "overall_identity": 0.254,
-        "window_identities": [
-          {
-            "start": 0,
-            "end": 100,
-            "identity": 0.61
-          },
-          {
-            "start": 50,
-            "end": 150,
-            "identity": 0.26
-          },
-          {
-            "start": 100,
-            "end": 200,
-            "identity": 0.18
-          },
-          {
-            "start": 150,
-            "end": 250,
             "identity": 0.24
           },
           {
             "start": 200,
             "end": 300,
-            "identity": 0.26
-          },
-          {
-            "start": 250,
-            "end": 350,
-            "identity": 0.17
-          },
-          {
-            "start": 300,
-            "end": 400,
-            "identity": 0.09
-          },
-          {
-            "start": 350,
-            "end": 450,
-            "identity": 0.08
-          },
-          {
-            "start": 400,
-            "end": 500,
-            "identity": 0.13
-          }
-        ],
-        "per_base_accuracy": {
-          "A": 0.1045,
-          "C": 0.2234,
-          "G": 0.1488,
-          "T": 0.75
-        },
-        "n_gaps_remaining": 0
-      },
-      "phylo": {
-        "species": "saber_tooth_cat",
-        "cosine_similarity": 0.137389,
-        "expected_similarity": 0.165299,
-        "expected_distance": 90.0,
-        "deviation": 0.02791,
-        "consistency_score": 0.97209
-      },
-      "calibration": {
-        "ece": 0.374345,
-        "bins": [
-          {
-            "bin": "[0.0, 0.1)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.1, 0.2)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.2, 0.3)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.3, 0.4)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.4, 0.5)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.5, 0.6)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.6, 0.7)",
-            "count": 500,
-            "avg_conf": 0.6283,
-            "avg_acc": 0.254,
-            "gap": 0.3743
-          },
-          {
-            "bin": "[0.7, 0.8)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.8, 0.9)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          },
-          {
-            "bin": "[0.9, 1.0)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
-          }
-        ],
-        "mean_confidence": 0.6283,
-        "mean_accuracy": 0.254,
-        "n_samples": 500
-      }
-    },
-    "woolly_rhino": {
-      "species": "woolly_rhino",
-      "accuracy": {
-        "accuracy": 0.43,
-        "matches": 215,
-        "total": 500,
-        "mismatches": 285,
-        "length_diff": 288
-      },
-      "edit_dist": {
-        "edit_distance": 473,
-        "normalised": 0.600254,
-        "similarity": 0.399746,
-        "seq1_len": 500,
-        "seq2_len": 788
-      },
-      "similarity": {
-        "overall_identity": 0.43,
-        "window_identities": [
-          {
-            "start": 0,
-            "end": 100,
-            "identity": 0.58
-          },
-          {
-            "start": 50,
-            "end": 150,
-            "identity": 0.38
-          },
-          {
-            "start": 100,
-            "end": 200,
-            "identity": 0.33
-          },
-          {
-            "start": 150,
-            "end": 250,
-            "identity": 0.38
-          },
-          {
-            "start": 200,
-            "end": 300,
-            "identity": 0.37
-          },
-          {
-            "start": 250,
-            "end": 350,
-            "identity": 0.28
-          },
-          {
-            "start": 300,
-            "end": 400,
             "identity": 0.31
           },
           {
+            "start": 250,
+            "end": 350,
+            "identity": 0.38
+          },
+          {
+            "start": 300,
+            "end": 400,
+            "identity": 0.35
+          },
+          {
             "start": 350,
             "end": 450,
-            "identity": 0.38
+            "identity": 0.33
           },
           {
             "start": 400,
             "end": 500,
-            "identity": 0.56
+            "identity": 0.37
           }
         ],
         "per_base_accuracy": {
-          "A": 0.2786,
-          "C": 0.2021,
-          "G": 0.0541,
-          "T": 0.9742
+          "A": 0.3655,
+          "C": 0.366,
+          "G": 0.1884,
+          "T": 0.3609
         },
         "n_gaps_remaining": 0
       },
       "phylo": {
-        "species": "woolly_rhino",
-        "cosine_similarity": 0.103747,
-        "expected_similarity": 0.313486,
-        "expected_distance": 58.0,
-        "deviation": 0.20974,
-        "consistency_score": 0.79026
+        "species": "ensembl_human_mt",
+        "cosine_similarity": 0.822944,
+        "expected_similarity": 0.165299,
+        "expected_distance": 90.0,
+        "deviation": 0.657645,
+        "consistency_score": 0.342355
       },
       "calibration": {
-        "ece": 0.202491,
+        "ece": 0.493878,
         "bins": [
           {
             "bin": "[0.0, 0.1)",
@@ -1179,10 +1330,9 @@
           },
           {
             "bin": "[0.6, 0.7)",
-            "count": 500,
-            "avg_conf": 0.6325,
-            "avg_acc": 0.43,
-            "gap": 0.2025
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
           },
           {
             "bin": "[0.7, 0.8)",
@@ -1192,9 +1342,10 @@
           },
           {
             "bin": "[0.8, 0.9)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
+            "count": 500,
+            "avg_conf": 0.8339,
+            "avg_acc": 0.34,
+            "gap": 0.4939
           },
           {
             "bin": "[0.9, 1.0)",
@@ -1203,18 +1354,18 @@
             "avg_acc": 0.0
           }
         ],
-        "mean_confidence": 0.6325,
-        "mean_accuracy": 0.43,
+        "mean_confidence": 0.8339,
+        "mean_accuracy": 0.34,
         "n_samples": 500
       }
     },
-    "ensembl_human_mt": {
-      "species": "ensembl_human_mt",
+    "ucsc_human_mt": {
+      "species": "ucsc_human_mt",
       "accuracy": {
-        "accuracy": 0.342,
-        "matches": 171,
+        "accuracy": 0.372,
+        "matches": 186,
         "total": 500,
-        "mismatches": 329,
+        "mismatches": 314,
         "length_diff": 7500
       },
       "edit_dist": {
@@ -1225,72 +1376,72 @@
         "seq2_len": 8000
       },
       "similarity": {
-        "overall_identity": 0.342,
+        "overall_identity": 0.372,
         "window_identities": [
           {
             "start": 0,
             "end": 100,
-            "identity": 0.56
+            "identity": 0.55
           },
           {
             "start": 50,
             "end": 150,
-            "identity": 0.48
+            "identity": 0.21
           },
           {
             "start": 100,
             "end": 200,
-            "identity": 0.43
+            "identity": 0.2
           },
           {
             "start": 150,
             "end": 250,
-            "identity": 0.33
+            "identity": 0.26
           },
           {
             "start": 200,
             "end": 300,
-            "identity": 0.26
+            "identity": 0.31
           },
           {
             "start": 250,
             "end": 350,
-            "identity": 0.18
+            "identity": 0.35
           },
           {
             "start": 300,
             "end": 400,
-            "identity": 0.17
+            "identity": 0.44
           },
           {
             "start": 350,
             "end": 450,
-            "identity": 0.24
+            "identity": 0.42
           },
           {
             "start": 400,
             "end": 500,
-            "identity": 0.29
+            "identity": 0.36
           }
         ],
         "per_base_accuracy": {
-          "A": 0.1724,
-          "C": 0.1503,
-          "G": 0.1594,
-          "T": 0.8421
+          "A": 0.3793,
+          "C": 0.3922,
+          "G": 0.2609,
+          "T": 0.3985
         },
         "n_gaps_remaining": 0
       },
       "phylo": {
-        "species": "ensembl_human_mt",
-        "cosine_similarity": 0.09628,
+        "species": "ucsc_human_mt",
+        "cosine_similarity": 0.849627,
         "expected_similarity": 0.165299,
         "expected_distance": 90.0,
-        "deviation": 0.069019,
-        "consistency_score": 0.930981
+        "deviation": 0.684328,
+        "consistency_score": 0.315672
       },
       "calibration": {
-        "ece": 0.292578,
+        "ece": 0.461971,
         "bins": [
           {
             "bin": "[0.0, 0.1)",
@@ -1330,10 +1481,9 @@
           },
           {
             "bin": "[0.6, 0.7)",
-            "count": 500,
-            "avg_conf": 0.6346,
-            "avg_acc": 0.342,
-            "gap": 0.2926
+            "count": 0,
+            "avg_conf": 0.0,
+            "avg_acc": 0.0
           },
           {
             "bin": "[0.7, 0.8)",
@@ -1343,9 +1493,10 @@
           },
           {
             "bin": "[0.8, 0.9)",
-            "count": 0,
-            "avg_conf": 0.0,
-            "avg_acc": 0.0
+            "count": 500,
+            "avg_conf": 0.834,
+            "avg_acc": 0.372,
+            "gap": 0.462
           },
           {
             "bin": "[0.9, 1.0)",
@@ -1354,17 +1505,17 @@
             "avg_acc": 0.0
           }
         ],
-        "mean_confidence": 0.6346,
-        "mean_accuracy": 0.342,
+        "mean_confidence": 0.834,
+        "mean_accuracy": 0.372,
         "n_samples": 500
       }
     }
   },
   "aggregate": {
-    "n_species": 9,
-    "avg_accuracy": 0.3793,
-    "avg_similarity": 0.3793,
-    "avg_phylo_consist": 0.6912,
-    "avg_ece": 0.2539
+    "n_species": 10,
+    "avg_accuracy": 0.3562,
+    "avg_similarity": 0.3562,
+    "avg_phylo_consist": 0.6882,
+    "avg_ece": 0.4764
   }
 }

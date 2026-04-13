@@ -49,7 +49,7 @@ _CPU_DEFAULTS = dict(
     N_LAYERS       = 6,
     FFN_DIM        = 1024,
     MAX_SEQ_LEN    = 256,
-    BATCH_SIZE     = 16,
+    BATCH_SIZE     = 8,
     BPE_VOCAB_SIZE = 2048,
 )
 

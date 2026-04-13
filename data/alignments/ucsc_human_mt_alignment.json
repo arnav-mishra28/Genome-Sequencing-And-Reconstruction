@@ -1,7 +1,7 @@
 {
   "name": "ucsc_human_mt",
-  "score": 8046.5,
-  "identity": 0.8875,
+  "score": 7647.5,
+  "identity": 0.875,
   "aligned_length": 80,
   "variants": [
     {
@@ -41,19 +41,25 @@
       "type": "unknown"
     },
     {
-      "aln_pos": 24,
+      "aln_pos": 23,
       "ref_base": "C",
       "qry_base": "T",
       "type": "transition"
     },
     {
-      "aln_pos": 44,
+      "aln_pos": 34,
       "ref_base": "C",
       "qry_base": "T",
       "type": "transition"
+    },
+    {
+      "aln_pos": 48,
+      "ref_base": "C",
+      "qry_base": "A",
+      "type": "transversion"
     }
   ],
-  "n_variants": 8,
-  "query_aligned": "target            1 ATCATAGGTCTATCACCCTATTAATCACTCACGGGAG-TCTCCATGCATTTGGTATTTTC",
-  "ref_aligned": "query             1 ATCACAGGTCTATCACCCTATTAACCACTCACGGGAGCTCTCCATGCATTTGGTATTTTC"
+  "n_variants": 9,
+  "query_aligned": "target            0 GATTACAGGTCTATTACCCTATTAACCAATCACGGGAGCTCTCCAT-CATTTGGTATTTT",
+  "ref_aligned": "query             0 GATCACAGGTCTATCACCCTATTAACCACTCACGGGAGCTCTCCATGCATTTGGTATTTT"
 }

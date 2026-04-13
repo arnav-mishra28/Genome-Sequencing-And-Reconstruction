@@ -2,9 +2,10 @@
 full_pipeline.py
 ================
 Orchestrates the entire genome reconstruction pipeline with:
-  - 4-phase training curriculum
-  - Ensemble reconstruction
+  - 5-phase training curriculum
+  - Multi-species ensemble reconstruction
   - Full evaluation metrics
+  - Confidence scoring
 """
 
 import os
@@ -39,7 +40,7 @@ def run_pipeline(
     batch_size:     int  = None,
     skip_download:  bool = False,
 ):
-    """Execute the full 4-phase training + reconstruction pipeline."""
+    """Execute the full 5-phase training + reconstruction pipeline."""
     phase1_epochs = phase1_epochs or (bert_epochs or PHASE1_EPOCHS)
     phase2_epochs = phase2_epochs or PHASE2_EPOCHS
     phase3_epochs = phase3_epochs or PHASE3_EPOCHS
@@ -295,7 +296,7 @@ def run_pipeline(
         "alignments":      alignments,
         "mappings":        mappings,
         "benchmark":       benchmark,
-        "gnn_embeddings":  gnn_embeddings.cpu().numpy().tolist(),
+        "gnn_embeddings":  gnn_embeddings.cpu().detach().numpy().tolist() if gnn_embeddings is not None else [],
         "vocab_size":      len(vocab),
     }
 

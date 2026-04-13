@@ -238,7 +238,7 @@ def train_dnabert(
             opt.zero_grad(set_to_none=True)
 
             if use_amp:
-                with torch.amp.autocast("cuda"):
+                with torch.amp.autocast(device.type, enabled=USE_AMP):
                     logits = model(tokens, att)
                     loss = crit(logits.reshape(-1, len(vocab)), labels.reshape(-1))
             else:

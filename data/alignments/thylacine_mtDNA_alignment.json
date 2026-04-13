@@ -1,7 +1,7 @@
 {
   "name": "thylacine_mtDNA",
-  "score": 4077.5,
-  "identity": 0.7875,
+  "score": 5303.5,
+  "identity": 0.775,
   "aligned_length": 80,
   "variants": [
     {
@@ -55,7 +55,7 @@
     {
       "aln_pos": 18,
       "ref_base": "0",
-      "qry_base": "5",
+      "qry_base": "2",
       "type": "unknown"
     },
     {
@@ -63,6 +63,18 @@
       "ref_base": "T",
       "qry_base": "A",
       "type": "transversion"
+    },
+    {
+      "aln_pos": 41,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 44,
+      "ref_base": "G",
+      "qry_base": "A",
+      "type": "transition"
     },
     {
       "aln_pos": 63,
@@ -83,7 +95,7 @@
       "type": "transition"
     }
   ],
-  "n_variants": 13,
-  "query_aligned": "target          855 GTTAATGTAGCTTAAATACATAAAGCAAGGC-CTGAAAATGCCTAGATGAGTCATCA-AA",
+  "n_variants": 15,
+  "query_aligned": "target          852 GTTAATGTAGCTTAAATACATGAAACAAGGCACTGAAAATGCCTAGATGAGTCATCA-AA",
   "ref_aligned": "query             0 GTTAATGTAGCTTAATTA-ATAAAGCAAGGCACTGAAAATGCCAAGATGAGTC-GCACGA"
 }

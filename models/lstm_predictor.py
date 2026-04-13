@@ -144,15 +144,22 @@ def train_lstm(
             Y = Y.to(device, non_blocking=True)
             opt.zero_grad(set_to_none=True)
 
-            with torch.amp.autocast("cuda", enabled=USE_AMP):
+            if USE_AMP and device.type == "cuda":
+                with torch.amp.autocast("cuda"):
+                    logits = model(X)
+                    loss   = crit(logits.reshape(-1, VOCAB_SIZE), Y.reshape(-1))
+                scaler.scale(loss).backward()
+                scaler.unscale_(opt)
+                nn.utils.clip_grad_norm_(model.parameters(), GRADIENT_CLIP)
+                scaler.step(opt)
+                scaler.update()
+            else:
                 logits = model(X)
                 loss   = crit(logits.reshape(-1, VOCAB_SIZE), Y.reshape(-1))
+                loss.backward()
+                nn.utils.clip_grad_norm_(model.parameters(), GRADIENT_CLIP)
+                opt.step()
 
-            scaler.scale(loss).backward()
-            scaler.unscale_(opt)
-            nn.utils.clip_grad_norm_(model.parameters(), GRADIENT_CLIP)
-            scaler.step(opt)
-            scaler.update()
             sched.step()
             total_loss += loss.item()
             n_batches  += 1

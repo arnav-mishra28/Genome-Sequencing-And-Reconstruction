@@ -1,6 +1,6 @@
 {
   "name": "passenger_pigeon",
-  "score": 53.0,
+  "score": 69.5,
   "identity": 0.55,
   "aligned_length": 80,
   "variants": [
@@ -42,7 +42,7 @@
     },
     {
       "aln_pos": 16,
-      "ref_base": "5",
+      "ref_base": "6",
       "qry_base": " ",
       "type": "unknown"
     },
@@ -54,48 +54,36 @@
     },
     {
       "aln_pos": 18,
-      "ref_base": "7",
-      "qry_base": "1",
+      "ref_base": "9",
+      "qry_base": "0",
       "type": "unknown"
     },
     {
-      "aln_pos": 32,
-      "ref_base": "C",
-      "qry_base": "T",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 35,
+      "aln_pos": 26,
       "ref_base": "G",
       "qry_base": "T",
       "type": "transversion"
     },
     {
-      "aln_pos": 37,
+      "aln_pos": 33,
       "ref_base": "C",
-      "qry_base": "A",
-      "type": "transversion"
+      "qry_base": "T",
+      "type": "transition"
     },
     {
-      "aln_pos": 41,
-      "ref_base": "T",
-      "qry_base": "G",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 45,
+      "aln_pos": 67,
       "ref_base": "C",
       "qry_base": "G",
       "type": "transversion"
     },
     {
-      "aln_pos": 52,
+      "aln_pos": 76,
       "ref_base": "T",
-      "qry_base": "G",
-      "type": "transversion"
+      "qry_base": "C",
+      "type": "transition"
     }
   ],
-  "n_variants": 15,
-  "query_aligned": "target            1 TTA-T---TGATTG-TGAATCGT-TGTCTTCAGTGC---TGG--CC-C------C---GG",
-  "ref_aligned": "query           547 TTAGTCCGTGATCGCGGCATCTTATCTCTTCATTGCTGTTGGTTCCTCTTTTTTCTGGGG"
+  "n_variants": 13,
+  "query_aligned": "target            0 ATT--ATTGA---TTGTGA--A----T-CGTT--GTC---TTC-AGTGCT---G-GCCCC",
+  "ref_aligned": "query           649 ATTCAAGTGAAGCCTG-GACTACTCCTGCGTTGCGTCCTATTCTAGTCCTCTCGTGTCCC"
 }

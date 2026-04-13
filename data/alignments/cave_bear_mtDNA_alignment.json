@@ -1,7 +1,7 @@
 {
   "name": "cave_bear_mtDNA",
-  "score": 125.0,
-  "identity": 0.4625,
+  "score": 56.0,
+  "identity": 0.6375,
   "aligned_length": 80,
   "variants": [
     {
@@ -41,25 +41,85 @@
       "type": "unknown"
     },
     {
-      "aln_pos": 17,
-      "ref_base": "9",
+      "aln_pos": 15,
+      "ref_base": "1",
       "qry_base": " ",
       "type": "unknown"
     },
     {
-      "aln_pos": 18,
-      "ref_base": "7",
-      "qry_base": "2",
+      "aln_pos": 17,
+      "ref_base": "5",
+      "qry_base": "7",
       "type": "unknown"
     },
     {
-      "aln_pos": 49,
+      "aln_pos": 18,
+      "ref_base": "1",
+      "qry_base": "6",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 29,
+      "ref_base": "A",
+      "qry_base": "C",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 41,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 42,
       "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 44,
+      "ref_base": "T",
       "qry_base": "G",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 49,
+      "ref_base": "T",
+      "qry_base": "G",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 57,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 59,
+      "ref_base": "A",
+      "qry_base": "C",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 61,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 66,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 67,
+      "ref_base": "A",
+      "qry_base": "C",
       "type": "transversion"
     }
   ],
-  "n_variants": 9,
-  "query_aligned": "target            2 GTTTTT----G--TTA---AT-------TGCA-GCCC--------AT---CT-----TC-",
-  "ref_aligned": "query            97 GTTTTTAGCAGACTTACACATGCAAGTCTCCACGCCCCAGTGAGAATGCCCTTAAAATCA"
+  "n_variants": 19,
+  "query_aligned": "target          476 ACAAATCAGCATT----TTCATTTGTAAAGTTA-CTAGACAGAATGTCAATCCTTTATAT",
+  "ref_aligned": "query          1451 ACAAA-CAGAATTTTAGTTCAACTTTAAATTTACCTAAAAAAAAT-AAAAT--TTTA-AT"
 }

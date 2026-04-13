@@ -16,13 +16,14 @@
         "elephant_mtDNA",
         "gray_wolf_mtDNA",
         "rock_pigeon_mtDNA",
-        "ensembl_human_mt"
+        "ensembl_human_mt",
+        "ucsc_human_mt"
       ]
     },
     {
       "step": 2,
       "name": "simulate",
-      "count": 9
+      "count": 10
     },
     {
       "step": 3,
@@ -38,8 +39,12 @@
       "name": "4_phase_training"
     },
     {
+      "step": "5b",
+      "name": "fusion_training"
+    },
+    {
       "step": 6,
-      "name": "reconstruct"
+      "name": "multi_species_reconstruct"
     },
     {
       "step": 7,
@@ -50,7 +55,7 @@
       "name": "mapping"
     }
   ],
-  "start_time": 1775467762.1093004,
-  "end_time": 1775468081.4150348,
-  "elapsed_sec": 319.3
+  "start_time": 1776080038.5352771,
+  "end_time": 1776080794.5322056,
+  "elapsed_sec": 756.0
 }

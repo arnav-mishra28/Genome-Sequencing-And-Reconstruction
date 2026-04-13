@@ -1,8 +1,8 @@
 {
   "name": "dodo_partial",
-  "score": 37.0,
-  "identity": 0.6,
-  "aligned_length": 60,
+  "score": 243.0,
+  "identity": 0.5125,
+  "aligned_length": 80,
   "variants": [
     {
       "aln_pos": 0,
@@ -42,78 +42,84 @@
     },
     {
       "aln_pos": 15,
-      "ref_base": "1",
+      "ref_base": "2",
       "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 16,
-      "ref_base": "8",
-      "qry_base": " ",
-      "type": "unknown"
-    },
-    {
-      "aln_pos": 17,
-      "ref_base": "8",
-      "qry_base": " ",
-      "type": "unknown"
-    },
-    {
-      "aln_pos": 18,
-      "ref_base": "0",
-      "qry_base": "1",
-      "type": "unknown"
-    },
-    {
-      "aln_pos": 46,
-      "ref_base": "C",
-      "qry_base": "A",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 48,
-      "ref_base": "C",
-      "qry_base": "T",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 49,
-      "ref_base": "A",
-      "qry_base": "T",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 51,
-      "ref_base": "T",
-      "qry_base": "A",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 56,
-      "ref_base": "1",
-      "qry_base": " ",
-      "type": "unknown"
-    },
-    {
-      "aln_pos": 57,
       "ref_base": "9",
       "qry_base": " ",
       "type": "unknown"
     },
     {
-      "aln_pos": 58,
+      "aln_pos": 17,
       "ref_base": "1",
-      "qry_base": "3",
+      "qry_base": " ",
       "type": "unknown"
     },
     {
-      "aln_pos": 59,
-      "ref_base": "0",
-      "qry_base": "5",
+      "aln_pos": 18,
+      "ref_base": "3",
+      "qry_base": "0",
       "type": "unknown"
+    },
+    {
+      "aln_pos": 26,
+      "ref_base": "A",
+      "qry_base": "C",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 36,
+      "ref_base": "T",
+      "qry_base": "A",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 39,
+      "ref_base": "T",
+      "qry_base": "G",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 40,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 41,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 42,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 43,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 64,
+      "ref_base": "C",
+      "qry_base": "G",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 67,
+      "ref_base": "C",
+      "qry_base": "G",
+      "type": "transversion"
     }
   ],
-  "n_variants": 18,
-  "query_aligned": "target            1 AAAT-AAAGATTAAAGCAGGTGTTAGATTTAAAGC   35",
-  "ref_aligned": "query          1880 AAATGAAAGATTAA--CA-GTG--AGCTCAATAGC 1910"
+  "n_variants": 19,
+  "query_aligned": "target            0 CAA-A-CAGAGATTAAAGCGGTGTTGGATGTAA-----AAC--TGCTGT--------TAA",
+  "ref_aligned": "query          2913 CAATAGAAGA-ATTAATGCTAAAAT-GA-GTAACTCGGAACCTTCCTCTGCGCAGCGTAA"
 }

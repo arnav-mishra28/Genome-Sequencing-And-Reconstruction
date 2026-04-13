@@ -177,15 +177,22 @@ def train_autoencoder(
             targets = clean[:, :4, :].argmax(dim=1)
             opt.zero_grad(set_to_none=True)
 
-            with torch.amp.autocast("cuda", enabled=USE_AMP):
+            if USE_AMP and device.type == "cuda":
+                with torch.amp.autocast("cuda"):
+                    logits = model(noisy)
+                    loss   = crit(logits, targets)
+                scaler.scale(loss).backward()
+                scaler.unscale_(opt)
+                nn.utils.clip_grad_norm_(model.parameters(), GRADIENT_CLIP)
+                scaler.step(opt)
+                scaler.update()
+            else:
                 logits = model(noisy)
                 loss   = crit(logits, targets)
+                loss.backward()
+                nn.utils.clip_grad_norm_(model.parameters(), GRADIENT_CLIP)
+                opt.step()
 
-            scaler.scale(loss).backward()
-            scaler.unscale_(opt)
-            nn.utils.clip_grad_norm_(model.parameters(), GRADIENT_CLIP)
-            scaler.step(opt)
-            scaler.update()
             total_loss += loss.item()
             n_batches  += 1
 

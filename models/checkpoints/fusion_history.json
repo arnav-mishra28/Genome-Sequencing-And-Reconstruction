@@ -1,0 +1,26 @@
+[
+  {
+    "epoch": 1,
+    "loss": 8.410552,
+    "mlm_loss": 8.168968,
+    "conf_loss": 0.481076,
+    "val_loss": 7.907907,
+    "temperature": 1.4942
+  },
+  {
+    "epoch": 2,
+    "loss": 7.825594,
+    "mlm_loss": 7.737857,
+    "conf_loss": 0.173382,
+    "val_loss": 7.842434,
+    "temperature": 1.4911
+  },
+  {
+    "epoch": 3,
+    "loss": 7.695984,
+    "mlm_loss": 7.631388,
+    "conf_loss": 0.127101,
+    "val_loss": 7.835524,
+    "temperature": 1.4906
+  }
+]
