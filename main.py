@@ -8,12 +8,15 @@ Everything runs automatically — data download, training, reconstruction,
 evaluation, visualizations, and live 3D reconstruction viewer.
 
 Subcommands (optional):
-  train            — Run training pipeline only
-  reconstruct-live — Launch real-time 3D reconstruction viewer only
-  evaluate         — Run benchmark evaluation on existing results
-  simulate         — Launch live DNA damage simulation viewer
-  serve            — Start FastAPI server
-  dashboard        — Launch Dash real-time dashboard
+  train                  — Run training pipeline only
+  reconstruct-live       — Launch real-time 3D reconstruction viewer only
+  reconstruct-interactive — Launch with full user manual controls
+  evaluate               — Run benchmark evaluation on existing results
+  simulate               — Launch live DNA damage simulation viewer
+  serve                  — Start FastAPI server
+  dashboard              — Launch Streamlit metrics dashboard
+  train-evoformer        — Train Evoformer model only
+  train-distributed      — Train with DeepSpeed distributed
 """
 
 import os
@@ -39,12 +42,13 @@ BANNER = """
 ================================================================
      GENOME SEQUENCING & RECONSTRUCTION SYSTEM v3.0
 
-  Powered by: DNABERT-2 + Fusion(T+GNN) + ESM + AlphaFold + GNN
-  New:        Confidence Scoring + Multi-Species + Live 3D Viewer
+  Powered by: DNABERT-2 + Evoformer + Fusion(T+GNN) + AlphaFold
+  New:        Evoformer + Interactive Recon + Streamlit Dashboard
   Data:       NCBI + Ensembl + UCSC Genome Browser
-  Training:   5-Phase Curriculum Learning
+  Training:   6-Phase Curriculum + DeepSpeed Distributed
   Live Sim:   Real-time 3D/2D Damage Visualization
-  Live Recon: Real-time 3D DNA Reconstruction (PyOpenGL)
+  Live Recon: Interactive 3D DNA Reconstruction (PyOpenGL)
+  Dashboard:  Streamlit Metrics + SaaS Upload
   API:        FastAPI + Swagger
 ================================================================
 """
@@ -76,16 +80,21 @@ def verify_modules():
         os.path.join(BASE_DIR, "training", "phase3_evolution_aware.py"),
         os.path.join(BASE_DIR, "training", "phase4_finetune.py"),
         os.path.join(BASE_DIR, "training", "phase5_fusion.py"),
+        os.path.join(BASE_DIR, "training", "phase6_evoformer.py"),
+        os.path.join(BASE_DIR, "training", "distributed_trainer.py"),
         os.path.join(BASE_DIR, "evaluation", "metrics.py"),
         os.path.join(BASE_DIR, "evaluation", "benchmark.py"),
         os.path.join(BASE_DIR, "pipeline", "full_pipeline.py"),
         os.path.join(BASE_DIR, "pipeline", "genome_mapper.py"),
+        os.path.join(BASE_DIR, "models", "evoformer_model.py"),
+        os.path.join(BASE_DIR, "data", "multi_species_loader.py"),
         os.path.join(BASE_DIR, "visualization", "live_helix_3d.py"),
         os.path.join(BASE_DIR, "visualization", "live_genome_2d.py"),
         os.path.join(BASE_DIR, "visualization", "live_viewer.py"),
         os.path.join(BASE_DIR, "visualization", "reconstruction_viewer.py"),
         os.path.join(BASE_DIR, "visualization", "reconstruction_engine.py"),
         os.path.join(BASE_DIR, "simulation", "live_simulation.py"),
+        os.path.join(BASE_DIR, "dashboard", "streamlit_app.py"),
     ]
     for path in checks:
         if not os.path.exists(path):
@@ -114,10 +123,10 @@ def step_download_data():
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-#  STEP 2: Train Everything (5-phase curriculum)
+#  STEP 2: Train Everything (6-phase curriculum)
 # ═══════════════════════════════════════════════════════════════════════════════
 def step_train(skip_download=False, **epoch_overrides):
-    """Run the full 5-phase training + reconstruction pipeline."""
+    """Run the full 6-phase training + reconstruction pipeline."""
     from pipeline.full_pipeline import run_pipeline
 
     results = run_pipeline(
@@ -221,8 +230,9 @@ def run_everything():
       7. Phase 3: Evolution-aware training (Phylogenetic GNN)
       8. Phase 4: Fine-tune on ancient DNA
       9. Phase 5: Transformer + GNN Fusion (cross-attention + confidence)
-     10. Multi-species ensemble reconstruction (all ancient species)
-     11. Full evaluation (5 metrics: accuracy, edit distance,
+     10. Phase 6: Evoformer (AlphaFold-inspired, multi-species, recycling)
+     11. Multi-species ensemble reconstruction (all ancient species)
+     12. Full evaluation (5 metrics: accuracy, edit distance,
          similarity, phylo consistency, confidence calibration)
      12. Generate visualizations (3D helix, 2D genome maps)
      13. Launch live 3D reconstruction viewer
@@ -312,9 +322,167 @@ def cmd_serve(args):
 
 
 def cmd_dashboard(args):
-    """Launch Dash dashboard."""
-    from visualization.realtime_dashboard import run_dashboard
-    run_dashboard()
+    """Launch Streamlit dashboard."""
+    import subprocess
+    dashboard_path = os.path.join(BASE_DIR, "dashboard", "streamlit_app.py")
+    print(f"  Launching Streamlit dashboard: {dashboard_path}")
+    subprocess.run(
+        [sys.executable, "-m", "streamlit", "run", dashboard_path,
+         "--server.headless", "true"],
+        cwd=BASE_DIR,
+    )
+
+
+def cmd_reconstruct_interactive(args):
+    """Launch interactive reconstruction viewer with manual controls."""
+    from visualization.reconstruction_viewer import launch_reconstruction_viewer
+
+    print("\n" + "=" * 65)
+    print("  INTERACTIVE RECONSTRUCTION MODE")
+    print("=" * 65)
+    print("  Full manual controls available:")
+    print("    [M]     Toggle manual/auto mode")
+    print("    [1-4]   Set base A/C/G/T at cursor")
+    print("    [←→]    Move cursor along sequence")
+    print("    [↑↓]    Jump cursor ±10 positions")
+    print("    [Z]     Undo last edit")
+    print("    [Y/N]   Accept/reject AI suggestion")
+    print("    [F]     Force re-predict window")
+    print("    [SPACE] Pause/resume auto-reconstruction")
+    print("    [+/-]   Adjust speed")
+    print("    [C]     Toggle confidence overlay")
+    print("    [Q]     Quit")
+    print("=" * 65)
+
+    launch_reconstruction_viewer(
+        species_name=args.species,
+        damaged_seq=args.sequence,
+        max_bases=args.max_bases,
+        speed=args.speed,
+        width=args.width,
+        height=args.height,
+    )
+
+
+def cmd_train_evoformer(args):
+    """Train the Evoformer model standalone."""
+    print("\n" + "=" * 65)
+    print("  EVOFORMER STANDALONE TRAINING")
+    print("=" * 65)
+
+    # Load sequences
+    from data.fetch_sequences import fetch_all, load_fasta
+    from config.settings import SEQ_DIR, MODERN_SPECIES, EVOFORMER_LR
+    from preprocessing.encoding import build_kmer_vocab
+    from data.multi_species_loader import (
+        download_evolution_genomes,
+        load_evolution_sequences,
+    )
+
+    if not args.skip_download:
+        metadata = fetch_all()
+    else:
+        meta_path = os.path.join(SEQ_DIR, "metadata.json")
+        with open(meta_path) as f:
+            metadata = json.load(f)
+
+    sequences_raw = {}
+    for name, info in metadata.items():
+        if not os.path.exists(info["path"]):
+            continue
+        recs = load_fasta(info["path"])
+        sequences_raw[name] = next(iter(recs.values()))[:8000]
+
+    all_seqs_list = list(sequences_raw.values())
+    vocab = build_kmer_vocab(all_seqs_list, k=6)
+
+    # Download evolution genomes
+    evo_meta = download_evolution_genomes()
+    evolution_seqs = load_evolution_sequences(evo_meta)
+
+    # Simulate damage
+    from data.simulate_ancient_dna import simulate_ancient_damage
+    ANCIENT = {k: v for k, v in sequences_raw.items()
+               if k not in MODERN_SPECIES}
+    simulated = {}
+    for name, seq in ANCIENT.items():
+        simulated[name] = simulate_ancient_damage(
+            seq, name, seed=hash(name) % (2**31)
+        )
+
+    all_species = sorted(sequences_raw.keys())
+
+    from training.phase6_evoformer import run_phase6
+    run_phase6(
+        sequences_raw=sequences_raw,
+        simulated=simulated,
+        vocab=vocab,
+        species_names=all_species,
+        evolution_seqs=evolution_seqs,
+        epochs=args.epochs or 3,
+        batch_size=args.batch_size,
+        lr=EVOFORMER_LR,
+        scale_profile=args.profile or "small",
+    )
+
+
+def cmd_train_distributed(args):
+    """Train with DeepSpeed distributed training."""
+    print("\n" + "=" * 65)
+    print("  DeepSpeed DISTRIBUTED TRAINING")
+    print("=" * 65)
+
+    from data.fetch_sequences import fetch_all, load_fasta
+    from config.settings import SEQ_DIR, MODERN_SPECIES, EVOFORMER_LR
+    from preprocessing.encoding import build_kmer_vocab
+    from data.multi_species_loader import (
+        download_evolution_genomes,
+        load_evolution_sequences,
+    )
+
+    if not args.skip_download:
+        metadata = fetch_all()
+    else:
+        meta_path = os.path.join(SEQ_DIR, "metadata.json")
+        with open(meta_path) as f:
+            metadata = json.load(f)
+
+    sequences_raw = {}
+    for name, info in metadata.items():
+        if not os.path.exists(info["path"]):
+            continue
+        recs = load_fasta(info["path"])
+        sequences_raw[name] = next(iter(recs.values()))[:8000]
+
+    all_seqs_list = list(sequences_raw.values())
+    vocab = build_kmer_vocab(all_seqs_list, k=6)
+
+    evo_meta = download_evolution_genomes()
+    evolution_seqs = load_evolution_sequences(evo_meta)
+
+    ANCIENT = {k: v for k, v in sequences_raw.items()
+               if k not in MODERN_SPECIES}
+    simulated = {}
+    for name, seq in ANCIENT.items():
+        simulated[name] = simulate_ancient_damage(
+            seq, name, seed=hash(name) % (2**31)
+        )
+
+    from data.simulate_ancient_dna import simulate_ancient_damage
+    all_species = sorted(sequences_raw.keys())
+
+    from training.distributed_trainer import run_distributed_training
+    run_distributed_training(
+        sequences_raw=sequences_raw,
+        simulated=simulated,
+        vocab=vocab,
+        species_names=all_species,
+        evolution_seqs=evolution_seqs,
+        epochs=args.epochs or 5,
+        batch_size=args.batch_size,
+        lr=EVOFORMER_LR,
+        scale_profile=args.profile or "medium",
+    )
 
 
 def cmd_simulate(args):
@@ -414,7 +582,7 @@ visualize, and launch the live 3D reconstruction viewer.
     sub.add_parser("serve", help="Start FastAPI server")
 
     # -- dashboard --
-    sub.add_parser("dashboard", help="Launch Dash dashboard")
+    sub.add_parser("dashboard", help="Launch Streamlit metrics dashboard")
 
     # -- evaluate --
     sub.add_parser("evaluate", help="Run benchmark evaluation")
@@ -440,6 +608,34 @@ visualize, and launch the live 3D reconstruction viewer.
     p_rlive.add_argument("--speed", type=float, default=15.0)
     p_rlive.add_argument("--width", type=int, default=1600)
     p_rlive.add_argument("--height", type=int, default=900)
+
+    # -- reconstruct-interactive --
+    p_rint = sub.add_parser("reconstruct-interactive",
+                             help="Launch interactive reconstruction with manual controls")
+    p_rint.add_argument("--species", type=str, default="neanderthal_mtDNA")
+    p_rint.add_argument("--sequence", type=str, default=None)
+    p_rint.add_argument("--max-bases", type=int, default=300)
+    p_rint.add_argument("--speed", type=float, default=5.0)
+    p_rint.add_argument("--width", type=int, default=1600)
+    p_rint.add_argument("--height", type=int, default=900)
+
+    # -- train-evoformer --
+    p_evo = sub.add_parser("train-evoformer",
+                            help="Train Evoformer model standalone")
+    p_evo.add_argument("--skip-download", action="store_true")
+    p_evo.add_argument("--epochs", type=int, default=None)
+    p_evo.add_argument("--batch-size", type=int, default=None)
+    p_evo.add_argument("--profile", type=str, default=None,
+                       choices=["small", "medium", "large", "xl"])
+
+    # -- train-distributed --
+    p_dist = sub.add_parser("train-distributed",
+                             help="Train with DeepSpeed distributed")
+    p_dist.add_argument("--skip-download", action="store_true")
+    p_dist.add_argument("--epochs", type=int, default=None)
+    p_dist.add_argument("--batch-size", type=int, default=None)
+    p_dist.add_argument("--profile", type=str, default=None,
+                        choices=["small", "medium", "large", "xl"])
 
     args = parser.parse_args()
 
@@ -472,6 +668,12 @@ visualize, and launch the live 3D reconstruction viewer.
         cmd_simulate(args)
     elif args.command == "reconstruct-live":
         cmd_reconstruct_live(args)
+    elif args.command == "reconstruct-interactive":
+        cmd_reconstruct_interactive(args)
+    elif args.command == "train-evoformer":
+        cmd_train_evoformer(args)
+    elif args.command == "train-distributed":
+        cmd_train_distributed(args)
     else:
         # ── DEFAULT: Run everything with just 'python main.py' ────────────
         run_everything()

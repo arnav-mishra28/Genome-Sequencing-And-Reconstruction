@@ -425,6 +425,229 @@ class ReconstructionEngine:
     def slow_down(self):
         self.speed = max(self.speed / 1.5, 0.5)
 
+    # ══════════════════════════════════════════════════════════════════════════
+    #  Interactive Controls (User Manual Intervention)
+    # ══════════════════════════════════════════════════════════════════════════
+    def manual_edit(self, pos: int, base: str) -> Optional[ReconstructionEvent]:
+        """
+        Manually set a base at a given position.
+        Records the action in history for undo support.
+        """
+        if pos < 0 or pos >= len(self.current_seq):
+            return None
+        base = base.upper()
+        if base not in "ACGTN":
+            return None
+
+        old_base = self.current_seq[pos]
+        old_conf = self.confidences[pos]
+
+        # Record history for undo
+        self._edit_history.append({
+            "type": "manual_edit",
+            "pos": pos,
+            "old_base": old_base,
+            "new_base": base,
+            "old_conf": old_conf,
+            "new_conf": 1.0,  # manual edits get full confidence
+        })
+
+        self.current_seq[pos] = base
+        self.confidences[pos] = 1.0
+        self.step_count += 1
+
+        event = ReconstructionEvent(
+            position=pos,
+            original_base=old_base,
+            predicted_base=base,
+            confidence=1.0,
+            model_source="manual",
+            phase="manual_edit",
+            step=self.step_count,
+            timestamp=time.time(),
+            is_gap_fill=(old_base == "N"),
+            is_correction=(old_base != base and old_base != "N"),
+        )
+        self.events.append(event)
+        return event
+
+    def undo_last(self) -> Optional[Dict]:
+        """
+        Undo the last edit (manual or AI).
+        Returns the undone edit info, or None if nothing to undo.
+        """
+        if not self._edit_history:
+            return None
+
+        edit = self._edit_history.pop()
+        pos = edit["pos"]
+        self.current_seq[pos] = edit["old_base"]
+        self.confidences[pos] = edit["old_conf"]
+
+        # Also remove from events if it exists
+        if self.events and self.events[-1].position == pos:
+            self.events.pop()
+
+        return edit
+
+    @property
+    def _edit_history(self) -> List[Dict]:
+        """Lazy-init history stack."""
+        if not hasattr(self, "__edit_history"):
+            self.__edit_history = []
+        return self.__edit_history
+
+    @_edit_history.setter
+    def _edit_history(self, val):
+        self.__edit_history = val
+
+    def get_pending_suggestions(self) -> List[Dict]:
+        """
+        Get AI suggestions for all remaining gap positions
+        WITHOUT applying them. User can accept/reject each one.
+        """
+        suggestions = []
+        for pos in self.damage_positions:
+            if self.current_seq[pos] == "N":
+                # Use a simple heuristic or model to suggest
+                suggestion = self._predict_single_base(pos)
+                suggestions.append({
+                    "pos": pos,
+                    "suggested_base": suggestion["base"],
+                    "confidence": suggestion["confidence"],
+                    "model": suggestion["model"],
+                })
+        return suggestions
+
+    def accept_suggestion(self, pos: int, base: str = None,
+                          confidence: float = 0.8) -> Optional[ReconstructionEvent]:
+        """Accept an AI suggestion at a given position."""
+        if base is None:
+            suggestion = self._predict_single_base(pos)
+            base = suggestion["base"]
+            confidence = suggestion["confidence"]
+        return self.manual_edit(pos, base)
+
+    def reject_suggestion(self, pos: int):
+        """Mark a position as user-rejected (keep as N)."""
+        # Record rejection for analysis
+        if not hasattr(self, "_rejected_positions"):
+            self._rejected_positions = set()
+        self._rejected_positions.add(pos)
+
+    def force_repredict(self, start: int, end: int) -> List[ReconstructionEvent]:
+        """
+        Force the AI to re-predict a window of positions.
+        Useful when user wants to try a different model output.
+        """
+        events = []
+        # Reset positions to N
+        for pos in range(start, min(end, len(self.current_seq))):
+            if self.current_seq[pos] != "N":
+                self._edit_history.append({
+                    "type": "repredict_reset",
+                    "pos": pos,
+                    "old_base": self.current_seq[pos],
+                    "old_conf": self.confidences[pos],
+                })
+                self.current_seq[pos] = "N"
+                self.confidences[pos] = 0.0
+
+        # Re-run prediction on the window
+        for pos in range(start, min(end, len(self.current_seq))):
+            if self.current_seq[pos] == "N":
+                suggestion = self._predict_single_base(pos)
+                event = self.manual_edit(pos, suggestion["base"])
+                if event:
+                    event.model_source = suggestion["model"]
+                    event.phase = "repredict"
+                    event.confidence = suggestion["confidence"]
+                    self.confidences[pos] = suggestion["confidence"]
+                    events.append(event)
+        return events
+
+    def _predict_single_base(self, pos: int) -> Dict:
+        """Predict a single base at given position using available models."""
+        # Try AE first
+        ae = self.models.get("ae")
+        if ae is not None:
+            try:
+                from preprocessing.encoding import one_hot_encode
+                from models.denoising_autoencoder import SEQ_LEN as AE_SEQ_LEN
+                INT2BASE = {0: "A", 1: "C", 2: "G", 3: "T"}
+
+                chunk_start = max(0, pos - AE_SEQ_LEN // 2)
+                chunk_end = min(len(self.current_seq), chunk_start + AE_SEQ_LEN)
+                chunk = "".join(self.current_seq[chunk_start:chunk_end])
+                padded = chunk.ljust(AE_SEQ_LEN, "N").upper()
+
+                oh = one_hot_encode(padded)
+                enc = np.zeros((AE_SEQ_LEN, 5), dtype=np.float32)
+                enc[:, :4] = oh
+                enc[:, 4] = np.array([1.0 if c == "N" else 0.0
+                                       for c in padded], dtype=np.float32)
+
+                ae.eval()
+                t = torch.from_numpy(enc.T.copy()).unsqueeze(0).to(self.device)
+                with torch.no_grad():
+                    logits = ae(t)
+                    probs = torch.softmax(logits[0], dim=0)
+
+                local_pos = pos - chunk_start
+                if local_pos < AE_SEQ_LEN:
+                    pred_idx = int(probs[:4, local_pos].argmax())
+                    conf = float(probs[:4, local_pos].max())
+                    return {
+                        "base": INT2BASE[pred_idx],
+                        "confidence": round(conf, 4),
+                        "model": "ae",
+                    }
+            except Exception:
+                pass
+
+        # Fallback: context-aware random
+        import random
+        rng = random.Random(pos)
+        # Look at neighbors for context
+        context_bases = []
+        for offset in [-2, -1, 1, 2]:
+            p = pos + offset
+            if 0 <= p < len(self.current_seq) and self.current_seq[p] != "N":
+                context_bases.append(self.current_seq[p])
+
+        if context_bases:
+            base = rng.choice(context_bases)
+        else:
+            base = rng.choice("ACGT")
+
+        return {"base": base, "confidence": 0.5, "model": "heuristic"}
+
+    @property
+    def cursor_position(self) -> int:
+        """Current cursor position for interactive editing."""
+        if not hasattr(self, "_cursor_pos"):
+            self._cursor_pos = 0
+        return self._cursor_pos
+
+    @cursor_position.setter
+    def cursor_position(self, pos: int):
+        self._cursor_pos = max(0, min(pos, len(self.current_seq) - 1))
+
+    def move_cursor(self, delta: int):
+        """Move cursor by delta positions."""
+        self.cursor_position = self.cursor_position + delta
+
+    def get_cursor_info(self) -> Dict:
+        """Get info about the base at cursor position."""
+        pos = self.cursor_position
+        return {
+            "position": pos,
+            "base": self.current_seq[pos],
+            "confidence": self.confidences[pos],
+            "is_gap": self.current_seq[pos] == "N",
+            "original": self.original_damaged[pos],
+        }
+
 
 # ═══════════════════════════════════════════════════════════════════════════════
 #  Create engine with pre-trained models
@@ -506,6 +729,24 @@ def create_reconstruction_engine(
         fusion.load_state_dict(ckpt["model"])
         models["fusion"] = fusion
         print(f"  ✅ Loaded Fusion from {fusion_path}")
+
+    # Try loading Evoformer
+    evo_path = os.path.join(MODEL_DIR, "evoformer.pt")
+    if os.path.exists(evo_path):
+        try:
+            ckpt = torch.load(evo_path, map_location="cpu", weights_only=True)
+            from models.evoformer_model import EvoformerGenomeModel, EvoformerConfig
+            cfg_dict = ckpt.get("config", {})
+            config = EvoformerConfig()
+            for k, v in cfg_dict.items():
+                if hasattr(config, k):
+                    setattr(config, k, v)
+            evo = EvoformerGenomeModel(config)
+            evo.load_state_dict(ckpt["model"])
+            models["evoformer"] = evo
+            print(f"  ✅ Loaded Evoformer from {evo_path}")
+        except Exception as e:
+            print(f"  ⚠ Could not load Evoformer: {e}")
 
     # ── Load vocab ────────────────────────────────────────────────────────────
     from config.settings import RESULTS_DIR

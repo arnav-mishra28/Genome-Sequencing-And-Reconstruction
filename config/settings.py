@@ -169,3 +169,18 @@ DISEASE_MUTATIONS = {
     4160:  ("T→C", "LHON — mild ND1 variant"),
     7444:  ("G→A", "LHON — COX1 variant"),
 }
+
+# ── Phase 6: Evoformer Training ───────────────────────────────────────────────
+PHASE6_EPOCHS = 3
+EVOFORMER_SCALE = "small"    # "small" | "medium" | "large" | "xl"
+EVOFORMER_LR    = 1e-4
+
+# ── Evolution Species for Multi-Species Training ─────────────────────────────
+EVOLUTION_SPECIES = {
+    "human":       {"accession": "NC_012920", "name": "Homo sapiens"},
+    "chimpanzee":  {"accession": "NC_001643", "name": "Pan troglodytes"},
+    "gorilla":     {"accession": "NC_011120", "name": "Gorilla gorilla"},
+    "mouse":       {"accession": "NC_005089", "name": "Mus musculus"},
+    "elephant":    {"accession": "NC_005129", "name": "Loxodonta africana"},
+}
+

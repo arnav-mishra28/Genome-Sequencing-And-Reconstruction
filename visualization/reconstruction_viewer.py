@@ -388,8 +388,32 @@ class HUDRenderer:
         if engine and hasattr(engine, 'confidences'):
             self._draw_confidence_bars(engine.confidences, engine)
 
+        # ── Cursor Info ───────────────────────────────────────────────────────
+        if engine and hasattr(engine, 'cursor_position'):
+            cursor_info = engine.get_cursor_info()
+            pos = cursor_info['position']
+            base = cursor_info['base']
+            conf = cursor_info['confidence']
+            is_gap = cursor_info['is_gap']
+
+            cursor_y = self.height - 240
+            self._draw_rect(20, cursor_y - 50, 280, 45, (0.08, 0.08, 0.12, 0.85))
+            self._draw_rect_outline(20, cursor_y - 50, 280, 45, (0.3, 0.3, 0.4, 0.5))
+            self._draw_text(
+                f"Cursor: pos {pos} | base={base} | conf={conf:.3f}",
+                30, cursor_y - 15,
+                color=(1.0, 0.8, 0.0) if is_gap else (0.7, 0.7, 0.8),
+            )
+            mode_str = "MANUAL" if getattr(self, '_manual_mode', False) else "AUTO"
+            self._draw_text(
+                f"Mode: {mode_str} | [M] Toggle  [1-4] Set A/C/G/T  [Z] Undo",
+                30, cursor_y - 35,
+                color=(0.5, 0.5, 0.6),
+                size=10,
+            )
+
         # ── Controls ─────────────────────────────────────────────────────────
-        controls = "[SPACE] Pause  [+/-] Speed  [C] Confidence  [S] Save  [Q] Quit"
+        controls = "[SPACE] Pause  [+/-] Speed  [C] Confidence  [←→] Cursor  [1-4] ACGT  [Z] Undo  [F] Repredict  [Q] Quit"
         self._draw_text(controls, 20, 15, color=(0.4, 0.4, 0.5), size=10)
 
         self._teardown_2d()
@@ -660,6 +684,80 @@ class ReconstructionViewer:
             self.auto_rotate = not self.auto_rotate
         elif key == K_s:
             self._save_snapshot()
+
+        # ── Interactive Reconstruction Controls ───────────────────────────────
+        elif key == K_m:
+            # Toggle manual mode
+            self._manual_mode = not getattr(self, '_manual_mode', False)
+            if self._manual_mode:
+                self.paused = True  # auto-pause in manual mode
+
+        elif key == K_LEFT:
+            self.engine.move_cursor(-1)
+        elif key == K_RIGHT:
+            self.engine.move_cursor(1)
+        elif key == K_UP:
+            self.engine.move_cursor(-10)  # jump 10 positions
+        elif key == K_DOWN:
+            self.engine.move_cursor(10)
+
+        elif key == K_1:  # Set base A
+            pos = self.engine.cursor_position
+            event = self.engine.manual_edit(pos, "A")
+            if event:
+                self.helix.apply_reconstruction(pos, "A", 1.0)
+                self.engine.move_cursor(1)
+        elif key == K_2:  # Set base C
+            pos = self.engine.cursor_position
+            event = self.engine.manual_edit(pos, "C")
+            if event:
+                self.helix.apply_reconstruction(pos, "C", 1.0)
+                self.engine.move_cursor(1)
+        elif key == K_3:  # Set base G
+            pos = self.engine.cursor_position
+            event = self.engine.manual_edit(pos, "G")
+            if event:
+                self.helix.apply_reconstruction(pos, "G", 1.0)
+                self.engine.move_cursor(1)
+        elif key == K_4:  # Set base T
+            pos = self.engine.cursor_position
+            event = self.engine.manual_edit(pos, "T")
+            if event:
+                self.helix.apply_reconstruction(pos, "T", 1.0)
+                self.engine.move_cursor(1)
+
+        elif key == K_z:  # Undo last edit
+            edit = self.engine.undo_last()
+            if edit:
+                pos = edit["pos"]
+                self.helix.apply_reconstruction(
+                    pos, edit["old_base"], edit["old_conf"]
+                )
+
+        elif key == K_y:  # Accept AI suggestion at cursor
+            pos = self.engine.cursor_position
+            event = self.engine.accept_suggestion(pos)
+            if event:
+                self.helix.apply_reconstruction(
+                    pos, event.predicted_base, event.confidence
+                )
+                self.engine.move_cursor(1)
+
+        elif key == K_n:  # Reject suggestion at cursor
+            pos = self.engine.cursor_position
+            self.engine.reject_suggestion(pos)
+            self.engine.move_cursor(1)
+
+        elif key == K_f:  # Force re-predict window around cursor
+            pos = self.engine.cursor_position
+            start = max(0, pos - 5)
+            end = min(len(self.engine.current_seq), pos + 5)
+            events = self.engine.force_repredict(start, end)
+            for ev in events:
+                self.helix.apply_reconstruction(
+                    ev.position, ev.predicted_base, ev.confidence
+                )
+
         return True
 
     def _update(self, dt: float):
@@ -883,6 +981,38 @@ class ReconstructionViewer:
                 self.speed = max(0.5, self.speed / 1.5)
             elif event.key == "q":
                 plt.close(fig)
+            # Interactive reconstruction controls (MPL fallback)
+            elif event.key == "left":
+                self.engine.move_cursor(-1)
+            elif event.key == "right":
+                self.engine.move_cursor(1)
+            elif event.key == "1":
+                pos = self.engine.cursor_position
+                self.engine.manual_edit(pos, "A")
+                self.engine.move_cursor(1)
+            elif event.key == "2":
+                pos = self.engine.cursor_position
+                self.engine.manual_edit(pos, "C")
+                self.engine.move_cursor(1)
+            elif event.key == "3":
+                pos = self.engine.cursor_position
+                self.engine.manual_edit(pos, "G")
+                self.engine.move_cursor(1)
+            elif event.key == "4":
+                pos = self.engine.cursor_position
+                self.engine.manual_edit(pos, "T")
+                self.engine.move_cursor(1)
+            elif event.key == "z":
+                self.engine.undo_last()
+            elif event.key == "y":
+                pos = self.engine.cursor_position
+                self.engine.accept_suggestion(pos)
+                self.engine.move_cursor(1)
+            elif event.key == "f":
+                pos = self.engine.cursor_position
+                start = max(0, pos - 5)
+                end = min(len(self.engine.current_seq), pos + 5)
+                self.engine.force_repredict(start, end)
 
         fig.canvas.mpl_connect("key_press_event", on_key)
 

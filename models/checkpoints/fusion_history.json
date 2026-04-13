@@ -1,26 +1,26 @@
 [
   {
     "epoch": 1,
-    "loss": 8.410552,
-    "mlm_loss": 8.168968,
-    "conf_loss": 0.481076,
-    "val_loss": 7.907907,
-    "temperature": 1.4942
+    "loss": 8.35174,
+    "mlm_loss": 8.11206,
+    "conf_loss": 0.477269,
+    "val_loss": 7.92076,
+    "temperature": 1.4941
   },
   {
     "epoch": 2,
-    "loss": 7.825594,
-    "mlm_loss": 7.737857,
-    "conf_loss": 0.173382,
-    "val_loss": 7.842434,
-    "temperature": 1.4911
+    "loss": 7.781006,
+    "mlm_loss": 7.695009,
+    "conf_loss": 0.169903,
+    "val_loss": 7.803659,
+    "temperature": 1.491
   },
   {
     "epoch": 3,
-    "loss": 7.695984,
-    "mlm_loss": 7.631388,
-    "conf_loss": 0.127101,
-    "val_loss": 7.835524,
-    "temperature": 1.4906
+    "loss": 7.681467,
+    "mlm_loss": 7.619171,
+    "conf_loss": 0.1225,
+    "val_loss": 7.787761,
+    "temperature": 1.4905
   }
 ]

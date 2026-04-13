@@ -44,6 +44,10 @@
     },
     {
       "step": 6,
+      "name": "evoformer_training"
+    },
+    {
+      "step": 6,
       "name": "multi_species_reconstruct"
     },
     {
@@ -55,7 +59,7 @@
       "name": "mapping"
     }
   ],
-  "start_time": 1776080038.5352771,
-  "end_time": 1776080794.5322056,
-  "elapsed_sec": 756.0
+  "start_time": 1776094491.5617943,
+  "end_time": 1776095171.520886,
+  "elapsed_sec": 680.0
 }

@@ -1,6 +1,6 @@
 {
   "name": "mammoth_mtDNA",
-  "score": 7797.0,
+  "score": 6823.5,
   "identity": 0.9125,
   "aligned_length": 80,
   "variants": [
@@ -41,13 +41,13 @@
       "type": "unknown"
     },
     {
-      "aln_pos": 73,
-      "ref_base": "C",
-      "qry_base": "T",
+      "aln_pos": 25,
+      "ref_base": "T",
+      "qry_base": "C",
       "type": "transition"
     }
   ],
   "n_variants": 7,
-  "query_aligned": "target            2 TAATGTAGCTTAAAACAAAAGCAAGGTACTGAAAATACCTAGACGAGTATATCTAACTCC",
-  "ref_aligned": "query             2 TAATGTAGCTTAAAACAAAAGCAAGGTACTGAAAATACCTAGACGAGTATATCCAACTCC"
+  "query_aligned": "target            0 GTTAACGTAGCTTAAAACAAAAGCAAGGTACTGAAAATACCTAGACGAGTATATCCAACT",
+  "ref_aligned": "query             0 GTTAATGTAGCTTAAAACAAAAGCAAGGTACTGAAAATACCTAGACGAGTATATCCAACT"
 }

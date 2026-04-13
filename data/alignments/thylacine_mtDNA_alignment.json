@@ -1,7 +1,7 @@
 {
   "name": "thylacine_mtDNA",
-  "score": 5303.5,
-  "identity": 0.775,
+  "score": 4812.0,
+  "identity": 0.7625,
   "aligned_length": 80,
   "variants": [
     {
@@ -55,47 +55,41 @@
     {
       "aln_pos": 18,
       "ref_base": "0",
-      "qry_base": "2",
+      "qry_base": "7",
       "type": "unknown"
     },
     {
-      "aln_pos": 35,
+      "aln_pos": 36,
       "ref_base": "T",
       "qry_base": "A",
       "type": "transversion"
     },
     {
-      "aln_pos": 41,
-      "ref_base": "A",
-      "qry_base": "G",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 44,
-      "ref_base": "G",
-      "qry_base": "A",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 63,
-      "ref_base": "A",
-      "qry_base": "T",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 74,
+      "aln_pos": 45,
       "ref_base": "G",
       "qry_base": "T",
       "type": "transversion"
     },
     {
-      "aln_pos": 78,
+      "aln_pos": 64,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 75,
+      "ref_base": "G",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 79,
       "ref_base": "G",
       "qry_base": "A",
       "type": "transition"
     }
   ],
-  "n_variants": 15,
-  "query_aligned": "target          852 GTTAATGTAGCTTAAATACATGAAACAAGGCACTGAAAATGCCTAGATGAGTCATCA-AA",
-  "ref_aligned": "query             0 GTTAATGTAGCTTAATTA-ATAAAGCAAGGCACTGAAAATGCCAAGATGAGTC-GCACGA"
+  "n_variants": 14,
+  "query_aligned": "target          857 GTTAATGTAGCTTAAAATACATAAATCAA-GCACTGAAAATGCCTAGATGAGTCATCA-A",
+  "ref_aligned": "query             0 GTTAATGTAGCTT-AATTA-ATAAAGCAAGGCACTGAAAATGCCAAGATGAGTC-GCACG"
 }

@@ -1,7 +1,7 @@
 {
   "name": "cave_bear_mtDNA",
-  "score": 56.0,
-  "identity": 0.6375,
+  "score": 161.0,
+  "identity": 0.6,
   "aligned_length": 80,
   "variants": [
     {
@@ -42,84 +42,126 @@
     },
     {
       "aln_pos": 15,
+      "ref_base": "3",
+      "qry_base": " ",
+      "type": "unknown"
+    },
+    {
+      "aln_pos": 16,
       "ref_base": "1",
       "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 17,
-      "ref_base": "5",
-      "qry_base": "7",
+      "ref_base": "3",
+      "qry_base": "1",
       "type": "unknown"
     },
     {
       "aln_pos": 18,
-      "ref_base": "1",
-      "qry_base": "6",
+      "ref_base": "2",
+      "qry_base": "0",
       "type": "unknown"
     },
     {
-      "aln_pos": 29,
-      "ref_base": "A",
-      "qry_base": "C",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 41,
-      "ref_base": "A",
-      "qry_base": "T",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 42,
+      "aln_pos": 24,
       "ref_base": "C",
       "qry_base": "T",
       "type": "transition"
     },
     {
-      "aln_pos": 44,
-      "ref_base": "T",
-      "qry_base": "G",
+      "aln_pos": 26,
+      "ref_base": "G",
+      "qry_base": "C",
       "type": "transversion"
     },
     {
-      "aln_pos": 49,
-      "ref_base": "T",
-      "qry_base": "G",
+      "aln_pos": 31,
+      "ref_base": "C",
+      "qry_base": "A",
       "type": "transversion"
     },
     {
-      "aln_pos": 57,
-      "ref_base": "A",
-      "qry_base": "G",
+      "aln_pos": 34,
+      "ref_base": "C",
+      "qry_base": "T",
       "type": "transition"
     },
     {
-      "aln_pos": 59,
+      "aln_pos": 35,
+      "ref_base": "G",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 36,
       "ref_base": "A",
       "qry_base": "C",
       "type": "transversion"
     },
     {
-      "aln_pos": 61,
-      "ref_base": "A",
-      "qry_base": "G",
-      "type": "transition"
+      "aln_pos": 37,
+      "ref_base": "G",
+      "qry_base": "T",
+      "type": "transversion"
     },
     {
-      "aln_pos": 66,
+      "aln_pos": 39,
       "ref_base": "A",
       "qry_base": "T",
       "type": "transversion"
     },
     {
-      "aln_pos": 67,
-      "ref_base": "A",
+      "aln_pos": 40,
+      "ref_base": "G",
       "qry_base": "C",
       "type": "transversion"
+    },
+    {
+      "aln_pos": 45,
+      "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 50,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 54,
+      "ref_base": "T",
+      "qry_base": "G",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 59,
+      "ref_base": "T",
+      "qry_base": "A",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 68,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 69,
+      "ref_base": "C",
+      "qry_base": "A",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 72,
+      "ref_base": "T",
+      "qry_base": "C",
+      "type": "transition"
     }
   ],
-  "n_variants": 19,
-  "query_aligned": "target          476 ACAAATCAGCATT----TTCATTTGTAAAGTTA-CTAGACAGAATGTCAATCCTTTATAT",
-  "ref_aligned": "query          1451 ACAAA-CAGAATTTTAGTTCAACTTTAAATTTACCTAAAAAAAAT-AAAAT--TTTA-AT"
+  "n_variants": 26,
+  "query_aligned": "target           10 TAATTGCAGCCATTTTCTCTCTAGATTCAATCAAGC-CAAATG--GTAGAACCA--AATT",
+  "ref_aligned": "query          3132 TAATCGGAGCCCTTCGAGCAGTAG-CTCAAACAATCTCATATGAAGTAACACTAGCAATT"
 }

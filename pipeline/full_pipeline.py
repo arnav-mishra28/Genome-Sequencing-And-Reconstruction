@@ -22,7 +22,8 @@ if _PROJECT not in sys.path:
 from config.settings import (
     BASE_DIR, RESULTS_DIR, MODERN_SPECIES, REF_MAP,
     PHASE1_EPOCHS, PHASE2_EPOCHS, PHASE3_EPOCHS, PHASE4_EPOCHS,
-    PHASE5_EPOCHS, LSTM_EPOCHS, AE_EPOCHS, GNN_EPOCHS, BATCH_SIZE,
+    PHASE5_EPOCHS, PHASE6_EPOCHS, LSTM_EPOCHS, AE_EPOCHS, GNN_EPOCHS,
+    BATCH_SIZE, EVOFORMER_SCALE, EVOFORMER_LR,
 )
 
 
@@ -33,23 +34,27 @@ def run_pipeline(
     phase3_epochs:  int  = None,
     phase4_epochs:  int  = None,
     phase5_epochs:  int  = None,
+    phase6_epochs:  int  = None,
     lstm_epochs:    int  = None,
     ae_epochs:      int  = None,
     gnn_epochs:     int  = None,
     bert_epochs:    int  = None,
     batch_size:     int  = None,
     skip_download:  bool = False,
+    evoformer_scale: str = None,
 ):
-    """Execute the full 5-phase training + reconstruction pipeline."""
+    """Execute the full 6-phase training + reconstruction pipeline."""
     phase1_epochs = phase1_epochs or (bert_epochs or PHASE1_EPOCHS)
     phase2_epochs = phase2_epochs or PHASE2_EPOCHS
     phase3_epochs = phase3_epochs or PHASE3_EPOCHS
     phase4_epochs = phase4_epochs or PHASE4_EPOCHS
     phase5_epochs = phase5_epochs or PHASE5_EPOCHS
+    phase6_epochs = phase6_epochs or PHASE6_EPOCHS
     lstm_epochs   = lstm_epochs   or LSTM_EPOCHS
     ae_epochs     = ae_epochs     or AE_EPOCHS
     gnn_epochs    = gnn_epochs    or GNN_EPOCHS
     batch_size    = batch_size    or BATCH_SIZE
+    evoformer_scale = evoformer_scale or EVOFORMER_SCALE
 
     pipeline_log = {"steps": [], "start_time": time.time()}
 
@@ -208,6 +213,43 @@ def run_pipeline(
     except Exception as e:
         print(f"  [PHASE5] Fusion training error (continuing): {e}")
     pipeline_log["steps"].append({"step": "5b", "name": "fusion_training"})
+
+    # ══════════════════════════════════════════════════════════════════════════
+    #  PHASE 6: Evoformer (AlphaFold-Inspired) Training
+    # ══════════════════════════════════════════════════════════════════════════
+    evoformer_model = None
+    evolution_seqs = {}
+    try:
+        # Download evolution genomes for multi-species training
+        print("\n" + "=" * 65)
+        print("  PHASE 6a — Downloading Evolution Species Genomes")
+        print("=" * 65)
+        from data.multi_species_loader import (
+            download_evolution_genomes,
+            load_evolution_sequences,
+        )
+        evo_meta = download_evolution_genomes()
+        evolution_seqs = load_evolution_sequences(evo_meta)
+        print(f"  Loaded {len(evolution_seqs)} evolution species.")
+
+        # Train Evoformer
+        from training.phase6_evoformer import run_phase6
+        evoformer_model = run_phase6(
+            sequences_raw=sequences_raw,
+            simulated=simulated,
+            vocab=vocab,
+            species_names=all_species_names,
+            evolution_seqs=evolution_seqs,
+            epochs=phase6_epochs,
+            batch_size=batch_size,
+            lr=EVOFORMER_LR,
+            scale_profile=evoformer_scale,
+        )
+    except Exception as e:
+        print(f"  [PHASE6] Evoformer training error (continuing): {e}")
+        import traceback
+        traceback.print_exc()
+    pipeline_log["steps"].append({"step": 6, "name": "evoformer_training"})
 
     # ══════════════════════════════════════════════════════════════════════════
     #  STEP 6: Multi-Species Ensemble Reconstruction
