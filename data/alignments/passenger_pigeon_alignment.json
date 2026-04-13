@@ -1,7 +1,7 @@
 {
   "name": "passenger_pigeon",
-  "score": 111.5,
-  "identity": 0.5375,
+  "score": 53.0,
+  "identity": 0.55,
   "aligned_length": 80,
   "variants": [
     {
@@ -42,54 +42,60 @@
     },
     {
       "aln_pos": 16,
-      "ref_base": "6",
-      "qry_base": "2",
+      "ref_base": "5",
+      "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 17,
-      "ref_base": "2",
-      "qry_base": "7",
+      "ref_base": "4",
+      "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 18,
-      "ref_base": "1",
-      "qry_base": "8",
+      "ref_base": "7",
+      "qry_base": "1",
       "type": "unknown"
     },
     {
-      "aln_pos": 36,
+      "aln_pos": 32,
+      "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 35,
       "ref_base": "G",
-      "qry_base": "C",
+      "qry_base": "T",
       "type": "transversion"
     },
     {
       "aln_pos": 37,
-      "ref_base": "G",
-      "qry_base": "T",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 38,
-      "ref_base": "G",
-      "qry_base": "T",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 57,
-      "ref_base": "T",
-      "qry_base": "C",
-      "type": "transition"
-    },
-    {
-      "aln_pos": 73,
       "ref_base": "C",
+      "qry_base": "A",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 41,
+      "ref_base": "T",
+      "qry_base": "G",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 45,
+      "ref_base": "C",
+      "qry_base": "G",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 52,
+      "ref_base": "T",
       "qry_base": "G",
       "type": "transversion"
     }
   ],
-  "n_variants": 14,
-  "query_aligned": "target          278 GCACCTTGCAC----CCTTTG------GC-ATTC---CGAAG---GG--TA-TGCT-CGT",
-  "ref_aligned": "query           621 GC-CCTT-CACAGTGCGGGTGCGGAGTGCTATTCAAGTGAAGCCTGGACTACTCCTGCGT"
+  "n_variants": 15,
+  "query_aligned": "target            1 TTA-T---TGATTG-TGAATCGT-TGTCTTCAGTGC---TGG--CC-C------C---GG",
+  "ref_aligned": "query           547 TTAGTCCGTGATCGCGGCATCTTATCTCTTCATTGCTGTTGGTTCCTCTTTTTTCTGGGG"
 }

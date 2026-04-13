@@ -1,14 +1,15 @@
 """
 main.py
 =======
-Entry point — Advanced Genome Sequencing & Reconstruction System v2.0
+Entry point — Advanced Genome Sequencing & Reconstruction System v3.0
 
 Subcommands:
-  train       — Run training (all phases or specific phase)
-  reconstruct — Reconstruct from input FASTA file
-  evaluate    — Run benchmark evaluation
-  serve       — Start FastAPI server
-  dashboard   — Launch Dash real-time dashboard
+  train           — Run training (all phases or specific phase)
+  reconstruct     — Reconstruct from input FASTA file
+  reconstruct-live — Launch real-time 3D reconstruction viewer
+  evaluate        — Run benchmark evaluation
+  serve           — Start FastAPI server
+  dashboard       — Launch Dash real-time dashboard
 """
 
 import os
@@ -58,12 +59,14 @@ if BASE_DIR not in sys.path:
 
 BANNER = """
 ╔══════════════════════════════════════════════════════════════════╗
-║     🧬  GENOME SEQUENCING & RECONSTRUCTION SYSTEM v2.0  🧬     ║
+║     🧬  GENOME SEQUENCING & RECONSTRUCTION SYSTEM v3.0  🧬     ║
 ║                                                                  ║
-║  Powered by: DNABERT-2 · ESM · AlphaFold Attention · GNN        ║
+║  Powered by: DNABERT-2 · Fusion(T+GNN) · ESM · AlphaFold · GNN  ║
+║  New:        Confidence Scoring · Multi-Species · Live 3D Viewer ║
 ║  Data:       NCBI · Ensembl · UCSC Genome Browser                ║
-║  Training:   4-Phase Curriculum Learning                         ║
+║  Training:   5-Phase Curriculum Learning                         ║
 ║  Live Sim:   Real-time 3D/2D Damage Visualization                ║
+║  Live Recon: Real-time 3D DNA Reconstruction (PyOpenGL)          ║
 ║  API:        FastAPI + Swagger                                   ║
 ╚══════════════════════════════════════════════════════════════════╝
 """
@@ -88,11 +91,14 @@ def verify_modules():
         os.path.join(BASE_DIR, "models", "denoising_autoencoder.py"),
         os.path.join(BASE_DIR, "models", "gnn_phylogenetic.py"),
         os.path.join(BASE_DIR, "models", "ensemble_reconstructor.py"),
+        os.path.join(BASE_DIR, "models", "fusion_model.py"),
+        os.path.join(BASE_DIR, "models", "confidence_scorer.py"),
         os.path.join(BASE_DIR, "training", "trainer.py"),
         os.path.join(BASE_DIR, "training", "phase1_pretrain.py"),
         os.path.join(BASE_DIR, "training", "phase2_corruption.py"),
         os.path.join(BASE_DIR, "training", "phase3_evolution_aware.py"),
         os.path.join(BASE_DIR, "training", "phase4_finetune.py"),
+        os.path.join(BASE_DIR, "training", "phase5_fusion.py"),
         os.path.join(BASE_DIR, "evaluation", "metrics.py"),
         os.path.join(BASE_DIR, "evaluation", "benchmark.py"),
         os.path.join(BASE_DIR, "api", "app.py"),
@@ -104,6 +110,8 @@ def verify_modules():
         os.path.join(BASE_DIR, "visualization", "live_helix_3d.py"),
         os.path.join(BASE_DIR, "visualization", "live_genome_2d.py"),
         os.path.join(BASE_DIR, "visualization", "live_viewer.py"),
+        os.path.join(BASE_DIR, "visualization", "reconstruction_viewer.py"),
+        os.path.join(BASE_DIR, "visualization", "reconstruction_engine.py"),
         os.path.join(BASE_DIR, "simulation", "live_simulation.py"),
     ]
     for path in checks:
@@ -158,6 +166,21 @@ def cmd_simulate(args):
         max_events=args.max_events,
         seed=args.seed,
     )
+
+
+def cmd_reconstruct_live(args):
+    """Launch real-time 3D DNA reconstruction viewer."""
+    from visualization.reconstruction_viewer import launch_reconstruction_viewer
+
+    launch_reconstruction_viewer(
+        species_name=args.species,
+        damaged_seq=args.sequence,
+        max_bases=args.max_bases,
+        speed=args.speed,
+        width=args.width,
+        height=args.height,
+    )
+
 
 
 def cmd_evaluate(args):
@@ -252,7 +275,7 @@ def _generate_visualizations(results):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="🧬 Genome Sequencing & Reconstruction System v2.0",
+        description="🧬 Genome Sequencing & Reconstruction System v3.0",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     sub = parser.add_subparsers(dest="command")
@@ -319,6 +342,36 @@ def main():
         help="Random seed for reproducibility (default: 42)",
     )
 
+    # ── reconstruct-live ─────────────────────────────────────────────────────
+    p_rlive = sub.add_parser(
+        "reconstruct-live",
+        help="Launch real-time 3D DNA reconstruction viewer",
+    )
+    p_rlive.add_argument(
+        "--species", type=str, default="neanderthal_mtDNA",
+        help="Species to reconstruct (default: neanderthal_mtDNA)",
+    )
+    p_rlive.add_argument(
+        "--sequence", type=str, default=None,
+        help="Custom damaged DNA sequence (overrides --species)",
+    )
+    p_rlive.add_argument(
+        "--max-bases", type=int, default=300,
+        help="Max bases to show in 3D helix (default: 300)",
+    )
+    p_rlive.add_argument(
+        "--speed", type=float, default=10.0,
+        help="Reconstruction events per second (default: 10.0)",
+    )
+    p_rlive.add_argument(
+        "--width", type=int, default=1600,
+        help="Window width (default: 1600)",
+    )
+    p_rlive.add_argument(
+        "--height", type=int, default=900,
+        help="Window height (default: 900)",
+    )
+
     args = parser.parse_args()
 
     print(BANNER)
@@ -353,6 +406,8 @@ def main():
         cmd_evaluate(args)
     elif args.command == "simulate":
         cmd_simulate(args)
+    elif args.command == "reconstruct-live":
+        cmd_reconstruct_live(args)
     else:
         # Default: run full pipeline (backward compatible)
         # Create a namespace with default args

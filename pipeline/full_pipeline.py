@@ -21,7 +21,7 @@ if _PROJECT not in sys.path:
 from config.settings import (
     BASE_DIR, RESULTS_DIR, MODERN_SPECIES, REF_MAP,
     PHASE1_EPOCHS, PHASE2_EPOCHS, PHASE3_EPOCHS, PHASE4_EPOCHS,
-    LSTM_EPOCHS, AE_EPOCHS, GNN_EPOCHS, BATCH_SIZE,
+    PHASE5_EPOCHS, LSTM_EPOCHS, AE_EPOCHS, GNN_EPOCHS, BATCH_SIZE,
 )
 
 
@@ -31,6 +31,7 @@ def run_pipeline(
     phase2_epochs:  int  = None,
     phase3_epochs:  int  = None,
     phase4_epochs:  int  = None,
+    phase5_epochs:  int  = None,
     lstm_epochs:    int  = None,
     ae_epochs:      int  = None,
     gnn_epochs:     int  = None,
@@ -43,6 +44,7 @@ def run_pipeline(
     phase2_epochs = phase2_epochs or PHASE2_EPOCHS
     phase3_epochs = phase3_epochs or PHASE3_EPOCHS
     phase4_epochs = phase4_epochs or PHASE4_EPOCHS
+    phase5_epochs = phase5_epochs or PHASE5_EPOCHS
     lstm_epochs   = lstm_epochs   or LSTM_EPOCHS
     ae_epochs     = ae_epochs     or AE_EPOCHS
     gnn_epochs    = gnn_epochs    or GNN_EPOCHS
@@ -188,45 +190,48 @@ def run_pipeline(
     pipeline_log["steps"].append({"step": 5, "name": "4_phase_training"})
 
     # ══════════════════════════════════════════════════════════════════════════
-    #  STEP 6: Ensemble Reconstruction
+    #  PHASE 5: Transformer + GNN Fusion Training
+    # ══════════════════════════════════════════════════════════════════════════
+    all_species_names = sorted(sequences_raw.keys())
+    fusion_model = None
+    try:
+        from training.phase5_fusion import run_phase5
+        fusion_model = run_phase5(
+            sequences_raw=sequences_raw,
+            simulated=simulated,
+            vocab=vocab,
+            species_names=all_species_names,
+            epochs=phase5_epochs,
+            batch_size=batch_size,
+        )
+    except Exception as e:
+        print(f"  [PHASE5] Fusion training error (continuing): {e}")
+    pipeline_log["steps"].append({"step": "5b", "name": "fusion_training"})
+
+    # ══════════════════════════════════════════════════════════════════════════
+    #  STEP 6: Multi-Species Ensemble Reconstruction
     # ══════════════════════════════════════════════════════════════════════════
     print("\n" + "=" * 65)
-    print("  STEP 6 — Ensemble Reconstruction")
+    print("  STEP 6 — Multi-Species Ensemble Reconstruction")
+    print("  (Transformer + GNN Fusion + AE + BERT + LSTM)")
     print("=" * 65)
-    from models.ensemble_reconstructor import ensemble_reconstruct
+    from models.ensemble_reconstructor import multi_species_ensemble_reconstruct
 
-    reconstructions = {}
-    for name, sim_result in simulated.items():
-        print(f"\n  Reconstructing: {name}")
-        damaged = sim_result["damaged_sequence"]
-
-        recon_seq, confidences, details = ensemble_reconstruct(
-            sequence=damaged,
-            bert_model=bert_model,
-            ae_model=ae_model,
-            lstm_model=lstm_model,
-            vocab=vocab,
-        )
-
-        reconstructions[name] = {
-            "original_length":    len(sequences_raw.get(name, damaged)),
-            "damaged_length":     len(damaged),
-            "reconstructed_seq":  recon_seq[:500] + "…",
-            "full_length":        len(recon_seq),
-            "confidences":        confidences[:500],
-            **details,
-            "mutation_log":       sim_result["mutation_log"][:20],
-            "mutation_summary":   sim_result["mutation_summary"],
-        }
-
-        print(f"    Coverage: {details['coverage']:.2%}  "
-              f"Reliability: {details['reliability_score']:.4f}  "
-              f"Gaps: {details['gaps_before']} → {details['gaps_after']}")
+    reconstructions = multi_species_ensemble_reconstruct(
+        simulated=simulated,
+        sequences_raw=sequences_raw,
+        bert_model=bert_model,
+        ae_model=ae_model,
+        lstm_model=lstm_model,
+        vocab=vocab,
+        fusion_model=fusion_model,
+        species_names=all_species_names,
+    )
 
     recon_path = os.path.join(RESULTS_DIR, "reconstructions.json")
     with open(recon_path, "w") as f:
         json.dump(reconstructions, f, indent=2, default=str)
-    pipeline_log["steps"].append({"step": 6, "name": "reconstruct"})
+    pipeline_log["steps"].append({"step": 6, "name": "multi_species_reconstruct"})
 
     # ══════════════════════════════════════════════════════════════════════════
     #  STEP 7: Evaluation Metrics

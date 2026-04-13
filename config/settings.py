@@ -81,6 +81,9 @@ PHASE4_EPOCHS = 3
 LSTM_EPOCHS   = 5
 AE_EPOCHS     = 6
 GNN_EPOCHS    = 30
+PHASE5_EPOCHS = 3
+FUSION_LR     = 1e-4
+FUSION_N_MC_SAMPLES = 10   # Monte Carlo dropout samples for confidence
 
 # ── NCBI accessions (real published sequences) ───────────────────────────────
 NCBI_SEQUENCES = {

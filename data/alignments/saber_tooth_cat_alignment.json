@@ -1,7 +1,7 @@
 {
   "name": "saber_tooth_cat",
-  "score": 194.0,
-  "identity": 0.5375,
+  "score": 108.5,
+  "identity": 0.525,
   "aligned_length": 80,
   "variants": [
     {
@@ -48,54 +48,78 @@
     },
     {
       "aln_pos": 16,
-      "ref_base": "9",
-      "qry_base": "6",
+      "ref_base": "8",
+      "qry_base": "3",
       "type": "unknown"
     },
     {
       "aln_pos": 17,
-      "ref_base": "6",
-      "qry_base": "9",
+      "ref_base": "8",
+      "qry_base": "0",
       "type": "unknown"
     },
     {
       "aln_pos": 18,
-      "ref_base": "9",
-      "qry_base": "4",
+      "ref_base": "6",
+      "qry_base": "0",
       "type": "unknown"
     },
     {
-      "aln_pos": 31,
+      "aln_pos": 22,
       "ref_base": "G",
       "qry_base": "C",
       "type": "transversion"
     },
     {
-      "aln_pos": 35,
-      "ref_base": "T",
-      "qry_base": "C",
+      "aln_pos": 28,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 29,
+      "ref_base": "A",
+      "qry_base": "G",
       "type": "transition"
     },
     {
-      "aln_pos": 36,
-      "ref_base": "T",
-      "qry_base": "G",
+      "aln_pos": 32,
+      "ref_base": "A",
+      "qry_base": "C",
       "type": "transversion"
     },
     {
-      "aln_pos": 39,
-      "ref_base": "T",
-      "qry_base": "G",
+      "aln_pos": 41,
+      "ref_base": "G",
+      "qry_base": "C",
       "type": "transversion"
     },
     {
-      "aln_pos": 67,
-      "ref_base": "T",
-      "qry_base": "A",
+      "aln_pos": 43,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 45,
+      "ref_base": "A",
+      "qry_base": "G",
+      "type": "transition"
+    },
+    {
+      "aln_pos": 47,
+      "ref_base": "A",
+      "qry_base": "T",
+      "type": "transversion"
+    },
+    {
+      "aln_pos": 50,
+      "ref_base": "A",
+      "qry_base": "C",
       "type": "transversion"
     }
   ],
-  "n_variants": 15,
-  "query_aligned": "target          694 GCC-GCC--GTCA-ACGTGGT----GGCCGACG--A--C-GACGTCGAGC---GG--GC-",
-  "ref_aligned": "query          1969 GCCTGCCCAGTGACATTTGTTTAACGGCCG-CGGTATCCTGAC--CGTGCAAAGGTAGCA"
+  "n_variants": 19,
+  "query_aligned": "target          300 AGCAGT--TGGGCACCTCTCGCCGAGCTC-CACCCCGCC-G-----------CATCGACC",
+  "ref_aligned": "query          1886 AGGAGTAAAAGGAA---CTCGGCAAACACAAACCCCGCCTGTTTACCAAAAACATC-ACC"
 }

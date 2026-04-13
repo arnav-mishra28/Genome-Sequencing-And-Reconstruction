@@ -1,7 +1,7 @@
 {
   "name": "ensembl_human_mt",
-  "score": 7726.0,
-  "identity": 0.9,
+  "score": 9242.0,
+  "identity": 0.9125,
   "aligned_length": 80,
   "variants": [
     {
@@ -41,13 +41,13 @@
       "type": "unknown"
     },
     {
-      "aln_pos": 73,
-      "ref_base": "T",
-      "qry_base": "G",
-      "type": "transversion"
+      "aln_pos": 62,
+      "ref_base": "C",
+      "qry_base": "T",
+      "type": "transition"
     }
   ],
   "n_variants": 7,
-  "query_aligned": "target            1 ATCACAGGTCTATCACCCTATTAACCACTCACGGGAGCTC-CCATGCATTTGGGATTTTC",
-  "ref_aligned": "query             1 ATCACAGGTCTATCACCCTATTAACCACTCACGGGAGCTCTCCATGCATTTGGTATTTTC"
+  "query_aligned": "target            0 GATCACAGGTCTATCACCCTATTAACCACTCACGGGAGCTCTTCATGCATTTGGTATTTT",
+  "ref_aligned": "query             0 GATCACAGGTCTATCACCCTATTAACCACTCACGGGAGCTCTCCATGCATTTGGTATTTT"
 }

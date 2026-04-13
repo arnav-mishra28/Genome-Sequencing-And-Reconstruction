@@ -1,7 +1,7 @@
 {
   "name": "cave_bear_mtDNA",
-  "score": 49.5,
-  "identity": 0.5625,
+  "score": 125.0,
+  "identity": 0.4625,
   "aligned_length": 80,
   "variants": [
     {
@@ -41,55 +41,25 @@
       "type": "unknown"
     },
     {
-      "aln_pos": 15,
-      "ref_base": "4",
-      "qry_base": " ",
-      "type": "unknown"
-    },
-    {
-      "aln_pos": 16,
-      "ref_base": "0",
-      "qry_base": " ",
-      "type": "unknown"
-    },
-    {
       "aln_pos": 17,
-      "ref_base": "0",
+      "ref_base": "9",
       "qry_base": " ",
       "type": "unknown"
     },
     {
       "aln_pos": 18,
-      "ref_base": "2",
-      "qry_base": "0",
+      "ref_base": "7",
+      "qry_base": "2",
       "type": "unknown"
     },
     {
-      "aln_pos": 21,
-      "ref_base": "A",
-      "qry_base": "C",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 68,
-      "ref_base": "A",
-      "qry_base": "C",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 69,
-      "ref_base": "A",
-      "qry_base": "T",
-      "type": "transversion"
-    },
-    {
-      "aln_pos": 76,
-      "ref_base": "A",
-      "qry_base": "T",
+      "aln_pos": 49,
+      "ref_base": "C",
+      "qry_base": "G",
       "type": "transversion"
     }
   ],
-  "n_variants": 14,
-  "query_aligned": "target            0 GCATCCTGG-TT---AAT-----TGC-AGCC--CATC----TTCTC-TCTAAA--TTCAA",
-  "ref_aligned": "query          4002 GAAT--TGGATTCGAAATAAACATGCTAGCCATCATCCCTATTCTCATAAAAAAGTACAA"
+  "n_variants": 9,
+  "query_aligned": "target            2 GTTTTT----G--TTA---AT-------TGCA-GCCC--------AT---CT-----TC-",
+  "ref_aligned": "query            97 GTTTTTAGCAGACTTACACATGCAAGTCTCCACGCCCCAGTGAGAATGCCCTTAAAATCA"
 }

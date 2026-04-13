@@ -89,5 +89,12 @@
     "header": "ensembl|homo_sapiens|MT:1-16569",
     "length": 16569,
     "source": "ensembl"
+  },
+  "ucsc_human_mt": {
+    "accession": "ucsc_chrM",
+    "path": "D:\\MY WORK\\Genome Sequencing And Reconstruction\\data\\sequences\\ucsc_hg38_chrM_0_16569.fasta",
+    "header": "ucsc|hg38|chrM:0-16569",
+    "length": 16569,
+    "source": "ucsc"
   }
 }
