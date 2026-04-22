@@ -1,8 +1,8 @@
-﻿<div align="center">
+<div align="center">
 
-# Genome Sequencing And Reconstruction
+# Genome Sequencing & Reconstruction System v3.0
 
-Ancient DNA reconstruction pipeline that combines transformer pretraining, denoising, phylogenetic graph learning, fusion modeling, benchmarking, and interactive genome visualization.
+An advanced ancient DNA reconstruction pipeline combining transformer pretraining, denoising, phylogenetic graph learning, AlphaFold-inspired Evoformer modeling, distributed training, and interactive real-time 3D genome visualization.
 
 <p>
   <img alt="Python" src="https://img.shields.io/badge/Python-3.11%2B-1f6feb?style=for-the-badge">
@@ -14,128 +14,62 @@ Ancient DNA reconstruction pipeline that combines transformer pretraining, denoi
 
 </div>
 
-> End-to-end workflow: fetch sequences -> simulate damage -> align and encode -> train models -> reconstruct fragments -> benchmark outputs -> explore results through an API, dashboard, and live viewers
+> **End-to-end workflow:** fetch sequences (NCBI/Ensembl/UCSC) &rarr; simulate damage &rarr; encode &rarr; train 6-phase AI stack (including Evoformer) &rarr; reconstruct fragments &rarr; evaluate &rarr; interact via Dashboard and Live 3D Viewers.
 
 ## Overview
 
-This repository is an end-to-end experimental system for genome reconstruction, with a strong focus on damaged or ancient DNA-like inputs. It includes:
+This repository is an end-to-end experimental system for genome reconstruction, specializing in damaged or ancient DNA inputs. It seamlessly integrates:
 
-- sequence acquisition from NCBI, Ensembl, and UCSC with caching and fallback generation
-- synthetic ancient DNA damage simulation, fragmentation, and corruption pairing
-- preprocessing utilities for encoding, k-mer vocab building, and alignment
-- multiple reconstruction models, including DNABERT-2-style transformers, denoising autoencoders, a BiLSTM predictor, phylogenetic GNNs, a fusion model, and an Evoformer-style model
-- evaluation tools for accuracy, edit distance, similarity, phylogenetic consistency, and calibration
-- delivery layers for FastAPI, a Streamlit dashboard, 2D plots, 3D helix views, and interactive reconstruction viewers
+- **Data Acquisition**: Automated fetching from NCBI Entrez, Ensembl REST, and UCSC Genome Browser.
+- **Damage Simulation**: Synthetic ancient DNA damage simulation (deamination, oxidation, missing segments, fragmentation).
+- **Core AI Models**: DNABERT-2-style transformers, denoising autoencoders, BiLSTMs, phylogenetic GNNs, a fusion cross-attention model, and a new **AlphaFold-inspired Evoformer** for multi-species sequence completion.
+- **DeepSpeed Distributed Training**: Accelerated training workloads capable of scaling across hardware profiles.
+- **Evaluation & Benchmarking**: Precision, structural similarity, phylogenetic consistency, and confidence calibration scores.
+- **Immersive Visualization**: A real-time 3D DNA reconstruction viewer (PyOpenGL), a live DNA damage simulator, a Streamlit dashboard, and high-quality 2D/3D matplotlib reports.
 
 ## Architecture At A Glance
 
 ```text
-Raw or cached genomes
+Raw or cached genomes (NCBI, Ensembl, UCSC)
         |
         v
-Data fetchers + metadata catalog
+Data Fetchers & Multi-Species Loader
         |
         v
-Ancient DNA simulation
-  - deamination
-  - oxidative damage
-  - substitutions / indels
-  - missing segments and fragmentation
+Ancient DNA Simulation (deamination, oxidation, fragmentation)
         |
         v
-Preprocessing
-  - alignment
-  - integer / one-hot / physicochemical encoding
-  - k-mer vocab and BPE-style tokenization
+Preprocessing (K-mer, BPE, one-hot encoding, alignment)
         |
         v
-Training stack
-  - DNABERT-2 pretraining
-  - denoising autoencoder
-  - phylogenetic GNN
-  - ancient-fragment fine-tuning
-  - transformer-GNN fusion
-  - Evoformer-style multi-species model
-  - BiLSTM sequence completion
+6-Phase Training Curriculum
+  1. DNABERT-2 Pretraining (MLM)
+  2. Denoising Autoencoder (Corruption-Repair)
+  3. Phylogenetic GNN (Evolution-Aware)
+  4. Ancient Fragment Fine-Tuning
+  5. Transformer-GNN Fusion (Cross-Attention)
+  6. Evoformer (Multi-Species Evolutionary Alignment)
         |
         v
-Ensemble reconstruction + confidence scoring
+Multi-Model Ensemble Reconstructor + Confidence Scorer
         |
-        +--> benchmark reports
-        +--> genome mapping and hotspot analysis
-        +--> FastAPI service
-        +--> Streamlit dashboard
-        +--> 2D/3D visualization and live viewers
+        +--> Benchmark Reports & Hotspot Maps
+        +--> FastAPI Service
+        +--> Streamlit Metrics Dashboard
+        +--> Interactive Real-Time 3D Viewers (PyOpenGL)
 ```
 
 ## Core Components
 
-| Area | Main modules | What they do |
+| Area | Main Modules | Functionality |
 | --- | --- | --- |
-| Data acquisition | `data/fetch_sequences.py`, `data/multi_species_loader.py` | Download or reuse cached genomes and build multi-species training inputs |
-| Damage simulation | `data/simulate_ancient_dna.py` | Generate ancient DNA-like corruption, fragmentation, and mutation logs |
-| Preprocessing | `preprocessing/encoding.py`, `preprocessing/alignment.py`, `preprocessing/corruption.py` | Encode sequences, train BPE tokenizers, align to references, and make corruption pairs |
-| Models | `models/` | DNABERT-2-style transformer, denoising AE, BiLSTM, phylogenetic GNN, fusion model, confidence scorer, ESM-inspired encoder, Evoformer |
-| Training | `training/phase1_pretrain.py` through `training/phase6_evoformer.py` | Multi-stage training pipeline with checkpointing and histories |
-| Pipeline orchestration | `pipeline/full_pipeline.py`, `pipeline/genome_mapper.py` | Runs the full experiment, reconstruction, benchmarking, and mapping |
-| Evaluation | `evaluation/metrics.py`, `evaluation/benchmark.py` | Quantitative metrics and report generation |
-| Interfaces | `api/`, `dashboard/`, `visualization/`, `simulation/` | API server, dashboard, 2D/3D outputs, live simulation and interactive viewers |
-
-## Training Pipeline
-
-The main training and reconstruction flow implemented in `pipeline/full_pipeline.py` runs these stages:
-
-| Stage | File | Purpose |
-| --- | --- | --- |
-| 0 | `data/fetch_sequences.py` | Fetch source genomes and write `data/sequences/metadata.json` |
-| 0 | `data/simulate_ancient_dna.py` | Corrupt modern or reference genomes into ancient DNA-like fragments |
-| 0 | `preprocessing/alignment.py` | Align damaged reads to reference sequences |
-| 0 | `preprocessing/encoding.py` | Build token vocabularies and encoded datasets |
-| 1 | `training/phase1_pretrain.py` | Pretrain the DNABERT-2-style model on modern genomes |
-| 2 | `training/phase2_corruption.py` | Train the denoising autoencoder on corruption-repair pairs |
-| 3 | `training/phase3_evolution_aware.py` | Train the phylogenetic GNN with biological constraint losses |
-| 4 | `training/phase4_finetune.py` | Fine-tune transformer weights on ancient fragments |
-| 5 | `training/phase5_fusion.py` | Train the transformer-GNN fusion model with confidence outputs |
-| 6 | `training/phase6_evoformer.py` | Train the Evoformer-style multi-species model |
-| Extra lane | `models/lstm_predictor.py` | Train a BiLSTM for sequence completion and ensemble support |
-| Output | `models/ensemble_reconstructor.py` | Combine model outputs into final reconstructions and confidences |
-
-`python main.py` with no subcommand dispatches to the full end-to-end pipeline via `run_everything()`.
-
-## Repository Snapshot
-
-The current checked-in artifacts already include model histories and generated reports:
-
-| Item | Current snapshot |
-| --- | --- |
-| Cached sequence metadata | 14 catalog entries in `data/sequences/metadata.json` |
-| Latest benchmark species count | 10 |
-| Average accuracy | `0.4792` |
-| Average similarity | `0.4792` |
-| Average phylogenetic consistency | `0.6725` |
-| Expected calibration error | `0.3551` |
-| Latest pipeline runtime | `680.0` seconds |
-| Saved vocab size | `4031` tokens |
-| Checkpoint histories present | DNABERT-2, denoising AE, phylo GNN, fusion, BiLSTM |
-
-Training history files in `models/checkpoints/` show the following runs:
-
-| Model | Snapshot |
-| --- | --- |
-| DNABERT-2 | 5 epochs, training loss from about `8.44` to `7.61` |
-| Denoising autoencoder | 6 epochs, validation loss down to about `1.10` |
-| Phylogenetic GNN | 30 epochs, final loss about `0.0107` |
-| Fusion model | 3 epochs, validation loss about `7.79` |
-| BiLSTM | 5 epochs, accuracy up to about `0.338` |
-
-<details>
-<summary>Cached sequence labels in this repository snapshot</summary>
-
-`neanderthal_mtDNA`, `mammoth_mtDNA`, `dodo_partial`, `thylacine_mtDNA`, `passenger_pigeon`, `cave_bear_mtDNA`, `saber_tooth_cat`, `woolly_rhino`, `human_mtDNA`, `elephant_mtDNA`, `gray_wolf_mtDNA`, `rock_pigeon_mtDNA`, `ensembl_human_mt`, `ucsc_human_mt`
-
-</details>
-
-> Note: these keys are the repository's dataset identifiers. If you need publication-grade provenance, verify the underlying accessions and cached metadata before citing them.
+| **Data Acquisition** | `data/fetch_sequences.py`<br>`data/multi_species_loader.py` | Download genomes and prepare evolutionary context sequences. |
+| **Damage Simulation** | `data/simulate_ancient_dna.py` | Generate realistically degraded DNA fragments. |
+| **Preprocessing** | `preprocessing/*.py` | Build BPE tokenizers and k-mer vocabularies. |
+| **Models** | `models/*.py` | DNABERT-2, Denoising AE, BiLSTM, GNN, Fusion module, and Evoformer. |
+| **Training Pipeline** | `training/phase*.py`<br>`training/distributed_trainer.py` | Multi-stage, checkpointed curriculum training including DeepSpeed distributed runs. |
+| **Orchestration** | `pipeline/full_pipeline.py`<br>`main.py` | Unified execution entry point. |
+| **Interfaces** | `dashboard/`, `visualization/`, `api/`, `simulation/` | Streamlit app, FastAPI, 2D/3D charts, and PyOpenGL live viewers. |
 
 ## Quick Start
 
@@ -143,206 +77,89 @@ Training history files in `models/checkpoints/` show the following runs:
 
 ```bash
 python -m pip install -r requirements.txt
-python -m pip install streamlit
 ```
 
-Optional tools:
+> **Optional Dependencies**:
+> - `MAFFT` (requires external installation) for superior multiple sequence alignment.
+> - `DeepSpeed` for distributed multi-GPU training.
 
-- `MAFFT` for external multiple sequence alignment support
-- `DeepSpeed` for `train-distributed`
-
-### 2. Run the full pipeline
+### 2. Run the Full Magic Pipeline
 
 ```bash
 python main.py
 ```
+*This handles everything: downloads data, generates damage, trains all models, reconstructs the genomes, calculates benchmarks, builds visualizations, and automatically opens the glowing 3D Interactive Viewer.*
 
-That default run verifies modules, fetches or reuses sequences, simulates damage, trains the model stack, reconstructs sequences, benchmarks results, maps fragments, and generates visualization artifacts.
-
-### 3. Run a lighter training pass with cached data
-
-```bash
-python main.py train --skip-download --no-viz --phase1-epochs 2 --bert-epochs 2 --ae-epochs 2 --gnn-epochs 5 --lstm-epochs 2 --batch-size 4
-```
-
-### 4. Evaluate saved reconstructions
+### 3. Start the Interactive Live 3D Reconstruction Viewer
 
 ```bash
-python main.py evaluate
+python main.py reconstruct-interactive
 ```
+Engage manual mode to pause AI, step through the genome manually, override base pairings, and watch the confidence metrics update in real-time.
 
-### 5. Start the API
+### 4. Watch a Simulated DNA Degradation Process
 
 ```bash
-python main.py serve
+python main.py simulate
 ```
+Witness a clean genome slowly decay into ancient DNA.
 
-Open Swagger docs at `http://127.0.0.1:8000/docs`.
-
-### 6. Launch the dashboard
+### 5. Launch the Reporting Dashboard
 
 ```bash
 python main.py dashboard
 ```
+Opens the Streamlit web app in your browser to view loss curves, structural evaluations, species details, and more.
 
-This starts the Streamlit app in `dashboard/streamlit_app.py`. Unless you pass extra Streamlit flags, it uses Streamlit's default port.
-
-### 7. Run the integration smoke test
+### 6. Start the API Server
 
 ```bash
-python test_integration.py
+python main.py serve
 ```
+Explore the endpoints at `http://127.0.0.1:8000/docs`.
+
+---
 
 ## CLI Reference
 
-| Command | What it does |
+The `main.py` entry point acts as a unified CLI:
+
+| Command | Description |
 | --- | --- |
-| `python main.py` | Run the full end-to-end workflow |
-| `python main.py train` | Run the training pipeline |
-| `python main.py serve` | Start the FastAPI server on `0.0.0.0:8000` |
-| `python main.py dashboard` | Launch the Streamlit metrics dashboard |
-| `python main.py evaluate` | Run the benchmark suite |
-| `python main.py simulate` | Launch the live DNA damage simulation viewer |
-| `python main.py reconstruct-live` | Launch the real-time 3D reconstruction viewer |
-| `python main.py reconstruct-interactive` | Launch the manual interactive reconstruction viewer |
-| `python main.py train-evoformer` | Train the Evoformer model standalone |
-| `python main.py train-distributed` | Train with DeepSpeed if available |
+| `python main.py` | Run the full automated end-to-end pipeline. |
+| `python main.py train` | Run just the training pipeline (optionally skip downloads with `--skip-download`). |
+| `python main.py serve` | Start the FastAPI execution server. |
+| `python main.py dashboard` | Launch the Streamlit monitoring and metrics dashboard. |
+| `python main.py evaluate` | Process `reconstructions.json` to yield benchmarking metrics. |
+| `python main.py simulate` | Launch the **Live DNA Damage Simulator**. |
+| `python main.py reconstruct-live` | Launch the automated 3D reconstruction viewer. |
+| `python main.py reconstruct-interactive`| Launch the fully manual, gamified interactive 3D reconstruction viewer. |
+| `python main.py train-evoformer` | Launch the Phase 6 Evoformer standalone training explicitly. |
+| `python main.py train-distributed` | Launch training leveraging DeepSpeed (if available in environment). |
 
-Important CLI options already supported in `main.py`:
+## API Integration
 
-- `train`: `--skip-download`, `--no-viz`, `--no-dashboard`, `--phase1-epochs`, `--bert-epochs`, `--ae-epochs`, `--gnn-epochs`, `--lstm-epochs`, `--batch-size`
-- `simulate`: `--species`, `--sequence`, `--speed`, `--manual`, `--no-3d`, `--max-bases`, `--max-events`, `--seed`
-- `reconstruct-live`: `--species`, `--sequence`, `--max-bases`, `--speed`, `--width`, `--height`
-- `reconstruct-interactive`: `--species`, `--sequence`, `--max-bases`, `--speed`, `--width`, `--height`
-- `train-evoformer` and `train-distributed`: `--skip-download`, `--epochs`, `--batch-size`, `--profile {small,medium,large,xl}`
-
-## API
-
-The FastAPI app lives in `api/app.py` and mounts routes from `api/routes.py`.
+The system exposes a FastAPI backend (`api/app.py`).
 
 ### Endpoints
+- `GET /api/v1/health` - Health check and system configuration
+- `GET /api/v1/species` - Enumerate available genome catalogs
+- `POST /api/v1/reconstruct` - Feed degraded sequences and receive ensemble transcriptions
+- `POST /api/v1/compare` - Compare fragments with structural reference metrics
 
-| Method | Route | Purpose |
-| --- | --- | --- |
-| `GET` | `/api/v1/health` | Health check, device info, and model-loaded status |
-| `GET` | `/api/v1/species` | Available species catalog from the configured sequence set |
-| `POST` | `/api/v1/reconstruct` | Reconstruct a genome from uploaded fragments |
-| `POST` | `/api/v1/compare` | Compare uploaded fragments directly against a reference |
+## Dashboard and Visualizations
 
-### Example request body
+- **Streamlit Dashboard**: (`dashboard/streamlit_app.py`) Interactive dashboard displaying genome maps, attention weights, mapping hotspots, phylogenetic trees, and calibration.
+- **2D / 3D Static Artifacts**: Saved natively as images inside `results/visualizations`.
+- **Live Simulator**: (`simulation/live_simulation.py`) Generates real-time events imitating deamination/oxidation over time.
+- **Interactive 3D Viewer**: (`visualization/reconstruction_viewer.py`) A PyOpenGL application allowing for live intervention in the sequence reconstruction process. 
 
-```json
-{
-  "fragments": [
-    {
-      "seq": "ACGTNNNACGT",
-      "start": 0,
-      "end": 11
-    }
-  ],
-  "species_hint": "neanderthal_mtDNA",
-  "reference": "ACGTAAAACGT"
-}
-```
+## Configuration
 
-### Reconstruction response includes
-
-- reconstructed sequence
-- per-position confidence scores
-- mean confidence and coverage
-- gap counts before and after repair
-- up to 50 repair details
-- optional evaluation metrics when a reference is supplied
-- optional evolutionary comparison when a species hint is supplied
-
-## Dashboard And Visualization
-
-The repository includes several ways to inspect outputs:
-
-- `dashboard/streamlit_app.py`: multi-page dashboard for overview, training curves, sequences, confidence, phylogenetics, calibration, species detail, benchmark results, and upload-based reconstruction
-- `visualization/genome_map_2d.py`: ideograms, radar charts, benchmark comparisons, calibration plots, phylogenetic charts
-- `visualization/helix_3d.py`: HTML 3D helix generation
-- `visualization/live_viewer.py`, `visualization/live_helix_3d.py`, `visualization/live_genome_2d.py`: live simulation displays
-- `visualization/reconstruction_viewer.py`: PyOpenGL interactive reconstruction viewer
-- `simulation/live_simulation.py`: real-time DNA damage simulator
-
-## Generated Artifacts
-
-Important output files written by the pipeline include:
-
-| File | Description |
-| --- | --- |
-| `results/kmer_vocab.json` | Learned sequence vocabulary |
-| `results/reconstructions.json` | Per-species reconstruction outputs, confidence values, coverage, and mutation summaries |
-| `results/benchmark_report.json` | Aggregate and per-species metrics |
-| `results/pipeline_log.json` | Run log with elapsed time and completed steps |
-| `results/visualizations/` | Saved charts and figures |
-| `models/checkpoints/*.pt` | Trained model checkpoints |
-| `models/checkpoints/*_history.json` | Training histories for each phase |
-| `data/alignments/*.json` | Alignment outputs |
-| `data/mappings/*.json` | Fragment mapping and hotspot results |
-
-## Project Layout
-
-```text
-api/                  FastAPI app, routes, and request/response schemas
-config/               Settings, species catalogs, phylogenetic metadata, hardware-aware defaults
-dashboard/            Streamlit dashboard
-data/                 Fetchers, simulators, datasets, cached FASTA files, metadata
-docker/               Dockerfile and compose definitions
-evaluation/           Metrics and benchmark runner
-models/               Transformers, autoencoder, GNN, fusion, confidence, Evoformer, ensemble
-pipeline/             Full pipeline orchestration and genome mapping
-preprocessing/        Alignment, encoding, corruption helpers
-results/              Reports, reconstructions, vocab, and generated figures
-simulation/           Live simulation logic
-training/             Phase-based training scripts, trainers, and distributed entrypoints
-visualization/        2D charts, 3D views, live viewers, reconstruction tools
-main.py               Main CLI entrypoint
-requirements.txt      Python dependency list
-test_integration.py   Integration smoke tests for key modules
-```
-
-## Configuration Notes
-
-`config/settings.py` centralizes most runtime behavior:
-
-- auto-detects CPU vs GPU and scales embedding size, layer count, max sequence length, and batch size
-- defines API host and port
-- creates required data, model, and result directories on import
-- stores species catalogs, reference mappings, mitochondrial gene annotations, disease mutation locations, and phylogenetic distance priors
-
-## Docker
-
-Build and run with:
-
-```bash
-docker compose -f docker/docker-compose.yml up --build
-```
-
-Current compose setup:
-
-- `api` exposes port `8000`
-- `dashboard` runs `python main.py dashboard`
-- project `data/`, `models/checkpoints/`, and `results/` are mounted into the containers
-
-Practical note: the current dashboard entrypoint is Streamlit-based, but `requirements.txt` does not install `streamlit`. If you want the dashboard container to start cleanly, add Streamlit to the image environment first. Also note that `docker/docker-compose.yml` maps the dashboard service to port `8050`, while `main.py dashboard` launches Streamlit without forcing that port.
+Control hyperparameters directly via `config/settings.py`. It dynamically scales layers, sequence max lengths, embedding dimension, and hardware configuration according to whether the deployment target has a GPU or relies purely on CPU bounds.
 
 ## Known Caveats
 
-- This repository is best understood as a research prototype and systems demo, not a validated production genomics stack.
-- Sequence labels in cached metadata should be treated as project identifiers unless you independently verify the upstream accessions.
-- Some optional runtime paths depend on external software such as MAFFT, PyOpenGL, or DeepSpeed.
-- The active dashboard implementation is Streamlit-based even though `requirements.txt` currently includes Dash dependencies.
-
-## Why This Repo Is Interesting
-
-What makes the project stand out is not just one model, but the way the pieces are connected:
-
-- classical corruption simulation sits next to modern sequence modeling
-- multiple architectures contribute to reconstruction instead of a single monolithic model
-- confidence and calibration are treated as first-class outputs
-- benchmarking, mapping, visualization, and service layers are already wired into the same repo
-
-If you want one starting point, begin with `main.py`, then read `pipeline/full_pipeline.py`, and finally inspect `models/ensemble_reconstructor.py` to see how the different learned components come together.
-
+- **Research Prototype**: This codebase illustrates the viability of using deep learning combinations to repair damaged structural graphs representing sequences. It is a proof of concept, not a validated bio-medical production stack.
+- **DeepSpeed Compatibility**: To use `train-distributed`, DeepSpeed must be appropriately configured with native system dependencies (especially on Windows where WSL or native compiler toolchains are heavily suggested).
+- **Metadata**: Published phylogenetic distance constants configured within this codebase serve as broad estimates sourced from literature useful for graph construction; please review references diligently for downstream applications.
